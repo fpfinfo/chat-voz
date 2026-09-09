@@ -46,8 +46,8 @@ Um assistente virtual moderno com avatar animado feminino ("Aura") que responde 
 ├── knowledge/
 │   ├── faq.json            # Base de conhecimento FAQ
 │   └── sobre.md            # Informações institucionais
-├── api/
-│   └── rag-system.js       # Módulo RAG para busca documental
+├── lib/
+│   └── rag-system.js       # Módulo RAG para busca documental (client-side)
 └── vercel.json             # Configuração de deploy SPA
 ```
 
@@ -114,7 +114,7 @@ addMessage('iara', 'Olá! Sou a IARA...');
 
 2. **Crie arquivos `.md`** na pasta `knowledge/`
 
-3. **Atualize `api/rag-system.js`** para incluir novos arquivos
+3. **Atualize `lib/rag-system.js`** para incluir novos arquivos
 
 ### Integrar com IA Generativa
 

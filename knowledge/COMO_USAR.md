@@ -9,8 +9,8 @@ O sistema RAG (Retrieval-Augmented Generation) permite que o chatbot Aura respon
 ```
 /workspace
 ├── index.html              # Chat principal
-├── api/
-│   └── rag-system.js       # Sistema RAG
+├── lib/
+│   └── rag-system.js       # Sistema RAG (client-side)
 └── knowledge/
     ├── README.md           # Este arquivo
     ├── faq.json            # Perguntas frequentes
@@ -50,7 +50,7 @@ Descrição do produto B...
 
 ### 3. Atualizar o Sistema RAG
 
-Edite `api/rag-system.js` para incluir novos arquivos:
+Edite `lib/rag-system.js` para incluir novos arquivos:
 
 ```javascript
 const docsToLoad = [
