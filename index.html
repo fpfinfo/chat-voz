@@ -326,6 +326,7 @@
             </div>
         </div>
     </div>
+    <script src="lib/rag-system.js"></script>
     <script>
         // --- State Management ---
         let isListening = false;
@@ -349,10 +350,17 @@
                 synth.onvoiceschanged = loadVoices;
             }
             setupSpeechRecognition();
-            
+
+            // Pré-carrega a base de conhecimento (rag_estruturado.json) em segundo plano
+            if (window.KnowledgeBase) {
+                window.KnowledgeBase.loadKnowledge().catch(err =>
+                    console.warn('Base de conhecimento indisponível:', err)
+                );
+            }
+
             // Welcome message if history is empty
             if (messagesContainer.children.length === 0) {
-                addMessage('iara', 'Olá! Sou a IARA, sua Inteligência de Alocação de Recursos e Apoio. Como posso ajudar você hoje?');
+                addMessage('iara', 'Olá! Sou a IARA, assistente do Conselho Gestor Centralizado de Recursos de Valores Penais do TJPA. Pergunte sobre o Provimento Conjunto 2/2026, recolhimento, habilitação de entidades, prestação de contas ou transparência.');
             }
         });
         function loadVoices() {
@@ -422,7 +430,7 @@
             if (event.key === 'Enter') sendMessage();
         }
         // --- Chat Logic ---
-        function sendMessage() {
+        async function sendMessage() {
             const text = userInput.value.trim();
             if (!text) return;
             addMessage('user', text);
@@ -432,23 +440,42 @@
             scrollToBottom();
             updateStatus('Pensando...', '#f59e0b');
             avatarContainer.classList.add('thinking');
-            // Simulate delay for "thinking"
-            setTimeout(() => {
-                const response = generateResponse(text);
-                typingIndicator.style.display = 'none';
-                avatarContainer.classList.remove('thinking');
-                addMessage('iara', response);
-                speak(response);
-            }, 1500);
+
+            // Consulta o RAG mantendo um tempo mínimo visível de "pensando"
+            const minThinking = new Promise(r => setTimeout(r, 700));
+            let response;
+            try {
+                response = await generateResponse(text);
+            } catch (err) {
+                console.error('Erro ao gerar resposta:', err);
+                response = 'Desculpe, tive um problema ao consultar a base de conhecimento. Tente novamente.';
+            }
+            await minThinking;
+
+            typingIndicator.style.display = 'none';
+            avatarContainer.classList.remove('thinking');
+            addMessage('iara', response);
+            speak(response);
         }
-        function generateResponse(input) {
+        async function generateResponse(input) {
+            // 1) Base de conhecimento do TJPA (rag_estruturado.json)
+            try {
+                if (window.KnowledgeBase) {
+                    const r = await window.KnowledgeBase.query(input);
+                    if (r && r.found) return r.response;
+                }
+            } catch (err) {
+                console.warn('RAG indisponível, usando respostas locais:', err);
+            }
+
+            // 2) Fallback: respostas locais para saudações e perguntas triviais
             const lowerInput = input.toLowerCase();
-            if (lowerInput.includes('olá') || lowerInput.includes('oi')) return 'Olá! Como posso ajudar você com seus recursos hoje?';
-            if (lowerInput.includes('nome')) return 'Sou a IARA, Inteligência de Alocação de Recursos e Apoio.';
+            if (lowerInput.includes('olá') || lowerInput.includes('oi') || lowerInput.includes('bom dia') || lowerInput.includes('boa tarde')) return 'Olá! Como posso ajudar você sobre a gestão de recursos de valores penais do TJPA?';
+            if (lowerInput.includes('nome') || lowerInput.includes('quem é você') || lowerInput.includes('quem e voce')) return 'Sou a IARA, Inteligência de Alocação de Recursos e Apoio, assistente do Conselho Gestor Centralizado de Recursos de Valores Penais do TJPA.';
             if (lowerInput.includes('hora')) return `Agora são ${new Date().toLocaleTimeString('pt-BR')}.`;
-            if (lowerInput.includes('data')) return `Hoje é ${new Date().toLocaleDateString('pt-BR')}.`;
-            if (lowerInput.includes('ajuda')) return 'Posso ajudar com alocação de recursos, dúvidas gerais e organização. O que você precisa?';
-            return 'Interessante! Pode me contar mais detalhes? Estou aqui para ajudar.';
+            if (lowerInput.includes('data') || lowerInput.includes('que dia')) return `Hoje é ${new Date().toLocaleDateString('pt-BR')}.`;
+            if (lowerInput.includes('ajuda') || lowerInput.includes('o que você faz') || lowerInput.includes('o que voce faz')) return 'Posso responder sobre o Provimento Conjunto 2/2026, recolhimento por guia eletrônica, habilitação de entidades, Plano de Aplicação de Recursos (PARE), prestação de contas e transparência. O que você precisa saber?';
+            return 'Não encontrei isso na base de conhecimento do Conselho Gestor. Você pode reformular ou perguntar, por exemplo, sobre prazos, percentuais de destinação, habilitação de entidades ou prestação de contas.';
         }
         function addMessage(sender, text) {
             const msgDiv = document.createElement('div');

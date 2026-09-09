@@ -43,13 +43,19 @@ Um assistente virtual moderno com avatar animado feminino ("Aura") que responde 
 /workspace
 ├── index.html              # Aplicação completa (HTML + CSS + JS)
 ├── README.md               # Esta documentação
+├── rag_estruturado.json    # Base de conhecimento do TJPA (Provimento 2/2026, portarias, resoluções, FAQ)
+├── catalogo.json           # Catálogo dos documentos da base
 ├── knowledge/
-│   ├── faq.json            # Base de conhecimento FAQ
-│   └── sobre.md            # Informações institucionais
+│   ├── faq.json            # Conteúdo de exemplo (não usado pelo index.html)
+│   └── sobre.md            # Conteúdo de exemplo (não usado pelo index.html)
 ├── lib/
-│   └── rag-system.js       # Módulo RAG para busca documental (client-side)
-└── vercel.json             # Configuração de deploy SPA
+│   └── rag-system.js       # Módulo RAG (client-side) — lê rag_estruturado.json
+└── vercel.json             # Configuração de deploy estático
 ```
+
+O `index.html` carrega `lib/rag-system.js` e responde consultando `rag_estruturado.json`
+por palavras-chave (com casamento de radical e busca por artigo). Se nada for encontrado,
+recorre a respostas locais para saudações e perguntas triviais.
 
 ## 🚀 Como Usar
 
