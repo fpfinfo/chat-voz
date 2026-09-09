@@ -1,0 +1,1203 @@
+{
+ "documentos": [
+  {
+   "doc_id": "provimento-002-2026",
+   "titulo": "Provimento Conjunto nº 2/2026-GP/CGJ",
+   "tipo": "norma",
+   "orgao": "TJPA — Presidência e Corregedoria-Geral",
+   "data": "2026-06-30",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "TJ-PATribunal de Justiça do Estado do Pará\n \n\nPODER JUDICIÁRIO\n\nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ\n\n \n\nPROVIMENTO CONJUNTO Nº 2/2026- GP/CGJ, DE 30 DE JUNHO DE 2026\n\n \n\nDispõe sobre a atualização das regras de recolhimento gestão centralizada, a governança, a priorização programática, a automação de habilitação e de prestação de contas de recursos provenientes do cumprimento da pena de prestação pecuniária, do acordo de transação penal, do acordo de não persecução penal e da aceitação da suspensão condicional do processo, conforme as diretrizes estabelecidas pela Resolução CNJ n° 558/2024, e dá outras providências. \n\n \n\nO Desembargador ROBERTO GONÇALVES DE MOURA, Presidente do Tribunal de Justiça do Estado do Pará (TJPA), e a Desembargadora MARIA ELVINA GEMAQUE TAVEIRA, Corregedora-Geral de Justiça do TJPA, no uso de suas atribuições legais e regimentais, e\n\nCONSIDERANDO a Resolução nº 558, de 6 de maio de 2024, do Conselho Nacional de Justiça (CNJ), que estabelece diretrizes para a gestão e destinação de valores e bens oriundos de pena de multa, perda de bens e valores e prestações pecuniárias decorrentes de condenações criminais, colaboração premiada, acordos de leniência e acordos de cooperação internacional no âmbito do Poder Judiciário e dá outras providências;\n\nCONSIDERANDO o Provimento Conjunto nº 07/2024-CGJ, de 24 de dezembro de 2024, que disciplina as regras para a gestão, recolhimento, destinação, controle, aplicação e prestação de contas de valores provenientes do cumprimento da pena de prestação pecuniária, do acordo de transação penal, do acordo de não persecução penal e da aceitação condicional do processo conforme as diretrizes estabelecidas pela Resolução CNJ nº 558/2024;\n\nCONSIDERANDO a importância estratégica de desenvolver e implementar soluções inovadoras e desburocratizadas de otimização da gestão e destinação dos valores provenientes do cumprimento da pena de prestação pecuniária, do acordo de transação penal, do acordo de não persecução penal e da aceitação da suspensão condicional do processo, para custear ações e projetos de relevante finalidade social com abrangência para as dezesseis Regiões Judiciárias do Estado do Pará;\n\nCONSIDERANDO o interesse público na transparência, efetividade e impacto social mensurável da destinação dos valores penais; e\n\nCONSIDERANDO a estratégia institucional de priorização programática para aplicação dos recursos,\n\nRESOLVEM:\n\nCAPÍTULO I\n\nDAS DISPOSIÇÕES GERAIS"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [
+      "§1"
+     ],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "Art. 1º Este Provimento Conjunto regulamenta, no âmbito do Poder Judiciário do Estado do Pará, a gestão centralizada dos recursos, o recolhimento, a destinação, a liberação, a aplicação e a prestação de contas dos valores oriundos da pena de prestação pecuniária (artigos 43, I, e 45, §1º, do Código Penal), do acordo de transação penal (art. 76 da Lei nº 9.099/1995), do acordo de não persecução penal (art. 28-A, IV, do Código de Processo Penal) e da suspensão condicional do processo (art. 89 da Lei nº 9.099/1995), e dá outras providências."
+    },
+    {
+     "artigo": "2",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "Art. 2º Os recursos de que trata o art. 1º serão depositados em Subconta Centralizadora, administrada pelo Conselho Gestor instituído por este Provimento Conjunto."
+    },
+    {
+     "artigo": "3",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "Art. 3º As varas com competência referente a juizados criminais, matéria criminal, ou execução penal são unidades captadoras dos recursos a que se refere o art. 1º deste Provimento Conjunto.\n\nParágrafo único. As varas de juiz das garantias não são consideradas unidades captadoras para fins deste Provimento Conjunto."
+    },
+    {
+     "artigo": "4",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 400,
+     "texto": "Art. 4º Os recursos de que trata o art. 1º serão prioritariamente destinados para aplicação em projetos decorrentes do Programa “Pena Justa” nos termos deste Provimento Conjunto e do Plano Anual de Aplicação dos Recursos (PARE).\n\nCAPÍTULO II\n\nDA GOVERNANÇA"
+    },
+    {
+     "artigo": "5",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 3"
+     ],
+     "parte": 0,
+     "ordem": 500,
+     "texto": "Art. 5º Fica instituído o Conselho Gestor Centralizado dos Recursos de Valores Penais (Conselho Gestor), responsável pela gestão centralizada dos recursos de que trata este Provimento Conjunto, de caráter deliberativo, com a seguinte composição:\n\nI - o(a) Presidente do Tribunal, ou o(a) Desembargador(a) por ele(a) indicado(a);\n\nII - o(a) Corregedor(a)-Geral de Justiça, ou o(a) Desembargador(a) por ele(a) indicado(a);\n\nIII - o(a) Desembargador(a) Supervisor(a) do Grupo de Monitoramento e Fiscalização Carcerária (GMF);\n\nIV - o(a) Desembargador(a) Coordenador(a) da Coordenadoria da Infância e da Juventude (CEIJ); e\n\nV - o(a) Desembargador(a) Coordenador(a) da Comissão de Ações Judiciais de Direitos Humanos e Repercussão Social;\n\nVI - o(a) Desembargador(a) Coordenador(a) da Coordenadoria Estadual das Mulheres em situação deViolência Doméstica e Familiar (CEVID);\n\nVII - o(a) Secretário(a) de Planejamento, Coordenação e Finanças do Tribunal de Justiça do Estado do Pará (SEFIN).\n\n§ 1º A Coordenação do Conselho Gestor da Subconta Centralizadora caberá a Presidência do TJPA ou ao(a) desembargador(a) indicado(a).\n\n§ 2º São atribuições do Conselho Gestor, além das demais previstas neste Provimento Conjunto:\n\nI - aprovar o PARE;\n\nII - homologar editais;\n\nIII - deliberar sobre seleção e sanções;\n\nIV - aprovar indicadores;\n\nV - homologar relatórios e dados abertos;\n\nVI - decidir incidentes de integridade e conflitos de interesse.\n\n§ 3º A totalidade dos recursos de que trata este Provimento Conjunto será gerida pelo Conselho Gestor com aplicação definida no PARE, que deverá especificar as despesas a serem realizadas no decorrer do exercício, indicando estimativas do valor global das despesas por Regiões Judiciárias beneficiárias dos recursos captados."
+    },
+    {
+     "artigo": "6",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 1",
+      "§ 3",
+      "§ 4"
+     ],
+     "parte": 0,
+     "ordem": 600,
+     "texto": "Art. 6º Fica instituída a Comissão de Apoio ao Conselho Gestor da Subconta Centralizadora (Comissão de Apoio), responsável por subsidiar o Conselho Gestor com informações gerenciais sobre os recursos disponíveis, elaboração, publicação e apoio à seleção e monitoramento da execução dos projetos.\n\n§ 1º A Comissão de Apoio será composta, preferencialmente, por servidores(as) integrantes das Comissões do TJPA com finalidade social das áreas de destinação dos recursos, sendo:\n\nI - dois(duas) servidores(a) indicados(a) pela Presidência do Tribunal, um deles designado para presidir a Comissão de Apoio;\n\nII - dois(duas) servidores(as) indicados(as) pela Corregedoria-Geral de Justiça;\n\nIII - dois(duas) servidores(as) indicados(as) pela Secretaria de Planejamento, Coordenação e Finanças (SEFIN);\n\nIV - um(a) servidor(a) indicado(a) pela Coordenadoria Estadual das Mulheres em Situação de Violência Doméstica e Familiar (CEVID);\n\nV - um(a) servidor(a) indicado(a) pela CEIJ;\n\nVI - um(a) servidor(a) indicado(a) pela Comissão de Ações Judiciais de Direitos Humanos e Repercussão Social;\n\nVII - um(a) servidor(a) indicado(a) pelo GMF;\n\nVIII - um(a) servidor(a) indicado pela Secretaria de Auditoria Interna (SEAUD).\n\n§ 2º Quando se tratar de casos afetos a projetos locais atendidos pela alínea “a” do § 1º do art. 8º deste Provimento Conjunto, o(a) juiz(a) responsável pela execução penal da respectiva comarca será ouvido sobre a questão.\n\n§ 3º A Comissão de Apoio prestará suporte técnico, emitirá pareceres e operará os documentos e fluxos no sistema SEI.\n\n§ 4º As reuniões terão atas-síntese públicas, resguardados os sigilos legalmente protegidos."
+    },
+    {
+     "artigo": "7",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 700,
+     "texto": "Art. 7º Os recursos, sob gestão do Conselho Gestor, serão aplicados nas 16 Regiões Judiciárias atualmente existentes, preferencialmente em áreas essenciais de saúde, educação e segurança pública, por meio de seleção dos projetos realizada por Edital de Chamada Pública a ser publicado semestralmente, sendo disponibilizado link para cadastramento dos projetos em formulário eletrônico.\n\nCAPÍTULO III\n\nDO RECOLHIMENTO DOS VALORES"
+    },
+    {
+     "artigo": "8",
+     "paragrafos": [
+      "§ 1"
+     ],
+     "parte": 0,
+     "ordem": 800,
+     "texto": "Art. 8º Os recursos serão depositados na Subconta Centralizadora, gerenciada por meio de sistema eletrônico, pela Coordenadoria de Depósitos Judiciais da Secretaria de Planejamento, Coordenação e Finanças.\n\n§ 1º O valor dos depósitos será distribuído da seguinte forma:\n\na) 40% (quarenta por cento) dos recursos serão destinados a atender os projetos desenvolvidos na comarca a qual pertence a unidade arrecadadora, especialmente os destinados ao Programa “Pena Justa” e “Novos Caminhos”; e\n\nb) 60% (sessenta por cento) dos recursos serão destinados a atender as localidades com arrecadação inferior a 3% (três por cento) em relação ao total arrecadado no exercício anterior e aos demais projetos de interesse social."
+    },
+    {
+     "artigo": "9",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 1",
+      "§ 3",
+      "§ 4",
+      "§ 5"
+     ],
+     "parte": 0,
+     "ordem": 900,
+     "texto": "Art. 9º As guias de depósito dos valores de que trata este Provimento Conjunto serão obtidas na página eletrônica do Poder Judiciário do Estado do Pará, mediante acesso direto pelo(a) interessado(a) ou por meio da Secretaria da Unidade Judicial Captadora.\n\n§ 1º Em relação aos depósitos oriundos do acordo de transação penal, do acordo de não persecução penal ou da suspensão condicional do processo, as guias de depósito poderão ser geradas após a respectiva audiência ou obtidas pelo(a) próprio(a) interessado(a) na página eletrônica do TJPA, nos termos de orientação da Corregedoria-Geral de Justiça, devendo indicar que o recurso se destina ao pagamento dessa modalidade de prestação pecuniária.\n\n§ 2º Fica vedado, a partir da vigência deste Provimento Conjunto, a realização de depósitos nas subcontas atualmente existentes, devendo 100% (cem por cento) de todos os recursos financeiros advindos das modalidades de que trata o § 1º ser depositados na Subconta Centralizadora.\n\n§ 3º Constarão na guia de depósito:\n\nI - o número do processo judicial em que houve o acordo de transação penal, o acordo de não persecução penal, a aceitação da suspensão condicional do processo ou a condenação penal;\n\nII - o nome da parte beneficiada por institutos despenalizadores ou condenada ao pagamento de prestação pecuniária;\n\nIII - o número do Cadastro de Pessoas Físicas (CPF) ou do Cadastro Nacional da Pessoa Jurídica (CNPJ) do(a) beneficiário(a) ou condenado(a); e\n\nIV - o valor a ser depositado.\n\n§ 4º Competirá à parte beneficiada por institutos despenalizadores e à parte condenada ao pagamento de prestação pecuniária, após efetuar o depósito, acostar o comprovante de pagamento no processo judicial em que houve o acordo de transação penal, o acordo de não persecução penal, a aceitação da suspensão processual ou a condenação penal.\n\n§ 5º É expressamente vedado o recolhimento de qualquer valor em espécie pela Secretaria ou Gabinete do Juízo de execução penal competente.\n\nCAPÍTULO IV\n\nDA PRIORIDADE PROGRAMÁTICA"
+    },
+    {
+     "artigo": "10",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1000,
+     "texto": "Art. 10. O PARE definirá percentuais mínimos de alocação destinados ao Programas “Pena Justa” e “Novos Caminhos”, eixos temáticos, metas e indicadores de impacto."
+    },
+    {
+     "artigo": "11",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1100,
+     "texto": "Art. 11. Serão priorizados projetos que:\n\nI - reduzam reincidência;\n\nII - ampliem alternativas penais e práticas restaurativas;\n\nIII - beneficiem pessoas egressas e vulneráveis;\n\nIV - promovam saúde mental e prevenção de álcool e outras drogas correlatas ao sistema de justiça; e\n\nV - tenham elevada custo, efetividade e governança."
+    },
+    {
+     "artigo": "12",
+     "paragrafos": [
+      "§ 3"
+     ],
+     "parte": 0,
+     "ordem": 1200,
+     "texto": "Art. 12. Os bens e valores cuja perda decorra de pena restritiva de direitos prevista no art. 43, II, do Código Penal serão destinados, ressalvada a legislação penal especial, ao Fundo Penitenciário Nacional, nos termos do art. 45, § 3º, do mencionado Código.\n\nCAPÍTULO V\n\nDOS(AS) BENEFICIÁRIOS(AS)"
+    },
+    {
+     "artigo": "13",
+     "paragrafos": [
+      "§ 1",
+      "§ 2"
+     ],
+     "parte": 0,
+     "ordem": 1300,
+     "texto": "Art. 13. Desde que não destinados diretamente a vítima, a proposta de transação penal, de não persecução penal ou de suspensão condicional do processo, bem como pelo(a) juiz(a) por ocasião da homologação ou pelo(a) juiz(a) da execução, os valores depositados serão preferencialmente destinados a entidade pública ou privada com finalidade social, previamente conveniada, ou para atividades de caráter essencial à segurança pública, à educação e à saúde, desde que estas atendam às áreas vitais de relevante cunho social, a critério do Conselho Gestor.\n\n§ 1º A receita de que trata este Provimento deverá financiar projetos apresentados pelos(as) beneficiários(as) citados no caput deste artigo, priorizando-se o repasse desses valores aos que:\n\nI - mantenham, por maior tempo, número expressivo de cumpridores de prestação de serviços à comunidade ou entidade pública, especialmente aquelas organizações sociais inseridas em contexto de extrema pobreza;\n\nII - atuem diretamente na execução penal, assistência à ressocialização de apenados(as), assistência às vítimas de crimes e prevenção da criminalidade, incluídos os conselhos da comunidade;\n\nIII - sejam parceiros ou integrantes do Programa Novos Caminhos/CNJ, instituído pela Resolução nº 543, de 10 de janeiro de 2024, do Conselho Nacional de Justiça, ou de programa similar de apoio à desinstitucionalização de crianças e adolescentes acolhidos e a egressos(as) de unidades de acolhimento;\n\nIV - prestem serviços de maior relevância social;\n\nV - apresentem projetos com viabilidade de implementação, segundo a utilidade e a necessidade, obedecendo-se aos critérios estabelecidos nas políticas públicas específicas;\n\nVI - realizem atividades que visem à garantia de direitos de adolescentes após o cumprimento de medida socioeducativa e ao fortalecimento dos vínculos familiares e comunitários, de acordo com as diretrizes do Conselho Nacional de Justiça;\n\nVII - executem projetos de prevenção e/ou atendimento a situações de conflitos, crimes e violências, que sejam baseados em princípios e práticas da justiça restaurativa no sistema criminal, inclusive para pessoas em execução penal em meio aberto, pré - egressas e egressas;\n\nVIII - se dediquem ao fortalecimento do serviço de avaliação e acompanhamento de medidas terapêuticas aplicáveis à pessoa com transtorno mental em conflito com a lei, especialmente por meio da Equipe de Avaliação e Acompanhamento das Medidas Terapêuticas Aplicáveis à Pessoa com Transtorno Mental em Conflito com a Lei (EAP) ou equipe conectora; e"
+    },
+    {
+     "artigo": "13",
+     "paragrafos": [
+      "§ 1",
+      "§ 2"
+     ],
+     "parte": 1,
+     "ordem": 1301,
+     "texto": "IX - atuem em projetos temáticos, desenvolvidos por entidades devidamente registradas nos órgãos públicos de controle competentes, sobre o uso de álcool e outras drogas, e adotem metodologias compatíveis com a Lei nacional nº 10.216, de 6 de abril de 2001, e com a Resolução nº 487, de 15 de fevereiro de 2023, do Conselho Nacional de Justiça, desde que se respeitem a voluntariedade e as diversidades culturais, religiosas e de crença das pessoas envolvidas, com prioridade ao atendimento na Rede de Atenção Psicossocial.\n\n§ 2º A receita de que trata este Provimento Conjunto poderá financiar projetos específicos apresentados pelo Poder Público da União, dos Estados ou dos Municípios nas hipóteses descritas no caput deste artigo."
+    },
+    {
+     "artigo": "14",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1400,
+     "texto": "Art. 14. É vedada a destinação de recursos de que trata este Provimento Conjunto para:\n\nI - custeio das instituições do Sistema de Justiça, inclusive do Poder Judiciário, do Ministério Público e da Defensoria Pública;\n\nII - promoção pessoal de membros e servidores de qualquer dos Poderes, do Ministério Público, da\n\nDefensoria Pública ou integrantes das entidades beneficiadas;\n\nIII - pagamento de remuneração fixa de cargos de gestão e direção aos membros das entidades beneficiadas, podendo estes receber apenas pelas horas prestadas na execução direta da atividade-fim do projeto, desde que devidamente comprovadas;\n\nIV - fins político-partidários;\n\nV - entidades que não estejam regularmente constituídas há mais de 1 (um) ano;\n\nVI - entidades que condicionem ou vinculem o serviço prestado à conversão religiosa ou ao exercício de atividades de cunho religioso; e\n\nVII - entidades cujos(as) membros(as), sócios(as), associados(as) ou dirigentes sejam o(a) magistrado(a) ou o(a) membro(a) do Ministério Público vinculado à unidade judicial competente ao julgamento do processo penal a que estejam associados(as), ou seus cônjuges, companheiros(as) e parentes em linha reta, colateral ou por afinidade até o segundo grau."
+    },
+    {
+     "artigo": "15",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1500,
+     "texto": "Art. 15. Não poderão ser destinados recursos a entidades públicas ou privadas:\n\nI - em que membros(as) e servidores(as) do PJPA, do respectivo Ministério Público ou da respectiva Defensoria Pública tenham qualquer ingerência, ainda que informal, na constituição ou administração da entidade ou na utilização de receitas, mesmo que para fins de patrocínio de eventos, projetos ou programas alinhados a metas institucionais; ou\n\nII - de cujas atividades possa decorrer, de qualquer forma e mesmo que indiretamente, a promoção pessoal de membros(as) e servidores(as) do PJPA, do respectivo Ministério Público, da respectiva Defensoria Pública ou de seus cônjuges, companheiros(as) e parentes em linha reta, colateral ou por afinidade até o segundo grau.\n\nParágrafo único. Os valores mencionados neste Provimento também não poderão ser utilizados para reembolsar despesas já realizadas por entidades públicas ou privadas que, embora contempladas, tenham despendido recursos próprios na execução dos projetos aprovados."
+    },
+    {
+     "artigo": "16",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 1",
+      "§ 3"
+     ],
+     "parte": 0,
+     "ordem": 1600,
+     "texto": "Art. 16. Excepcionalmente, a receita de que trata este Provimento Conjunto poderá ser transferida, independentemente de prévio credenciamento, à Defesa Civil da União, de Estados ou de Municípios enquanto durarem os efeitos de estado de calamidade pública formalmente decretado por ato do Poder Executivo Federal, Estadual ou Municipal.\n\n§ 1º A transferência excepcional de que trata o caput deste artigo deverá ser precedida de decisão do Conselho Gestor da Subconta Centralizadora.\n\n§ 2º O ato decisório de que trata o § 1º deste artigo deverá ser publicado, no prazo máximo de 5 (cinco) dias, no portal da Transparência e no Diário de Justiça Eletrônico (DJE) do TJPA.\n\n§ 3º Os valores transferidos nos termos deste artigo deverão ser objeto de prestação de contas pela entidade beneficiada ao respectivo Tribunal de Contas, nos termos da regulamentação do Conselho Nacional de Justiça.\n\nCAPÍTULO VI\n\nDO PLANO DE APLICAÇÃO DE RECURSOS (PARE)"
+    },
+    {
+     "artigo": "17",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1700,
+     "texto": "Art. 17. O Plano de Aplicação dos Recursos (PARE) deverá especificar as despesas a serem realizadas no decorrer do respectivo exercício, compatibilizando-se com o Plano de Gestão em vigor no PJPA, e indicar estimativa do valor global de todas as despesas a serem realizadas no período."
+    },
+    {
+     "artigo": "18",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1800,
+     "texto": "Art. 18. Cabe ao Conselho Gestor aprovar o Plano de Aplicação dos Recursos, fixando, inclusive, os valores estimados destinados ao custeio dos projetos previstas para o período do biênio.\n\nParágrafo único. O Plano de Aplicação dos Recursos deverá estar acompanhado de planilha com os valores estimados e a periodicidade das despesas de forma detalhada.\n\nSeção I\n\nDa Transferência à Subconta Centralizadora"
+    },
+    {
+     "artigo": "19",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1900,
+     "texto": "Art. 19. Para os fins do art. 8º deste Provimento Conjunto, a Coordenadoria de Depósitos Judiciais realizará a transferência centralizada de todos os valores auferidos nas atuais subcontas à Subconta Centralizadora todo 1º dia útil de cada mês."
+    },
+    {
+     "artigo": "20",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2000,
+     "texto": "Art. 20. Os projetos em execução pelas unidades arrecadadoras terão os recursos financeiros assegurados, devendo ser submetidos à deliberação do Conselho Gestor, a partir da vigência deste Provimento Conjunto.\n\nParágrafo único. A partir da publicação deste Provimento Conjunto, os valores serão depositados na Subconta Centralizadora de Recursos gerida pelo Conselho Gestor, devendo ser efetuada mensalmente em havendo eventuais depósitos ou saldos residuais as transferências devidas."
+    },
+    {
+     "artigo": "21",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2100,
+     "texto": "Art. 21. Os saldos residuais existentes após a implementação dos projetos deverão ser restituídos pelas entidades beneficiárias à Subconta Centralizadora."
+    },
+    {
+     "artigo": "22",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2200,
+     "texto": "Art. 22. Admite-se, a título de reserva de contingência, a manutenção de até 10% (dez por centro) do numerário disponível na Subconta Centralizadora.\n\nCAPÍTULO VII\n\nDO CHAMAMENTO PÚBLICO E HABILITAÇÃO AUTOMATIZADA"
+    },
+    {
+     "artigo": "23",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2300,
+     "texto": "Art. 23. O TJPA publicará, semestralmente, Edital de Chamamento com critérios objetivos, pesos e calendário."
+    },
+    {
+     "artigo": "24",
+     "paragrafos": [
+      "§ 1",
+      "§ 2"
+     ],
+     "parte": 0,
+     "ordem": 2400,
+     "texto": "Art. 24. A habilitação de entidades ocorrerá por módulo eletrônico integrado ao Sistema Eletrônico a ser disponibilizado, com:\n\nI - Cadastro Único (CNPJ, estatuto, dirigentes, política de integridade, política de privacidade/LGPD);\n\nII - Validação automática de certidões e consultas a bases de integridade (CEIS/CNEP, CADIN, TCE/CGU quando aplicável);\n\nIII - avaliação de elegibilidade com critérios e pesos divulgados;\n\nIV - Geração de parecer eletrônico automatizado e trilha de auditoria.\n\n§ 1º De forma periódica será ser divulgada lista atualizada das entidades credenciadas e devidamente habilitadas.\n\n§ 2º Indeferimentos serão motivados, com notificação e prazo para saneamento.\n\nCAPÍTULO VIII\n\nDA SELEÇÃO, FORMALIZAÇÃO E LIBERAÇÃO"
+    },
+    {
+     "artigo": "25",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2500,
+     "texto": "Art. 25. A seleção obedecerá a ranking público, por critérios e pesos do Edital, com desempates objetivos (impacto, custo, efetividade, equidade territorial)."
+    },
+    {
+     "artigo": "26",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2600,
+     "texto": "Art. 26. A formalização dar-se-á por Termo de Fomento/Colaboração, prevendo dentre outros:\n\nI - objeto, metas, indicadores e entregas;\n\nII - cronograma físico-financeiro e marcos de liberação;\n\nIII - plano de integridade e controles internos proporcionais ao porte; e\n\nIV - cláusulas LGPD (papéis, base legal, DPO, resposta a incidentes)."
+    },
+    {
+     "artigo": "27",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2700,
+     "texto": "Art. 27. Liberações ocorrerão por marcos validados no sistema, condicionadas à conformidade documental e execução física aferida, com conciliação bancária automatizada."
+    },
+    {
+     "artigo": "28",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 3"
+     ],
+     "parte": 0,
+     "ordem": 2800,
+     "texto": "Art. 28. Os Juízos das unidades captadoras dos recursos e o Ministério Público participarão da seleção dos projetos em suas Regiões Judiciárias e comarcas a que pertencem, submetendo-os à deliberação final do Conselho Gestor.\n\n§ 1º Serão preferencialmente contempladas as entidades sociais que desempenhem atividades essenciais, especialmente as relacionadas à segurança pública, à educação, à saúde, à assistência social, ao meio ambiente, ao desporto e à cultura.\n\n§ 2º É vedada a escolha arbitrária e aleatória dos(as) beneficiários(as).\n\n§ 3º Da decisão do Conselho Gestor, caberá pedido de reconsideração no prazo de 5 (cinco) dias.\n\nCAPÍTULO IX\n\nDA LIBERAÇÃO E DO EMPREGO DOS VALORES"
+    },
+    {
+     "artigo": "29",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2900,
+     "texto": "Art. 29. O valor destinado à entidade beneficiária contemplada somente poderá ser levantado por meio de alvará judicial expedido pelo Presidente do Conselho Gestor, ou por Desembargador com competência delegada.\n\nParágrafo único. A critério do Conselho Gestor poderão ser liberados parcialmente os valores quando a execução do projeto contemplar mais de uma etapa."
+    },
+    {
+     "artigo": "30",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3000,
+     "texto": "Art. 30. O numerário deverá ser empregado pela entidade beneficiária exclusivamente para execução do projeto selecionado nos termos aprovados e deverá conformar-se fielmente à discriminação pormenorizada dos gastos contida no pedido de cadastramento."
+    },
+    {
+     "artigo": "31",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3100,
+     "texto": "Art. 31. É vedado à entidade beneficiada, após a aprovação do projeto, realizar alteração em seu objeto ou quantitativo sem a autorização prévia do Conselho Gestor.\n\nParágrafo único. Para obter a autorização mencionada no caput deste artigo, o(a) interessado(a) deverá demonstrar a imperiosa necessidade de alteração do projeto social, devidamente lastreada em documentação que contenha novo cronograma de execução, orçamentos dos itens pretendidos e demais documentos que se façam necessários à análise do pedido.\n\nCAPÍTULO X\n\nDA PRESTAÇÃO DE CONTAS AUTOMATIZADA E MONITORAMENTO"
+    },
+    {
+     "artigo": "32",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3200,
+     "texto": "Art. 32. A prestação de contas dos recursos repassados será realizada por meio eletrônico, mediante sistema informatizado, contendo, no mínimo, os seguintes documentos e evidências comprobatórias:\n\nI - Nota fiscal e/ou documentos fiscais comprobatórios da utilização dos recursos, emitidos em conformidade com a legislação tributária aplicável;\n\nII - extrato bancário, permitindo a conciliação entre as despesas realizadas e os valores liberados pela Subconta Centralizadora;\n\nIII - documentos e registros que comprovem a execução física do projeto, tais como relatórios de atividades, listas de presença, registros fotográficos, relatórios técnicos, certificados, documentos institucionais ou outros meios idôneos de comprovação;\n\nIV - relatório sintético de execução físico-financeira, contendo a descrição das atividades realizadas, os resultados alcançados e a demonstração da aplicação dos recursos recebidos."
+    },
+    {
+     "artigo": "33",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3300,
+     "texto": "Art. 33. O Conselho Gestor poderá determinar a adoção de medidas corretivas, a glosa de despesas ou a restituição de valores, sem prejuízo da aplicação das sanções previstas.\n\nCAPÍTULO XI\n\nDA TRANSPARÊNCIA E DADOS ABERTOS"
+    },
+    {
+     "artigo": "34",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3400,
+     "texto": "Art. 34. O TJPA manterá Portal de Transparência com dados abertos contendo receitas, projetos, desembolsos, execução física/financeira, indicadores e decisões colegiadas (quando públicas), com atualização mensal.\n\nCAPÍTULO XII\n\nDAS INFRAÇÕES E SANÇÕES"
+    },
+    {
+     "artigo": "35",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3500,
+     "texto": "Art. 35. Infrações sujeitam-se à:\n\nI - advertência;\n\nII - glosa;\n\nIII - suspensão;\n\nIV - restituição de valores;\n\nV - declaração de inidoneidade temporária; e\n\nVI - comunicações aos órgãos de controle, conforme gravidade e reincidência.\n\nCAPÍTULO XIII\n\nDAS DISPOSIÇÕES FINAIS"
+    },
+    {
+     "artigo": "36",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3600,
+     "texto": "Art. 36. O Conselho Gestor aprovará o Manual Operacional, contendo informações detalhadas da operacionalização dos procedimentos complementares que se fizerem necessário e manterá a atualização dos demais anexos."
+    },
+    {
+     "artigo": "37",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3700,
+     "texto": "Art. 37. As questões relativas à aplicação deste Provimento Conjunto, inclusive aquelas que reclamem esclarecimento, bem como os casos omissos, serão submetidas à apreciação e deliberação do Conselho Gestor, a quem competirá prestar os esclarecimentos pertinentes e promover sua adequada solução, em estrita observância às disposições deste ato normativo e às diretrizes fixadas pelo Conselho Nacional de Justiça.\n\nParágrafo único. As deliberações proferidas pelo Conselho Gestor poderão ser consolidadas em orientações complementares, destinadas à uniformização de procedimentos no âmbito do Poder Judiciário do Estado do Pará."
+    },
+    {
+     "artigo": "38",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3800,
+     "texto": "Art. 38. Este Provimento Conjunto entra em vigor na data de sua publicação, devendo o módulo eletrônico entrar em operação em até 90 (noventa) dias da data da vigência.\n\n \n\nBelém (PA), 30 de junho de 2026.\n\n \n\nDesembargador ROBERTO GONÇALVES DE MOURA\n\nPresidente do Tribunal de Justiça do Estado do Pará\n\nDesembargadora MARIA ELVINA GEMAQUE TAVEIRA\n\n\nCorregedora-Geral de Justiça do tribunal de Justiça do Estado do Pará\n\n \n\n*Este texto não substitui o publicado no Diário da Justiça Eletrônico nº 8346, de 1 de julho de 2026."
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 25644,
+    "caracteres_convertidos": 25605,
+    "cobertura": 0.9985
+   }
+  },
+  {
+   "doc_id": "anexo-fluxo-002-2026",
+   "titulo": "ANEXO — Fluxo de Trabalho do Provimento 002/2026",
+   "tipo": "anexo",
+   "orgao": "TJPA",
+   "data": "2026-06-30",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "Página 1 de 6 \n \nANEXO - FLUXO DE TRABALHO \nGestão Centralizada de Valores Penais \nProvimento Conjunto nº 002/2026-GP/CGJ, de 30 de junho de 2026. \n \n \n1. Finalidade  \nDescrever detalhadamente o novo processo de trabalho para o recolhimento, a gestão, a \ndestinação, a liberação, a aplicação e a prestação de contas dos valores penais no âmbito \ndo Poder Judiciário do Estado do Pará, instituído pelo Provimento Conjunto nº 002/2026-\nGP/CGJ. Destina-se a orientar as unidades judiciais captadoras quanto ao que muda em \nrelação ao regime anterior, regulado pelo Provimento nº 0007/2024-GP/CGJ, esclarecendo \no papel de cada ator em cada etapa. \n \n2. Alteração do modelo: centralização da gestão dos recursos \nNo regime anterior, cada Juízo funcionava como unidade gestora: abria e movimentava \nsubconta própria, credenciava entidades, habilitava projetos, decidia isoladamente a \ndestinação e recebia a prestação de contas.  \nO novo regime centraliza a gestão financeira em uma única Subconta Centralizadora, \nadministrada pelo Conselho Gestor e operada pelo Núcleo de Depósitos Judiciais/SEFIN, \ncom apoio da Comissão de Apoio, chamamento público semestral único e habilitação, \nseleção, liberação e prestação de contas automatizadas por sistema eletrônico. A unidade \npassa a ser unidade captadora, concentrando-se em captar os recursos e participar da \nseleção dos projetos. \n \nQuadro comparativo - Modelo anterior (Provimento Conjunto nº 007/2024-GP/CGJ) × \nModelo atual (Provimento Conjunto nº 002/2026-GP/CGJ) \nAspecto \nModelo Anterior \nProvimento Conjunto nº 007/2024-\nGP/CGJ \nModelo Atual \nProvimento Conjunto nº 002/2026-\nGP/CGJ \nConta \nSubconta própria por Juízo/unidade \ngestora \nSubconta Centralizadora única (Conselho \nGestor) \nDecisão sobre \ndestinação \nCada juiz gestor decidia a destinação e o \nmontante  \nConselho Gestor delibera; Comissão de \nApoio operacionaliza \nCredenciamento \nEdital por cada unidade; certidão pela \nSecretaria \nChamamento semestral único do TJPA; \nhabilitação por módulo eletrônico \nHabilitação de projeto \nDecisão local do juiz, ouvido o MP \nRanking público + participação dos Juízos \ne do MP + deliberação do Conselho \nGestor \nLiberação de valores \nAlvará expedido pelo Juízo recebedor \nAlvará pelo Presidente do Conselho \nGestor (ou desembargador delegado \nPrestação de contas \nÀ unidade gestora; homologação judicial \nlocal \n \nAutomatizada por sistema eletrônico; \nConselho Gestor glosa/restitui"
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 1,
+     "ordem": 1,
+     "texto": "Página 2 de 6 \nAspecto \nModelo Anterior \nProvimento Conjunto nº 007/2024-\nGP/CGJ \nModelo Atual \nProvimento Conjunto nº 002/2026-\nGP/CGJ \nPriorização \nCritérios gerais da Resolução CNJ \n558/2024 \nCritérios gerais da Resolução CNJ \n558/2024 com prioridade programática \nPena Justa/Novos Caminhos via PARE \nTransparência \nPágina do TJPA, até o 5º dia útil \nPortal de dados abertos, atualização \nmensal \nPapel da unidade \njudicial \nUnidade gestora (executava todas as \netapas) \nUnidade captadora (capta, orienta, \nparticipa da seleção e fiscaliza) \n3. Partícipes e responsabilidades \nPartícipe \nPrincipais responsabilidades no novo fluxo previsto no Provimento \nConjunto nº 002/2026-GP/CGJ \nConselho Gestor \nÓrgão deliberativo (formado por representante da Presidência, CGJ, GMF, CEIJ, \nDireitos Humanos, CEVID e SEFIN). Aprova o PARE, homologa editais, delibera \nsobre seleção e sanções, aprova indicadores e decide incidentes de integridade. \nO Presidente (ou Desembargador delegado) expede os alvarás. \nComissão de Apoio \nServidores(as) que subsidiam o Conselho Gestor com informações gerenciais, \nelaboram e publicam editais, apoiam a seleção e o monitoramento e operam \ndocumentos e fluxos. \nUnidade Judicial Captadora \nVaras de juizados criminais, matéria criminal ou execução penal. Fixa a prestação \npecuniária, orienta/gera a guia, assegura o depósito na Subconta Centralizadora \ne a juntada do comprovante, participa da seleção junto ao MP e fiscaliza nos \nautos. \nNúcleo de Depósitos \nJudiciais  \nGerencia a Subconta Centralizadora e realiza a transferência mensal dos saldos \ndas subcontas atuais. \nMinistério Público \nParticipa da seleção dos projetos nas respectivas Regiões Judiciárias e \ncomarcas. \nEntidades beneficiárias \nHabilitam-se pelo módulo eletrônico, inscrevem projetos, executam o objeto \naprovado e prestam contas. \n \n \n\n \nPágina 3 de 6 \n4. Fluxograma do novo processo de trabalho"
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 2,
+     "ordem": 2,
+     "texto": "Página 4 de 6 \n5. Descrição do fluxo de trabalho, detalhado por fase \nFase 1 - Captação e recolhimento \nEtapa \nAção \nResponsável \nBase \n1.1 \nFixar a prestação pecuniária em audiência ou sentença \n(transação penal, ANPP, suspensão condicional do \nprocesso ou condenação criminal). \nUnidade captadora \nArt. 1º \n1.2 \nGerar a guia de depósito na página eletrônica do PJPA - \npor acesso direto do interessado ou pela Secretaria da \nunidade, com nº do processo, nome, CPF/CNPJ e valor. \nUnidade captadora / \nParte \nArt. 9º, caput e §3º \n1.3 \nDepositar exclusivamente na Subconta Centralizadora. É \nvedado o depósito nas subcontas antigas e o \nrecolhimento em espécie no cartório ou gabinete. \nParte \nArt. 9º, §2º e §5º \n1.4 \nJuntar o comprovante de pagamento ao processo judicial \nem que houve o acordo, a aceitação ou a condenação. \nParte / Secretaria \nArt. 9º, §4º \n1.5 \nOs recursos ingressam e permanecem na Subconta \nCentralizadora, gerida pelo Núcleo de Depósitos \nJudiciais. \nNúcleo de Depósitos \nJudiciais \nArts. 2º e 8º \nFase 2 - Regime de transição \nEtapa \nAção \nResponsável \nBase \n2.1 \nTransferir os saldos das subcontas atualmente \nexistentes para a Subconta Centralizadora. \nNúcleo de Depósitos \nJudiciais \nArt. 19 \n2.2 \nAssegurar os recursos dos projetos em execução e \nsubmetê-los à deliberação do Conselho Gestor. \nUnidade captadora → \nConselho Gestor \nArt. 20 \n2.3 \nRestituir à Subconta Centralizadora eventuais saldos \nresiduais de projetos encerrados. \nEntidade beneficiária \nArt. 21 \nFase 3 - Planejamento e priorização (PARE) \nEtapa \nAção \nResponsável \nBase \n3.1 \nSubsidiar o Conselho Gestor com informações \ngerenciais sobre os recursos disponíveis. \nComissão de Apoio \nArt. 6º \n3.2 \nAprovar o PARE: percentuais mínimos para Pena Justa \ne Novos Caminhos, eixos temáticos, metas e \nindicadores, observada a distribuição de 40% (comarca \narrecadadora) e 60% (localidades com arrecadação \ninferior a 3% e demais projetos). \nConselho Gestor \nArts. 8º §1º, 10 e \n18 \nFase 4 - Chamamento público e habilitação \nEtapa \nAção \nResponsável \nBase \n4.1 \nPublicar, semestralmente, o Edital de Chamamento \nPúblico com critérios objetivos, pesos e calendário. \nConselho Gestor \nArt. 23 \n4.2 \nHabilitar as entidades pelo módulo eletrônico: Cadastro \nÚnico, validação automática de certidões (CEIS/CNEP, \nCADIN, TCE/CGU), avaliação de elegibilidade e parecer \neletrônico com trilha de auditoria. \nEntidade / Sistema \nArt. 24 \n4.3 \nDivulgar a lista de entidades habilitadas; indeferimentos \nmotivados, com notificação e prazo para saneamento. \nComissão de Apoio \nArt. 24, §1º e §2º \nFase 5 - Inscrição e seleção dos projetos \nEtapa \nAção \nResponsável \nBase \n5.1 \nInscrever projetos por meio de formulário eletrônico. \nEntidade beneficiária \nArt. 7º \n5.2"
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 3,
+     "ordem": 3,
+     "texto": "Ordenar os projetos por ranking público, segundo \ncritérios e pesos do edital, com desempates objetivos \n(impacto, custo-efetividade, equidade territorial). \nComissão de Apoio / \nSistema \nArt. 25 \n\n \nPágina 5 de 6 \nEtapa \nAção \nResponsável \nBase \n5.3 \nParticipar da seleção dos projetos nas respectivas \nRegiões Judiciárias e comarcas. \nUnidade captadora + \nMinistério Público \nArt. 28 \n5.4 \nDeliberar, em caráter final, sobre a seleção. Da decisão \ncabe pedido de reconsideração em 5 dias. \nConselho Gestor \nArt. 28, §3º \nFase 6 - Formalização e liberação \nPasso Ação \nResponsável \nBase \n6.1 \nFormalizar a parceria por Termo de \nFomento/Colaboração (objeto, metas, cronograma físico-\nfinanceiro, integridade e cláusulas de LGPD). \nConselho Gestor / \nEntidade \nArt. 26 \n6.2 \nLiberar os recursos por marcos validados no sistema, \ncom conciliação bancária automatizada; admitida a \nliberação parcial por etapas. \nComissão de Apoio / \nSistema \nArts. 27 e 29, p.ú. \n6.3 \nExpedir o alvará judicial para o levantamento dos \nvalores. \nPresidente do Conselho \nGestor (ou \ndesembargador \ndelegado) \nArt. 29 \nFase 7 - Execução, prestação de contas e monitoramento \nEtapa \nAção \nResponsável \nBase \n7.1 \nExecutar o projeto exclusivamente no objeto aprovado; \nalteração de objeto ou quantitativo somente com \nautorização prévia do Conselho Gestor. \nEntidade beneficiária \nArts. 30 e 31 \n7.2 \nPrestar contas por meio eletrônico: nota fiscal, extrato \nbancário, comprovação da execução física e relatório \nfísico-financeiro. \nEntidade / Sistema \nArt. 32 \n7.3 \nDeterminar medidas corretivas, glosa ou restituição e \naplicar sanções (advertência, glosa, suspensão, \nrestituição, inidoneidade e comunicação aos órgãos de \ncontrole). \nConselho Gestor \nArts. 33 e 35 \n7.4 \nManter o Portal de Transparência com dados abertos e \natualização mensal. \nComissão de Apoio / \nSistema \nArt. 34"
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 4,
+     "ordem": 4,
+     "texto": "Página 6 de 6 \n6. Papel específico da unidade judicial captadora \n• Passa a fazer (Provimento Conjunto nº 002/2026-GP/CGJ) \n[+]  Gerar/orientar a emissão da guia e assegurar o depósito na Subconta Centralizadora única. \n[+]  Garantir a juntada do comprovante ao processo e a vedação do recolhimento em espécie. \n[+]  Participar da seleção dos projetos, em conjunto com o Ministério Público, na sua Região \nJudiciária e comarca. \n[+]  Fiscalizar, nos autos, a destinação dos recursos objeto de suas decisões. \n[+]  Submeter ao Conselho Gestor os projetos em execução e observar as prioridades do PARE. \n \n• Deixa de fazer (Provimento Conjunto nº 007/2024-GP/CGJ) \n[-]  Abrir e movimentar subconta própria da unidade. \n[-]  Publicar edital de credenciamento próprio e emitir certidão de credenciamento. \n[-]  Decidir isoladamente sobre a habilitação do projeto e o montante a destinar. \n[-]  Expedir alvará de levantamento. \n[-]  Receber e homologar a prestação de contas na própria unidade."
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 9606,
+    "caracteres_convertidos": 9602,
+    "cobertura": 0.9996
+   }
+  },
+  {
+   "doc_id": "manual-pratico-valores-penais",
+   "titulo": "Manual Prático — Gestão e Destinação de Valores Penais (TJPA)",
+   "tipo": "manual",
+   "orgao": "TJPA — Presidência e Corregedoria-Geral",
+   "data": "2026-06-30",
+   "publico": "unidades",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "T R I B U N A L D E J U S T I Ç A D O E S T A D O D O P A R Á\nPRESIDÊNCIA · CORREGEDORIA-GERAL DE JUSTIÇA\nM A N U A L P R Á T I C O\nGestão e Destinação\nde Valores Penais\nProvimento Conjunto nº 002/2026-GP/CGJ\nConselho Gestor Centralizado dos Recursos de Valores Penais\n\nManual Prático · Valores Penais · TJPA\n02\nV I S Ã O G E R A L · P A R A T O D O S\nComo usar este manual\n“Valores Penais com Destino Certo”\nO novo Provimento transforma a arrecadação de penas pecuniárias em um fundo único,\nrastreável e auditável, que financia projetos de ressocialização, alternativas penais, segurança\npública e demais áreas de relevância social em todas as Regiões Judiciárias do Pará.\nEste manual é dividido por público. Identifique o seu selo:\nVISÃO GERAL · PARA TODOS  - conceitos, governança, alterações, entre outros. Temáticas que\nenvolvem todos os públicos.\nUSO INTERNO · TJPA  - magistrados, diretores de secretarias, servidores e demais colaboradores. \nTemáticas que tratam sobre captação, recolhimento, seleção, liberação e implementação.\nUSO EXTERNO · ENTIDADES  - Organizações da Sociedade Civil e demais entidades beneficiárias. \nTemáticas que acerca da habilitação, do cadastramento de projetos e da prestação de contas.\nBase normativa\nProvimento Conjunto nº 002/2026-GP/CGJ e Resolução CNJ nº 558/2024 (atualizada pela\nResolução CNJ nº 685/2026)."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "P A R T E 1\nVisão Geral\nPara todos os públicos – concepção do novo modelo.\nO Q U E V O C Ê I R Á E N C O N T R A R :\n• O novo modelo e as três dimensões da mudança\n• Quadro comparativo: antes × depois\n• Governança e atores\n• Ganhos para a sociedade\n03\n\nParte 1 · Visão geral\nManual Prático · Valores Penais · TJPA\n04\nV I S Ã O G E R A L · P A R A T O D O S\nO novo modelo\nO Provimento representa uma mudança estrutural na forma como o TJPA arrecada, centraliza e destina\nos recursos de penas pecuniárias, alinhando o Tribunal à Resolução CNJ nº 685/2026 e aos programas\nPena Justa e Novos Caminhos.\nTrês dimensões que avançam de forma coordenada\n1\nNormativo-institucional\nFormaliza colegiados e \nfluxos: Conselho Gestor e \nComissão de Apoio.\n2\nTecnológico-financeira\nSubconta única, integrações \ne automação de habilitação e \ncontas.\n3\nHumana\nAdesão e capacitação de \nmagistrados, servidores e do \nTerceiro Setor.\nObjetivo geral do modelo\nCentralização segura dos recursos, automação dos fluxos de habilitação e prestação de contas e\nefetiva utilização dos recursos, com transparência e rastreabilidade de todos os valores\narrecadados. Além da capacitação de todos os públicos envolvidos, sejam usuários internos ou\nexternos\n\nParte 1 · Visão geral\nManual Prático · Valores Penais · TJPA\n05\nV I S Ã O G E R A L · P A R A T O D O S\nO que mudou\nDimensão\nAntes\nDepois\nArrecadação\nContas pulverizadas por vara/comarca, \ncontrole heterogêneo.\nSubconta Centralizadora gerida pelo \nConselho Gestor, com identificação dos \nvalores recolhidos.\nRecolhimento\nDepósitos dispersos nas subcontas das \nvaras.\nGuia de depósito obrigatória, com \ninformações detalhadas, como número\ndo processo e CPF/CNPJ, e repasse\nperíodo dos valores à Subconta\nCentralizadora. \nDestinação\nCritérios variáveis, decisão\ndescentralizada.\nPARE com critérios de relevância social, \nterritorial e distribuição previsível.\nAcesso das \nentidades\nCritérios não padronizados.\nEdital Semestral, Cadastro Único e \ncusto-efetividade.\nPrestação de \ncontas\nDocumentação física dispersa.\nSistema eletrônico para envoi de notas, \nextratos, relatórios e demais\ndocumentos comprobatórios.\nTransparência\nDados não consolidados.\nPortal de Dados Abertos com \nbalancetes mensais (Art. 34).\nRetorno à comarca\nSem regra formal.\n40% dos recursos serão destinados à \natender projetos desenvolvidos na\ncomarca a qual pertence a unidade\narrecadadora."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 1,
+     "ordem": 101,
+     "texto": "Parte 1 · Visão geral\nManual Prático · Valores Penais · TJPA\n06\nV I S Ã O G E R A L · P A R A T O D O S\nGovernança e atores\nAtor\nPapel no modelo\nConselho Gestor\nÓrgão deliberativo com competência para aprovação do PARE, \nhomologação de editais, deliberações sobre seleção e sanções, entre \noutras. \nO Conselho será presidido pelo Presidente do Tribunal, ou por\nDesembargador por ele indicado.\nRito mensal.\nComissão de Apoio\nExecução tática: subsidia o Conselho Gestor sobre os recursos\ndisponíveis, elaboração e publicação de editais, apoia a seleção e \nmonitoramento de projetos e opera o correio eletrônico no SEI. \nRito quinzenal.\nNúcleo de Depósitos\nJudiciais\nEstruturação operacional, migração de saldos e controle financeiro da \nSubconta Centralizadora.\nUnidade Captadora\nVaras criminais, JECRIM e execução penal: fixa a prestação, orienta\naexpedição de guias, participa da seleção e fiscaliza.\nMinistério Público\nParticipa da definição de diretrizes e prioridades e da seleção.\nEntidades (OSC)\nHabilitam-se, propõem e executam projetos e prestam contas.\nMinistério Público\nA participação do MP é institucional e colaborativa e não afasta a competência do Poder\nJudiciário para a destinação, a fiscalização e a prestação de contas, vedadas a vinculação prévia de\nreceitas e a indicação impositiva de beneficiários.\n\nParte 1 · Visão geral\nManual Prático · Valores Penais · TJPA\n05\nV I S Ã O G E R A L · P A R A T O D O S\nGanhos para a sociedade\n• A guia eletrônica elimina à ambiguidade sobre o destino do pagamento e protege o jurisdicionado \nde cobranças indevidas ou extravio.\n• Todos os valores arrecadados passam a ter rastreabilidade completa no processo: desde a origem\naté a prestação de contas acerca da utilização.\n• A utilização de 40% dos recursus no atendimento de projetos desenvolvidos na comarca a qual \npertence a unidade arrecadadora assegura que todas as regiões possuam projetos locais custeados.\n• Os recursos alimentam prioritariamente o Pena Justa e o Novos Caminhos, apoiando a reinserção \nsocial como política de segurança pública.\n• O Cadastro Único e os critérios objetivos ampliam a concorrência qualificada entre as OSC.\n• O Portal de Dados Abertos permite acompanhar, mensalmente, quanto foi arrecadado e para onde \nfoi destinado.\n• A centralização bancária e a proibição de espécie reduzem o risco de manuseio inadequado de \nrecursos públicos.\nObjetivo\nMais transparência, mais controle social e resultado social visível em todas as Regiões Judiciárias\ndo Pará."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "P A R T E 2\nPara o TJPA\nMagistrados, diretores de secretarias, servidores, equipes técnicas e demais colabradores.\nO Q U E V O C Ê I R Á E N C O N T R A R :\n• Unidades captadoras e recolhimento por guia eletrônica\n• Distribuição dos recursos, PARE e prioridades\n• Seleção, alvará e transparência\n• Plano de implementação: fases, indicadores e riscos\n08\n\nParte 2 · TJPA\nManual Prático · Valores Penais · TJPA\n09\nU S O I N T E R N O · T J P A\nUnidades captadoras\nUnidades Captadoras: Varas Criminais, JECRIM e Varas de Execução Penal.\nFluxo de arrecadação\n1\nDecisão / acordo\nA vara captadora fixa a \nprestação e orienta a \nemissão da guia.\n2\nSubconta Centralizadora\nGestão pelo Conselho Gestor.\n3\nRateio regulamentar\n40% comarca de origem · \n60% localidades com baixa\narrecadação.\nTransição (Arts. 19 e 20)\nMigração de 100% dos saldos das comarcas para a Subconta Centralizadora; solicitação de\nbloqueio de novos depósitos nas contas pulverizadas atualmente existentes; projetos em\nexecução terão recursos assegurados e submetidos ao Conselho Gestor.\n\nParte 2 · TJPA\nManual Prático · Valores Penais · TJPA\n10\nU S O I N T E R N O · T J P A\nRecolhimento por guia eletrônica (Art. 9º)\n1\nGerar a guia no site do TJPA. \nAPENADO / SECRETARIA\n2\nPagar exclusivamente na rede bancária oficial, com depósito na Subconta Centralizadora.\nBENEFICIÁRIO\n3\nAcostar o comprovante de pagamento nos autos do processo.\nBENEFICIÁRIO / ADVOGADO\n4\nIdentificar automaticamente os valoes depositados e migrar periodicamente para a \nSubconta Centralizadora.\nNÚLEO DE DEPÓSITOS BANCÁRIOS\nVedação a fluxos informais de caixa (Art. 9º, §§ 5º e 6º)\nÉ terminantemente vedado que qualquer servidor ou magistrado receba valores em espécie. Todo\nrecolhimento deve ser realizado por guia eletrônica, com valores vinculados à Subconta\nCentralizadora e com movimentação apenas por determinação do Conselho Gestor.\n\nParte 2 · TJPA\nManual Prático · Valores Penais · TJPA\n11\nU S O I N T E R N O · T J P A\nPartilha e prioridades (PARE)\nRegra de partilha (Art. 8º, § 1º)\nPercentual\nAplicação\n40% — Comarca de origem\nProjetos locais da comarca arrecadadora, especialmente Pena Justa \ne Novos Caminhos.\n60% — Fundo de equidade\nComarcas com arrecadação inferior a 3% do total do Estado e \nprojetos transversais.\nPrioridades programáticas (Art. 8º) e PARE\nInc.\nPrioridade\nII\nMedidas do Plano Pena Justa ou dos planos estaduais.\nIII\nCentrais Integradas de Alternativas Penais e Atendimento à Pessoa Custodiada.\nIV\nServiços de atenção à egressos (Escritórios Sociais).\nV\nInserção sócio laboral de pessoas privadas de liberdade e egressas.\nPARE e vedação\nO PARE define percentuais mínimos, eixos, metas e indicadores. Os percentuais são\nprogramáticos: não implicam vinculação prévia de receitas nem indicação impositiva de\nbeneficiários."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 1,
+     "ordem": 201,
+     "texto": "Parte 2 · TJPA\nManual Prático · Valores Penais · TJPA\n12\nU S O I N T E R N O · T J P A\nSeleção e liberação\nSeleção por ranking público (Art. 25). Os Juízos captadores e o MP participam da seleção regional, com\ndecisão final do Conselho Gestor (Art. 28).\nItem\nDiretriz obrigatória\nFormalização\nTermo de Fomento/Colaboração: objeto, metas, cronograma físico-\nfinanceiro, integridade e LGPD (Art. 26).\nLevantamento\nAlvará judicial eletrônico do Presidente do Conselho Gestor ou \ndesembargador delegado; parcelável por marcos (Art. 29).\nPagamento\nDireto à conta institucional da entidade, com conciliação automatizada; \nvedado repasse a pessoa física (Art. 27).\nEmprego restrito\nAplicação exclusiva no plano aprovado; sem alteração de objeto sem \nautorização (Arts. 30 e 31).\nMonitoramento e transparência (Arts. 33 a 35)\nO Conselho Gestor pode determinar medidas corretivas, glosa ou restituição, e aplicar sanções. O\nTJPA mantém Portal de Dados Abertos com balancetes mensais (Art. 34).\n\nParte 2 · TJPA\nManual Prático · Valores Penais · TJPA\n13\nU S O I N T E R N O · T J P A\nPlano de implementação\nA implementação segue cinco fases, com prazo de 90 dias para a estruturação inicial (Art. 38).\nFase\nObjetivo central\nPrazo\n1\nEstruturação institucional, normativa e bancária\naté jul/2026\n2\nDesenvolvimento tecnológico e integração\naté 30/09/2026\n3\nPlano de comunicação integrada\naté 31/08/2026\n4\nCapacitação das equipes e da rede de parceiros\naté 30/09/2026\n5\nPublicação do edital e entrada em operação\napós a Fase 4\nCapacitação interna\nWorkshop para magistrados, servidores e assessores das varas criminais, juizados e execução\npenal sobre o Provimento e sua operacionalização.\n\nParte 2 · TJPA\nManual Prático · Valores Penais · TJPA\n14\nU S O I N T E R N O · T J P A\nIndicadores e riscos\nIndicadores de acompanhamento (KPIs)\nIndicador\nMeta\nSaldos das comarcas migrados à Subconta\n100% em 15 dias\nHomologação da guia eletrônica\n≤ 15 dias\nMódulos tecnológicos em produção\naté 31/08\nRegiões Judiciárias no nivelamento\naté 31/08\nOSC capacitadas antes do edital\n≥ 70%\nPrincipais riscos e mitigação\nRisco\nAção de mitigação\nAtraso dos módulos tecnológicos\nSprints quinzenais com pontos de controle e \nescalonamento.\nBaixa adesão às capacitações\nFormato híbrido e reforço pela Coordenadoria de \nComunicação."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "P A R T E 3\nPara as Entidades\nOSC e Entidades beneficiárias.\n• Quem pode receber e quais as vedações\n• Habilitação no módulo eletrônico\n• Como propor projetos após a publicação dos editais\n• Execução e prestação de contas\n15\nO Q U E V O C Ê I R Á E N C O N T R A R :\n\nParte 3 · Entidades\nManual Prático · Valores Penais · TJPA\n16\nU S O E X T E R N O · E N T I D A D E S\nQuem pode receber e vedações\nPodem ser beneficiárias entidades públicas ou privadas com finalidade social, previamente conveniadas\n(Art. 13).\nANPP - entidade indicada pelo Juízo\nNa ANPP, a prestação pecuniária do art. 28-A, IV, do CPP é destinada à entidade indicada pelo\nJuízo competente, observadas as diretrizes legais.\nVedações absolutas (Arts. 14 e 15)\nProibição\nRegra\nCusteio institucional\nPara o Sistema de Justiça (Judiciário, MP, Defensoria).\nPolítico / religioso\nSem fins político-partidários ou condicionamento a atividade religiosa.\nConflito de interesses\nSem entidades cujos dirigentes sejam parentes até 2º grau de \nmagistrado/MP.\nReembolso / recente\nSem despesas anteriores à aprovação; entidade deve ter mais de 1 \nano.\n\nParte 3 · Entidades\nManual Prático · Valores Penais · TJPA\n17\nU S O E X T E R N O · E N T I D A D E S\nComo se habilitar (Art. 24)\nA habilitação é feita no Módulo Eletrônico de Habilitação, de forma automatizada, em quatro etapas:\n1\nCadastro Único\nCNPJ, estatuto, dirigentes, políticas de \nintegridade e LGPD.\n2\nValidação\nConsulta automática a CEIS/CNEP, CADIN, TCE \ne CGU (APIs).\n3\nElegibilidade\nPontuação por critérios e pesos divulgados no \nedital.\n4\nParecer\nParecer eletrônico com trilha de auditoria.\nDocumentos e requisitos\nComprovação de constituição há mais de 1 ano e finalidade social; certidões de regularidade;\nidentificação dos dirigentes. Indeferimentos são motivados, com prazo para saneamento (Art. 24,\n§§ 1º e 2º).\n\nParte 3 · Entidades\nManual Prático · Valores Penais · TJPA\n18\nU S O E X T E R N O · E N T I D A D E S\nComo propor projetos\nAs propostas são inscritas em formulário eletrônico durante o Edital Semestral de Chamada Pública\n(Art. 23), que traz cronograma, pesos e critérios.\nCritérios de avaliação e prioridade\n• Custo-efetividade, impacto social e equidade territorial (desempates objetivos).\n• Alinhamento ao Pena Justa e ao Novos Caminhos.\n• Redução de reincidência; alternativas penais e práticas restaurativas.\n• Atenção a egressos, pessoas vulneráveis e saúde mental.\n• Viabilidade de execução e clareza do plano de trabalho.\nDica de preparação\nÉ importante a participação nas Oficinas de Elaboração e Gestão de Projetos antes de inscrever a\nproposta, serão momentos de aprendizado sobre planejamento orçamentário, execução, boas\npráticas e preparação para a prestação de contas."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 1,
+     "ordem": 301,
+     "texto": "Parte 3 · Entidades\nManual Prático · Valores Penais · TJPA\n19\nU S O E X T E R N O · E N T I D A D E S\nExecução e prestação de contas\nRegras de execução\n• Empregue os recursos exclusivamente no objeto aprovado; não altere objeto ou quantitativo sem \nautorização prévia do Conselho Gestor.\n• O pagamento é feito por alvará eletrônico direto à conta institucional da entidade — vedado a \npessoas físicas.\nPrestação de contas eletrônica (Art. 32)\n• Notas fiscais eletrônicas nominais ao projeto;\n• Extratos bancários para conciliação automatizada;\n• Relatórios físicos e fotográficos de execução das metas.\nComo evitar glosas\nNão incluir despesas fora do objeto, sem nota fiscal ou anteriores à aprovação. Emita notas\ncorretamente e mantenha as evidências físicas.\n\nParte 3 · Entidades\nManual Prático · Valores Penais · TJPA\n20\nU S O E X T E R N O · E N T I D A D E S\nCapacitação e canais de apoio\nOficinas para o Terceiro Setor\nOficina\nFoco\nCarga\n1 · Elaboração e Gestão de Projetos\nCritérios do edital, orçamento e boas \npráticas\n5 h\n2 · Cadastro no Formulário Eletrônico\nPasso a passo, documentos e erros \ncomuns\n3 h\n3 · Prestação de Contas\nNotas, relatórios e prevenção de glosas\n3 h\nOnde tirar dúvidas\n• Página institucional da VEPMA no site do TJPA;\n• Balcão Virtual de atendimento e canais da Comissão de Apoio;\n• Manual Prático, Cartilhas e o FAQ.\n\nPerguntas frequentes\nManual Prático · Valores Penais · TJPA\n21\nV I S Ã O G E R A L · P A R A T O D O S\nPerguntas frequentes\nTJPA\nPosso pagar valores penais em espécie na secretaria?  Não. Todo recolhimento é feito \npor guia eletrônica, com número do processo e CPF/CNPJ.\nTJPA\nMinha comarca perde recursos com a centralização?  Não. A comarca arrecadadora \ntem retorno destinação de 40% dos valores arrecadados; os 60% são redistribuídos\nconforme o PARE.\nENTIDADES\nComo uma organização social acessa os recursos?  Cadastrando-se no Módulo \nEletrônico de Habilitação e participando do Edital Semestral de Chamada Pública.\nTODOS\nComo saber para onde os recursos estão indo?  Pelo Portal de Dados Abertos do TJPA, \nalimentado mensalmente (Art. 34).\nTODOS\nQuem fiscaliza a aplicação dos recursos?  O Conselho Gestor e a Comissão de Apoio, \ncom participação do MP e prestação de contas eletrônica das entidades.\nAinda com dúvidas?\nConsulte a página da VEPMA no site do TJPA, o Balcão Virtual e a Comissão de Apoio; as questões\ne casos omissos são decididos pelo Conselho Gestor (Art. 37).\n\nTribunal de Justiça\ndo Estado do Pará\nConselho Gestor Centralizado\ndos Recursos de Valores Penais\nManual Prático · Gestão e Destinação de Valores Penais\nProvimento Conjunto nº 002/2026-GP/CGJ · Belém (PA), 2026"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 16607,
+    "caracteres_convertidos": 16601,
+    "cobertura": 0.9996
+   }
+  },
+  {
+   "doc_id": "portaria-3189-2026",
+   "titulo": "Portaria nº 3189/2026-GP",
+   "tipo": "norma",
+   "orgao": "TJPA — Gabinete da Presidência",
+   "data": "2026-07-21",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "PODER JUDICIÁRIO\nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ\nCoordenadoria de Expediente e Informacao\n \n \nPORTARIA Nº 3189/2026-GP, DE 21 DE JULHO DE 2026.\nDesigna os membros do Conselho Gestor Centralizado dos Recursos de Valores Penais\n(Conselho Gestor), instituído pelo Provimento Conjunto nº 2/2026-GP/CGJ, de 30 de junho de 2026.\nO Desembargador ROBERTO GONÇALVES DE MOURA, Presidente do Tribunal de\nJustiça do Estado do Pará, no uso de suas atribuições regimentais e legais,\nCONSIDERANDO o Provimento Conjunto nº 2/2026-GP/CGJ, de 30 de junho de 2026,\nque dispõe sobre a atualização das regras de recolhimento, gestão centralizada, governança, priorização\nprogramática, automação de habilitação e prestação de contas de recursos provenientes do cumprimento\nda pena de prestação pecuniária, do acordo de transação penal, do acordo de não persecução penal e da\naceitação da suspensão condicional do processo, conforme as diretrizes estabelecidas pela Resolução CNJ\nnº 558/2024;\nCONSIDERANDO, em especial, o disposto no art. 5º do referido Provimento Conjunto,\nque institui o Conselho Gestor Centralizado dos Recursos de Valores Penais (Conselho Gestor),\nresponsável pela gestão centralizada dos recursos nele disciplinados,\nRESOLVE:"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "Art. 1º DESIGNAR os membros do Conselho Gestor Centralizado dos Recursos de\nValores Penais (Conselho Gestor), instituído pelo art. 5º do Provimento Conjunto nº 2/2026-GP/CGJ, de\n30 de junho de 2026, com a seguinte composição:\nI – Desembargador Luiz Gonzaga da Costa Neto, Vice-Presidente do Tribunal de Justiça\ndo Estado do Pará, que exercerá a coordenação do Conselho Gestor por delegação da Presidência\nII – Desembargadora Maria Elvina Gemaque Taveira, Corregedora-Geral de Justiça do\nTribunal de Justiça do Estado do Pará;\nIII – Desembargador José Roberto Pinheiro Maia Bezerra Junior, Supervisor do Grupo\nde Monitoramento e Fiscalização Carcerária;\nIV – Desembargador Vanderley de Oliveira Silva, Coordenador da Coordenadoria da\nInfância e da Juventude;\nV – Desembargadora Sarah Castelo Branco Monteiro Rodrigues, Coordenadora da\nComissão de Ações Judiciais de Direitos Humanos e Repercussão Social;\nVI – Desembargadora Luana de Nazareth Amaral Henriques Santalices, Coordenadora\nda Coordenadoria Estadual das Mulheres em Situação de Violência Doméstica e Familiar; e\nVII – Miguel Lucivaldo Alves Santos, Secretário de Planejamento, Coordenação e\nFinanças do Tribunal de Justiça do Estado do Pará."
+    },
+    {
+     "artigo": "2",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "Art. 2º Esta Portaria entra em vigor na data de sua publicação.\nPublique-se. Registre-se. Cumpra-se.\nBelém, 21 de julho de 2026.\nPortaria 5458 3189/2026 (0000765022)         SEI 0053830-22.2026.8.14.0900 / pg. 1\nTJPA - Diário da Justiça - Edição nº 8362/2026 - quinta-feira, 23 de julho de 2026\n\n(assinado eletronicamente)\nDesembargador ROBERTO GONÇALVES DE MOURA\nPresidente do Tribunal de Justiça do Estado do Pará\nDocumento assinado eletronicamente por ROBERTO GONCALVES DE MOURA, PRESIDENTE,\nem 22/07/2026, às 21:21, conforme art. 1º, III, \"b\", da Lei 11.419/2006.\nA autenticidade do documento pode ser conferida no site https://www.tjpa.jus.br/sei-autenticador\ninformando o código verificador 0000765022 e o código CRC 6042F0DF.\nPortaria 5458 3189/2026 (0000765022)         SEI 0053830-22.2026.8.14.0900 / pg. 2\nTJPA - Diário da Justiça - Edição nº 8362/2026 - quinta-feira, 23 de julho de 2026"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 3310,
+    "caracteres_convertidos": 3308,
+    "cobertura": 0.9994
+   }
+  },
+  {
+   "doc_id": "portaria-3132-2026",
+   "titulo": "Portaria nº 3132/2026-GP",
+   "tipo": "norma",
+   "orgao": "TJPA — Gabinete da Presidência",
+   "data": "2026-07-21",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "PODER JUDICIÁRIO\nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ\nCoordenadoria de Expediente e Informacao\n \n \nPORTARIA Nº 3132/2026-GP, DE 21 DE JULHO DE 2026.\nDesigna os membros da Comissão de Apoio ao Conselho Gestor da Subconta\nCentralizadora, instituída pelo art. 6º do Provimento Conjunto nº 2/2026-GP/CGJ, de 30 de junho de 2026,\ne dá outras providências.\nO Desembargador ROBERTO GONÇALVES DE MOURA, Presidente do Tribunal de\nJustiça do Estado do Pará, no uso de suas atribuições regimentais e legais,\nCONSIDERANDO o Provimento Conjunto nº 2/2026-GP/CGJ, de 30 de junho de 2026,\nque dispõe sobre a atualização das regras de recolhimento, gestão centralizada, governança, priorização\nprogramática, automação de habilitação e prestação de contas de recursos provenientes do cumprimento\nda pena de prestação pecuniária, do acordo de transação penal, do acordo de não persecução penal e da\naceitação da suspensão condicional do processo, conforme as diretrizes estabelecidas pela Resolução CNJ\nnº 685/2026, e dá outras providências;\nCONSIDERANDO, em especial, o disposto no art. 6º do Provimento Conjunto nº\n2/2026-GP/CGJ, que institui a Comissão de Apoio ao Conselho Gestor da Subconta Centralizadora;\nCONSIDERANDO as indicações constantes do Processo SEI nº 0050764-\n34.2026.8.14.0900, objetivando a formalização institucional dos colegiados e o estabelecimento dos\nprocedimentos operacionais;\nRESOLVE:"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "Art. 1º Designar os(as) servidores(as) abaixo relacionados(as) para compor a Comissão\nde Apoio ao Conselho Gestor da Subconta Centralizadora dos Recursos de Valores Penais, instituída pelo\nart. 6º do Provimento Conjunto nº 2/2026-GP/CGJ, de 30 de junho de 2026:\nI – representantes da Presidência do Tribunal de Justiça do Estado do Pará:\na) Alice Viana Soares Monteiro;\nb) Elias Saldanha Braga;\nII – representantes da Corregedoria-Geral de Justiça:\na) Eliana Conceição Vasques da Silva Pereira;\nb) Maria de Nazaré Rendeiro Saleme;\nIII – representantes da Secretaria de Planejamento, Coordenação e Finanças:\na) Wanda da Penha Sales;\nb) Ingrid da Silva Alencar Silva;\nIV – representante da Coordenadoria Estadual das Mulheres em Situação de Violência\nDoméstica e Familiar:\na) Renata da Mota Giordano;\nV – representante da Coordenadoria Estadual da Infância e da Juventude:\nPortaria 5439 3132/2026-GP (0000764425)         SEI 0050764-34.2026.8.14.0900 / pg. 1\nTJPA - Diário da Justiça - Edição nº 8363/2026 - sexta-feira, 24 de julho de 2026\n\na) France Santos da Cruz;\nVI – representante da Comissão de Ações Judiciais de Direitos Humanos e Repercussão\nSocial:\na) Paulo Victor Ramos Correa;\nVII – representante do Grupo de Monitoramento e Fiscalização do Sistema Carcerário e\nSocioeducativo:\na) Lívia Coimbra Leão de Almeida;\nVIII – representante da Secretaria de Auditoria Interna:\na) Gilson do Carmo Castelo dos Reis."
+    },
+    {
+     "artigo": "2",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "Art. 2º A Comissão de Apoio ao Conselho Gestor da Subconta Centralizadora exercerá\nas atribuições previstas no art. 6º e respectivos parágrafos do Provimento Conjunto nº 2/2026-GP/CGJ, de\n30 de junho de 2026."
+    },
+    {
+     "artigo": "3",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "Art. 3º Esta Portaria entra em vigor na data de sua publicação.\n(assinado eletronicamente)\nDesembargador ROBERTO GONÇALVES DE MOURA\nPresidente do Tribunal de Justiça do Estado do Pará\nDocumento assinado eletronicamente por ROBERTO GONCALVES DE MOURA, PRESIDENTE,\nem 22/07/2026, às 21:23, conforme art. 1º, III, \"b\", da Lei 11.419/2006.\nA autenticidade do documento pode ser conferida no site https://www.tjpa.jus.br/sei-autenticador\ninformando o código verificador 0000764425 e o código CRC 9B6B3EA3.\nPortaria 5439 3132/2026-GP (0000764425)         SEI 0050764-34.2026.8.14.0900 / pg. 2\nTJPA - Diário da Justiça - Edição nº 8363/2026 - sexta-feira, 24 de julho de 2026"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 3670,
+    "caracteres_convertidos": 3667,
+    "cobertura": 0.9992
+   }
+  },
+  {
+   "doc_id": "portaria-001-2026",
+   "titulo": "Portaria nº 001/2026 — Delegação de Competências",
+   "tipo": "norma",
+   "orgao": "TJPA — SEFIN",
+   "data": "2026-01-01",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "VICE-PRESIDÊNCIA\nPORTARIA Nº 001/2026 – CGCVP, DE 30 DE JULHO DE 2026.\nDispõe sobre a delegação de competência ao Secretário de Planejamento, Coordenação e Finanças do\nTribunal de Justiça do Estado do Pará para a restituição à Vara de Origem de valores destinados\ndiretamente à vítima e seus dependentes, nos termos da Resolução CNJ Nº 685/2026 e do Provimento\nConjunto nº 2/2026-GP/CGJ .\nO PRESIDENTE DO CONSELHO GESTOR CENTRALIZADO DOS RECURSOS DE VALORES\nPENAIS DO TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ , instituído pelo Provimento Conjunto nº\n2/2026 – GP/CGJ, no uso de suas atribuições delegadas pela Portaria nº 3189/2026 – GP, de 21 de julho\nde 2026.\nCONSIDERANDO o disposto no art. 13 c/c o art. 37 do Provimento Conjunto nº 002/2026-GP/CGJ, que\ndisciplina a destinação de valores decorrentes da pena de prestação pecuniária, acordo de transação\npenal, acordo de não persecução penal e aceitação da suspensão condicional do processo;\nCONSIDERANDO a necessidade de assegurar a celeridade, a eficiência e a desburocratização dos atos\nadministrativos no âmbito da gestão dos recursos penais vinculados à Subconta Centralizadora;\nCONSIDERANDO a relevância da restituição ágil dos valores devidos diretamente às vítimas de crimes e\na seus dependentes, garantindo a efetiva reparação dos danos sofridos;\nRESOLVE:"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "Art. 1º Delegar competência ao Secretário de Planejamento, Coordenação e Finanças do Tribunal de\nJustiça do Estado do Pará (SEFIN) para autorizar e operacionalizar a restituição, às Varas de Origem\n(unidades captadoras), dos recursos arrecadados e depositados na Subconta Centralizadora que forem\ndestinados diretamente à vítima ou aos seus dependentes, conforme preconizado no caput do art. 13 c/c o\nart. 37 do Provimento Conjunto nº 002/2026-GP/CGJ."
+    },
+    {
+     "artigo": "2",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "Art. 2º A restituição dos valores referidos no art. 1º será efetuada mediante solicitação formal do Juízo\nprolator da decisão ou responsável pela execução, devidamente instruída com a indicação precisa do\nprocesso judicial, valor e identificação do beneficiário."
+    },
+    {
+     "artigo": "3",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "Art. 3º A Secretaria de Planejamento, Coordenação e Finanças (SEFIN) apresentará periodicamente ao\nConselho Gestor Centralizado dos Recursos de Valores Penais relatório sintético das restituições\nrealizadas com base nesta delegação."
+    },
+    {
+     "artigo": "4",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 400,
+     "texto": "Art. 4º Esta Portaria entra em vigor na data de sua publicação. Publique-se, registre-se e cumpra-se.\nBelém, 30 de julho de 2026.\nDESEMBARGADOR LUIZ GONZAGA DA COSTA NETO\nVice- Presidente do Tribunal de Justiça do Estado do Pará Presidente do Conselho Gestor Centralizado\ndos Recursos de Valores Penais\nTJPA - Diário da Justiça - Edição nº 8373/2026 - quinta-feira, 6 de agosto de 2026\n8"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 2650,
+    "caracteres_convertidos": 2646,
+    "cobertura": 0.9985
+   }
+  },
+  {
+   "doc_id": "resolucao-cnj-558-2024",
+   "titulo": "Resolução CNJ nº 558/2024",
+   "tipo": "norma_cnj",
+   "orgao": "Conselho Nacional de Justiça",
+   "data": "2024-05-06",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [
+    "resolucao-cnj-685-2026"
+   ],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "Texto compilado a partir da redação dada \npela Resolução n. 559/2024. \n \n \n \nRESOLUÇÃO No 558, DE 6 DE MAIO DE 2024. \n \n \nEstabelece diretrizes para a gestão e \ndestinação de valores e bens oriundos de \npena de multa, perda de bens e valores e \nprestações pecuniárias decorrentes de \ncondenações \ncriminais, \ncolaboração \npremiada, acordos de leniência e acordos \nde cooperação internacional no âmbito do \nPoder Judiciário e dá outras providências. \n \n \nO PRESIDENTE DO CONSELHO NACIONAL DE JUSTIÇA, \n(CNJ) no uso de suas atribuições legais e regimentais, \nCONSIDERANDO a Resolução CNJ nº 101/ 2009, que definiu a política \ninstitucional do Poder Judiciário na execução de penas e medidas alternativas à prisão; \nCONSIDERANDO a necessidade de disciplinar de forma estreita as \ndestinações, controle e aplicação de valores oriundos de penas pecuniárias, espécie de \npena restritiva de direitos, inclusive para incremento de confiabilidade geral no sistema \npenal, assegurando a publicidade e transparência na destinação dos aludidos recursos; \nCONSIDERANDO as disposições da Lei Complementar nº 79/1994 e \nda Lei nº 13.756/2018, bem como as alterações promovidas pelas Leis nº \n13.840/2019 e 13.886/2019 quanto à gestão de ativos apreendidos em processos \ncriminais; \nCONSIDERANDO as \ndisposições \ndas \nLeis \nnº \n12.850/2013, 9.613/1998 e 11.343/2006; \nCONSIDERANDO a necessidade de melhor disciplinar a destinação de \nbens e valores oriundos de colaboração premiada, acordos de leniência e de cooperação \ninternacional; \nCONSIDERANDO as disposições do Manual de Orientações sobre \nRecolhimentos de Receitas e do Manual de Orientação para Avaliação e Alienação \nCautelar e Definitiva de Bens, ambos do Ministério da Justiça e Segurança Pública \n(MJSP);"
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 1,
+     "ordem": 1,
+     "texto": "CONSIDERANDO a necessidade de se efetivar a alienação em caráter \ncautelar e, com isso, evitar a deterioração e a consequente perda de valor econômico dos \nativos apreendidos; \nCONSIDERANDO o encargo dos magistrados, juízes de primeiro ou \nsegundo grau, em cada caso, de prover proteção, manutenção e oportuna restituição ou \ndestinação desses bens; \nCONSIDERANDO a necessidade de unificar a normatização sobre \ndestinação de valores oriundos de pena de prestação pecuniária, alienação de bens \napreendidos em procedimentos criminais, antes reguladas pelas Resoluções CNJ nº \n154/2012 e 356/2020, bem como de bens e valores oriundos de colaboração premiada, \nacordos de leniência e de cooperação internacional; \nCONSIDERANDO as decisões proferidas pelo Supremo Tribunal \nFederal na Ação Direta de Inconstitucionalidade nº 3.150/DF e na Ação Direta de \nInconstitucionalidade nº 2.935/ES; \nCONSIDERANDO a decisão cautelar proferida na Arguição de \nDescumprimento de Preceito Fundamental nº 569/DF, em trâmite no Supremo Tribunal \nFederal; \nCONSIDERANDO o Acordo de Cooperação Técnica celebrado em \nagosto de 2020, sob a coordenação do Supremo Tribunal Federal, do Ministério Público \nFederal, da Controladoria-Geral da União, da Advocacia-Geral da União, do MJSP e do \nTribunal de Contas da União em matéria de combate à corrupção no Brasil, especialmente \nem relação aos acordos de leniência da Lei nº 12.846/2013; \nCONSIDERANDO, por fim, a decisão do Plenário do CCNJ, tomada no \njulgamento do Ato nº 0002324-55.2021.2.00.0000, na 6ª Sessão Virtual, finalizada em 26 \nde abril de 2024; \n  \nRESOLVE: \n  \nCAPÍTULO I \nDAS DISPOSIÇÕES GERAIS"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "Art. 1º A gestão e destinação de valores e bens oriundos de pena de multa, \nde perda de bens e valores, inclusive por alienação antecipada de bens apreendidos, \nsequestrados ou arrestados, de condenações a prestações pecuniárias em procedimentos \ncriminais, de colaboração premiada, acordos de leniência e acordos de cooperação \ninternacional, no âmbito do Poder Judiciário, observarão as disposições legais aplicáveis \ne as diretrizes previstas nesta Resolução."
+    },
+    {
+     "artigo": "2",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "Art. 2º O manejo e a destinação dos bens e recursos públicos serão \nnorteados pelos princípios da legalidade, impessoalidade, moralidade, publicidade, \neficiência e demais princípios que regem a Administração Pública. \n  \nCAPÍTULO II \nDA PENA DE MULTA"
+    },
+    {
+     "artigo": "3",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 3",
+      "§ 4"
+     ],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "Art. 3º A pena de multa consiste na obrigação de pagamento de quantia \nem dinheiro fixada em sentença penal condenatória, aplicada de modo autônomo ou \ncumulativo a uma pena privativa de liberdade ou restritiva de direitos, e destinada ao \nFundo Penitenciário Nacional, criado pela Lei Complementar nº 79/ 1994, ou ao Fundo \nPenitenciário da respectiva Unidade da Federação, a depender da competência para os \ncrimes julgados, conforme requerimento do Ministério Público, nos termos do art. 49 do \nCódigo Penal. \n§ 1º Transitada em julgado a sentença condenatória, o Juízo competente \npara a execução penal intimará o Ministério Público para, em observância ao rito e aos \nprazos da Lei nº 6.830/1980, promover a execução da multa por meio judicial ou mediante \nprotesto extrajudicial, observado o procedimento descrito pelos arts. 164 e seguintes da \nLei de Execução Penal, bem como a Recomendação CNMP nº 99/2023. \n§ 2º Em caso de recolhimento de qualquer valor a título de fiança no curso \ndo mesmo processo, depois do pagamento das custas, da indenização do dano e da \nprestação pecuniária, a quantia será abatida na multa, com a cobrança apenas do restante, \nse houver. \n§ 3º O disposto neste artigo não prejudica a destinação prevista em \nlegislação penal especial. \n§ 4º Na aplicação deste artigo, serão observadas as disposições legais e \nregulamentares do CNJ acerca da cobrança de dívidas fazendárias de pequeno valor, bem \ncomo a jurisprudência dominante sobre a viabilidade de extinção da punibilidade \nindependentemente de pagamento da multa penal, quando comprovada a impossibilidade \nde fazê-lo. \n  \nCAPÍTULO III \nDAS PRESTAÇÕES PECUNIÁRIAS DECORRENTES DE CONDENAÇÃO \nCRIMINAL"
+    },
+    {
+     "artigo": "4",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 400,
+     "texto": "Art. 4º Para fins desta Resolução, a prestação pecuniária corresponde a \numa pena restritiva de direitos e consiste no pagamento em dinheiro à vítima, a seus \ndependentes ou à entidade pública ou privada com destinação social, de importância \nfixada pelo juiz."
+    },
+    {
+     "artigo": "5",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 500,
+     "texto": "Art. 5º Na execução da pena de prestação pecuniária, os valores pagos \ndeverão ser recolhidos em conta judicial vinculada à unidade gestora, com movimentação \napenas mediante determinação judicial, vedado o recolhimento em espécie em cartório \nou secretaria."
+    },
+    {
+     "artigo": "6",
+     "paragrafos": [
+      "§ 1",
+      "§ 2"
+     ],
+     "parte": 0,
+     "ordem": 600,
+     "texto": "Art. 6º Nos casos em que a destinação de valores couber ao Poder \nJudiciário, os recursos oriundos de prestação pecuniária, quando não destinados à vítima \nou aos seus dependentes, serão preferencialmente destinados à entidade pública ou \nprivada com finalidade social, previamente conveniada, ou para atividades de caráter \nessencial à segurança pública, educação e saúde, desde que estas atendam às áreas vitais \nde relevante cunho social, a critério da unidade gestora. \n§ 1º A receita da conta vinculada deverá financiar projetos apresentados \npelos beneficiários citados no caput deste artigo, priorizando-se o repasse desses valores \naos beneficiários que: \nI – mantenham, por maior tempo, número expressivo de cumpridores de \nprestação de serviços à comunidade ou entidade pública, especialmente aquelas \norganizações sociais inseridas em contexto de extrema pobreza; \nII – atuem diretamente na execução penal, assistência à ressocialização de \napenados, assistência às vítimas de crimes e prevenção da criminalidade, incluídos os \nconselhos da comunidade; \nIII – sejam parceiros ou integrantes do Programa Novos Caminhos \n(Resolução CNJ nº 543/2024) ou de programa similar de apoio à desinstitucionalização \nde crianças e adolescentes acolhidos e a egressos de unidades de acolhimento; \nIV – prestem serviços de maior relevância social; \nV – apresentem projetos com viabilidade de implementação, segundo a \nutilidade e a necessidade, obedecendo-se aos critérios estabelecidos nas políticas públicas \nespecíficas;  \nVI – realizem atividades que visem à garantia de direitos de adolescentes \napós o cumprimento de medida socioeducativa e ao fortalecimento dos vínculos \nfamiliares e comunitários, de acordo com as diretrizes do CNJ; \nVII – executem projetos de prevenção e/ou atendimento a situações de \nconflitos, crimes e violências e que sejam baseados em princípios e práticas da Justiça \nRestaurativa no sistema criminal, inclusive para pessoas em execução penal em meio \naberto, pré-egressas e egressas; \nVIII – se dediquem ao fortalecimento do serviço de avaliação e \nacompanhamento de medidas terapêuticas aplicáveis à pessoa com transtorno mental em \nconflito com a lei, especialmente por meio da Equipe de Avaliação e Acompanhamento \ndas Medidas Terapêuticas Aplicáveis à Pessoa com Transtorno Mental em Conflito com \na Lei (EAP) ou equipe conectora; e"
+    },
+    {
+     "artigo": "6",
+     "paragrafos": [
+      "§ 1",
+      "§ 2"
+     ],
+     "parte": 1,
+     "ordem": 601,
+     "texto": "IX – atuem em projetos temáticos sobre o uso de álcool e outras drogas – \ndesenvolvidos por entidades devidamente registradas nos órgãos públicos de controle \ncompetentes – e adotem metodologias compatíveis com a Lei nº 10.216/2001 e \na Resolução CNJ nº 487/2023, desde que se respeitem a voluntariedade e as diversidades \nculturais, religiosas e de crença das pessoas envolvidas, com prioridade ao atendimento \nna Rede da Atenção Psicossocial. \n§ 2º A receita da conta vinculada também poderá financiar projetos \nespecíficos apresentados pelo Poder Público da União, dos estados ou dos municípios nas \nhipóteses descritas no caput deste artigo."
+    },
+    {
+     "artigo": "7",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 700,
+     "texto": "Art. 7º É vedada a destinação de recursos para: \nI – custeio das instituições do Sistema de Justiça, inclusive Poder \nJudiciário, Ministério Público e Defensoria Pública; \nII – promoção pessoal de membros e servidores de quaisquer dos Poderes, \ndo Ministério Público, da Defensoria Pública ou integrantes das entidades beneficiadas; \nIII – pagamento de remuneração fixa por cargos de gestão e direção aos \nmembros da diretoria das entidades beneficiadas, podendo estes receber apenas pelas \nhoras prestadas na execução direta da atividade-fim do projeto, desde que devidamente \ncomprovadas; \nIV – fins político-partidários; \nV – entidades que não estejam regularmente constituídas há mais de 1 (um) \nano; \nVI – entidades que condicionem ou vinculem o serviço prestado à \nconversão religiosa ou ao exercício de atividades de cunho religioso; e \nVII – entidades cujos membros, sócios, associados ou dirigentes sejam o \nmagistrado ou o membro do Ministério Público vinculado à unidade judicial competente \npara a disponibilização de recursos, ou seus cônjuges, companheiros e parentes em linha \nreta, colateral ou por afinidade até o segundo grau. \nParágrafo único. Também não poderão ser destinados recursos a entidades \npúblicas ou privadas: \na) em que membros e servidores do tribunal, do respectivo Ministério \nPúblico ou da respectiva Defensoria Pública tenham qualquer ingerência, ainda que \ninformal, na constituição ou administração da entidade ou na utilização de receitas, \nmesmo que para fins de patrocínio de eventos, projetos ou programas alinhados a metas \ninstitucionais; \nb) de cujas atividades possa decorrer, de qualquer forma e mesmo que \nindiretamente, promoção pessoal de membros e servidores do Poder Judiciário, do \nMinistério Público, da respectiva Defensoria Pública ou de seus cônjuges, companheiros \ne parentes em linha reta, colateral ou por afinidade até o segundo grau."
+    },
+    {
+     "artigo": "8",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 800,
+     "texto": "Art. 8º Cabe à unidade gestora encaminhar à instituição financeira estadual \nou federal os dados do processo, entendidos como número da autuação, comarca, vara e \nnome do réu, para a realização do depósito judicial, que será feito pelo cumpridor, na \nforma e periodicidade fixada pelo juízo, se em mais de uma prestação."
+    },
+    {
+     "artigo": "9",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 900,
+     "texto": "Art. 9º O manejo e a destinação desses recursos públicos serão norteados \npelos princípios constitucionais da Administração Pública e condicionados à adequada \nprestação de contas perante a unidade gestora, sob pena de responsabilidade."
+    },
+    {
+     "artigo": "10",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1000,
+     "texto": "Art. 10. O credenciamento das entidades públicas ou privadas e dos \nrespectivos projetos a serem custeados pelos valores oriundos das penas de prestações \npecuniárias será realizado por meio de editais públicos, com ampla divulgação e \nobedecendo aos princípios citados no artigo anterior, além das diretrizes contidas nos arts. \n6º e 7º desta Resolução."
+    },
+    {
+     "artigo": "11",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 3"
+     ],
+     "parte": 0,
+     "ordem": 1100,
+     "texto": "Art. 11. Os tribunais poderão criar, nas suas estruturas administrativas \ninternas, comitês e instância específica, ou designar órgãos já existentes para fazer o \ncredenciamento geral e periódico de entidades aptas a serem beneficiadas pelos recursos \ndecorrentes de penas de prestação pecuniária, com a construção de lista disponível a todas \nas varas com competência criminal, a fim de facilitar a escolha e a destinação equitativa \ndos valores, considerados critérios de pluralidade e impacto social. \n§ 1º Os órgãos ou comitês citados no caput poderão contar com \nparticipação de membros do Ministério Público, da Defensoria Pública e da sociedade \ncivil, na forma regulamentada por cada tribunal, além do apoio da equipe multidisciplinar. \n§ 2º O Grupo de Monitoramento e Fiscalização será convidado a participar \ndo órgão ou comitê acima referido, com a possibilidade de indicar membro para integrá-\nlo. \n§ 3º Nos tribunais em que não haja comitê específico ou órgão designado, \na elaboração dos editais e o posterior credenciamento ficarão a cargo das varas \nresponsáveis pela execução da pena de prestação pecuniária, com a supervisão da \ncorregedoria do tribunal, conforme a regulamentação interna."
+    },
+    {
+     "artigo": "12",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1200,
+     "texto": "Art. 12. Os tribunais divulgarão periodicamente, em seus sítios eletrônicos \ne com acesso público, o montante dos valores arrecadados a título de pena de prestação \npecuniária, as entidades e projetos favorecidos."
+    },
+    {
+     "artigo": "13",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1300,
+     "texto": "Art. 13. As entidades beneficiadas prestarão contas da utilização dos \nvalores na forma contida nos editais de credenciamento e ficam sujeitas, tanto pessoas \nfísicas como jurídicas, gestoras dessas entidades, nas sanções administrativas, civis ou \npenais decorrentes do uso inadequado dos valores recebidos, assim considerado: \nI – o extravio de valores; \nII – o pagamento a pessoas, por bens ou por serviços diversos dos \nconstantes no convênio realizado com o tribunal, salvo quando autorizado previamente \npor este, em situações excepcionais devidamente registradas no ato da prestação de \ncontas; e \n\n \nIII – a modificação do escopo e público-alvo do projeto, salvo quando \nautorizado previamente pelo tribunal, em situações excepcionais devidamente registradas \nno ato da prestação de contas. \nParágrafo único. A homologação da prestação de contas ocorrerá na forma \ndisciplinada por cada tribunal, ouvidos a equipe multidisciplinar que atua junto ao juízo \ncompetente para a execução da medida de prestação pecuniária, o Ministério Público, a \nDefensoria Pública e o órgão ou comitê específico de que trata o art. 11, onde houver."
+    },
+    {
+     "artigo": "14",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1400,
+     "texto": "Art. 14. Caberá aos tribunais, no prazo de 6 (seis) meses contados da \npublicação desta Resolução, regulamentar: \nI – os procedimentos atinentes à elaboração e à publicação de editais para \ncadastramento, apresentação e aprovação de projetos de entidades públicas ou privadas \ncom destinação social, interessadas em executar ações a que se destinam os valores da \nmedida de prestação pecuniária; \nII – a forma de publicidade a ser adotada pelo tribunal, para garantir a \ntransparência da regulamentação e da destinação de valores; \nIII – a forma de prestação de contas pelas entidades conveniadas perante a \nunidade gestora; e \nIV – outras condições eventualmente necessárias, observadas as \npeculiaridades locais."
+    },
+    {
+     "artigo": "14",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1500,
+     "texto": "Art. 14-A. Eventual transferência à Defesa Civil dos recursos de que trata \no art. 6º, independentemente de prévio credenciamento, ocorrida enquanto durarem os \nefeitos de estado de calamidade pública formalmente decretada por ato do Poder \nExecutivo Federal, Estadual ou Municipal, deverá ser objeto de prestação de contas \ndiretamente pela entidade beneficiada ao respectivo Tribunal de Contas. (incluído pela \nResolução n. 559, de 10.5.2024)  \n  \nCAPÍTULO IV \nDA PERDA DE BENS E VALORES  \nSeção I \nDa Perda de Bens e Valores como Efeito da Condenação e Provenientes de Acordo \nde Colaboração Premiada"
+    },
+    {
+     "artigo": "15",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1600,
+     "texto": "Art. 15. A perda de bens, valores e ativos que sejam produtos, proveito ou \ninstrumentos do crime consiste em efeito secundário da condenação penal, previsto \nnos arts. 91 e 91-A do Código de Processo Penal e na legislação penal especial."
+    },
+    {
+     "artigo": "16",
+     "paragrafos": [
+      "§ 2"
+     ],
+     "parte": 0,
+     "ordem": 1700,
+     "texto": "Art. 16. Os valores que sejam produto ou proveito do crime e os recursos \nprovenientes da alienação de bens e direitos cuja perda tenha sido decretada serão \n\n \ndestinados ao Fundo Penitenciário Nacional ou Estadual, ouvido o Ministério Público, \nconforme os arts. 91 do Código Penal, 133, § 2º, do Código de Processo Penal e 2º, IV, \nda Lei Complementar nº 79/1994."
+    },
+    {
+     "artigo": "17",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1800,
+     "texto": "Art. 17. Os valores ou bens provenientes de acordo de colaboração \npremiada – art. 4º, inciso IV, da Lei nº 12.850/2013 – serão destinados à União, caso não \nhaja vinculação legal expressa e ressalvado o interesse de outras entidades lesadas."
+    },
+    {
+     "artigo": "18",
+     "paragrafos": [
+      "§ 1"
+     ],
+     "parte": 0,
+     "ordem": 1900,
+     "texto": "Art. 18. Haverá perda dos bens, direitos e valores relacionados, direta ou \nindiretamente, à prática dos crimes previstos na Lei nº 9.613/1998 em favor da União – e \ndos Estados, nos casos de competência da Justiça estadual –, observado o disposto no art. \n7º, inciso I, e § 1º, da referida Lei."
+    },
+    {
+     "artigo": "19",
+     "paragrafos": [
+      "§ 1"
+     ],
+     "parte": 0,
+     "ordem": 2000,
+     "texto": "Art. 19. Os bens, direitos ou valores apreendidos em decorrência dos \ncrimes tipificados na Lei nº 11.343/2006, ouvido o Ministério Público, serão revertidos \nao Fundo Nacional Antidrogas, conforme o disposto no art. 63, I e § 1º, da referida Lei \nnº 11.343/2006 e no art. 4º da Lei nº 7.560/1986."
+    },
+    {
+     "artigo": "20",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2100,
+     "texto": "Art. 20. Os recursos provenientes de bens móveis e imóveis apreendidos \nou sequestrados em decorrência das atividades criminosas perpetradas por milicianos \nserão destinados, ouvido o Ministério Público, ao Fundo Nacional de Segurança Pública, \nem atenção ao art. 3º da Lei nº 13.756/2018."
+    },
+    {
+     "artigo": "21",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2200,
+     "texto": "Art. 21. A destinação dos produtos e instrumentos de crimes ambientais \nobservará o disposto no art. 25 da Lei nº 9.605/1998."
+    },
+    {
+     "artigo": "22",
+     "paragrafos": [
+      "§ 12",
+      "§ 1"
+     ],
+     "parte": 0,
+     "ordem": 2300,
+     "texto": "Art. 22. Nos autos em que existam bens e ativos apreendidos ou que sejam \nobjeto de medida assecuratória, cabe ao juízo com competência criminal: \nI – manter, desde a data da efetiva apreensão, arresto ou sequestro, rigoroso \nacompanhamento do estado da coisa ou bem, diretamente ou por depositário formalmente \ndesignado, sob responsabilidade; \nII – ordenar o registro e averbações necessárias dos bens apreendidos, \narrestados ou sequestrados nos respectivos órgãos de registro, nos termos dos arts. 837 e \n844 do Código de Processo Civil e do § 12 do art. 61 da Lei nº 11.343/2006, alterada \npela Lei nº 13.840/2019; \nIII – intimar o Ministério Público para realizar busca ativa e restituição do \nbem apreendido à vítima, quando cabível e na medida das possibilidades; \nIV – providenciar, no prazo de trinta dias contados da apreensão, do arresto \nou do sequestro de bens, ouvido o Ministério Público, a alienação antecipada dos ativos \napreendidos em processos criminais, nos termos do § 1º do art. 61 da Lei nº 11.343/2006, \nalterada pela Lei nº 13.840/2019; \nV – decidir, no prazo de trinta dias contados da apreensão, arresto ou \nsequestro de bens, ouvido o Ministério Público, sobre o cabimento da alienação \nantecipada dos bens e ativos apreendidos ou que sejam objeto de medida assecuratória, \nnos termos do art. 144-A do CPP; \n\n \nVI – determinar o depósito das importâncias de valores referentes ao \nproduto da alienação ou relacionados a numerários apreendidos ou que tenham sido \nconvertidos, desde que sujeitos a perdimento em favor da União; \nVII – determinar, ouvido o Ministério Público, a devida destinação dos \nvalores depositados em contas vinculadas ao juízo antes do arquivamento dos autos; e \nVIII – registrar expressamente na sentença a existência da decretação do \nperdimento dos bens móveis e imóveis, bem como a apreensão de bens, direitos e valores, \nquando relacionados a atividades criminosas perpetradas por milicianos ou relacionadas \nao tráfico de drogas."
+    },
+    {
+     "artigo": "23",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2400,
+     "texto": "Art. 23. O produto da alienação depositado em conta vinculada ao juízo, \napós a decisão condenatória final do processo ou conforme dispuser lei específica, será \nconvertido em renda para a União, observando-se a sistemática e os códigos de \nrecolhimento divulgados no portal eletrônico do CNJ."
+    },
+    {
+     "artigo": "24",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2500,
+     "texto": "Art. 24. Em caso de alienação ou destinação de veículos automotores, o \njuízo deverá providenciar, antes da entrega do bem, a baixa de eventual registro de \nbloqueio no sistema Renajud, caso tenha sido efetivado."
+    },
+    {
+     "artigo": "25",
+     "paragrafos": [
+      "§ 1",
+      "§ 2",
+      "§ 3",
+      "§ 4"
+     ],
+     "parte": 0,
+     "ordem": 2600,
+     "texto": "Art. 25. A alienação antecipada de ativos será realizada preferencialmente \npor meio de leilões unificados, que poderão ser organizados pelo próprio juízo ou por \ncentrais de alienação criadas para tal fim, na primeira e na segunda instância, ou ainda \npor meio de adesão a procedimento de alienação promovido peloMJSP. \n§ 1º Os tribunais poderão criar cadastro de pessoas físicas ou jurídicas \nadministradoras de bens, com comprovada experiência na área de gestão do bem ou \nestabelecimento empresarial apreendido, objetivando a gestão até a alienação pelo Poder \nJudiciário, ou aderir ao procedimento do órgão gestor de ativos pertencente à estrutura do \nMJSP com essa finalidade. \n§ 2º Optando o juízo pelo encaminhamento dos bens e ativos apreendidos \nou sobre os quais recaia alguma medida assecuratória para alienação pelo MJSP, esta será \nconduzida por leiloeiros contratados por aquele Ministério, aptos a leiloar todos os tipos \nde ativos, incluindo bens imóveis, ativos biológicos e fundos de comércio, após gestão \nempresarial executada por profissionais indicados pelo Conselho Federal de \nAdministração ao Poder Judiciário, por intermédio de acordo firmado pelo MJSP. \n§ 3º Enquanto não houver a integração entre sistemas do Poder Judiciário \ne do MJSP, a utilização dos leiloeiros, e de acordos firmados com outras instituições, \ndeverá ser solicitada ao MJSP, mediante o preenchimento, no Sistema Eletrônico de \nInformações (SEI) do MJSP, do formulário de peticionamento eletrônico denominado \n\"SENAD: Pedido Judicial de Alienação de Bens Apreendidos\". \n§ 4º Aderindo o juízo ao procedimento de alienação promovido pelo \nMJSP, o envio de documentos ao referido órgão ocorrerá mediante peticionamento \neletrônico no SEI, devendo ser observado o Manual de Orientações sobre Recolhimentos \nde Receitas Relacionadas a Fundos Geridos pelo MJSP, disponibilizados na página do \nMinistério na internet."
+    },
+    {
+     "artigo": "26",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 2700,
+     "texto": "Art. 26. O juízo deverá determinar, no ato do perdimento ou antes do \nencaminhamento dos bens à alienação, independentemente se por meio da central de \nalienação ou do MJSP, as seguintes providências: \nI – às Secretarias de Fazenda e aos órgãos de registro e controle, que \nefetuem as averbações necessárias, caso não tenham sido realizadas por ocasião da \napreensão; \nII – aos cartórios de registro de imóveis, ao proferir a sentença em que \ndetermine o perdimento, que realizem o registro da propriedade em favor da União, nos \ntermos do caput e do parágrafo único do art. 243 da Constituição Federal, afastada a \nresponsabilidade de terceiros prevista no inciso VI do caput do art. 134 do Código \nTributário Nacional; e \nIII – à Secretaria de Coordenação e Governança do Patrimônio da União, \nao proferir a sentença em que determine o perdimento, que proceda à incorporação e \nentrega do imóvel, tornando-o livre e desembaraçado de quaisquer ônus para destinação. \nParágrafo único. Na decisão ou sentença de que trata o caput, deverá \nconstar de forma destacada que eventuais multas, encargos ou tributos pendentes de \npagamento não podem ser cobrados do arrematante ou do órgão público alienante como \ncondição para regularização dos bens, sem prejuízo de execução fiscal em relação ao \nantigo proprietário."
+    },
+    {
+     "artigo": "27",
+     "paragrafos": [
+      "§ 1"
+     ],
+     "parte": 0,
+     "ordem": 2800,
+     "texto": "Art. 27. A consulta ao MJSP, em atenção ao art. 62, § 1º-A, da Lei nº \n11.343/2006, quanto às indicações de órgãos de polícia judiciária, militar e rodoviária que \npoderão fazer uso de bens apreendidos, deverá ser feita diretamente no sítio eletrônico do \nMJSP na internet. \n  \nSeção II \nDa Pena Restritiva de Perda de Bens e Valores"
+    },
+    {
+     "artigo": "28",
+     "paragrafos": [
+      "§ 3"
+     ],
+     "parte": 0,
+     "ordem": 2900,
+     "texto": "Art. 28. Os bens e valores cuja perda decorra de pena restritiva de direitos \nprevista no art. 43, II, do Código Penal serão destinados, ressalvada a legislação penal \nespecial, ao Fundo Penitenciário Nacional, nos termos do art. 45, § 3º, do mencionado \nCódigo. \n  \nCAPÍTULO V \nDO ACORDO DE LENIÊNCIA"
+    },
+    {
+     "artigo": "29",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3000,
+     "texto": "Art. 29. Os recursos decorrentes de acordos de leniência firmados no \nâmbito da responsabilização judicial prevista no art. 19 da Lei nº 12.846/2013 têm \nnatureza indenizatória, cabendo ao juízo zelar para que sejam destinados ao ressarcimento \ndo ente público lesado."
+    },
+    {
+     "artigo": "30",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3100,
+     "texto": "Art. 30. Os recursos decorrentes de acordos de leniência firmados com \nfundamento no art. 20 da Lei nº 12.846/2013 têm natureza sancionatória, cabendo ao \njuízo zelar para que sejam destinados à União."
+    },
+    {
+     "artigo": "31",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3200,
+     "texto": "Art. 31. A destinação dos recursos decorrentes de acordo de leniência, em \nqualquer hipótese, ocorrerá após a necessária instrução probatória, assegurado o \ncontraditório e a ampla defesa. \n  \nCAPÍTULO VI \nDO ACORDO DE COOPERAÇÃO INTERNACIONAL"
+    },
+    {
+     "artigo": "32",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3300,
+     "texto": "Art. 32. Aplicam-se as disposições dos capítulos anteriores aos acordos de \ncooperação internacionais, conforme a natureza jurídica dos bens e valores que sejam \nobtidos. \n  \nCAPÍTULO VII \nDAS DISPOSIÇÕES FINAIS"
+    },
+    {
+     "artigo": "33",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3400,
+     "texto": "Art. 33. Esta Resolução não se aplica a prestações pecuniárias, bens e \nvalores depositados, apreendidos ou renunciados como condição para celebração de \ntransações penais, suspensão condicional do processo e acordos de não persecução penal."
+    },
+    {
+     "artigo": "34",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3500,
+     "texto": "Art. 34. Em quaisquer hipóteses de destinação de bens e valores à União \nprevistas nesta Resolução, fica vedada a distribuição de maneira vinculada, estabelecida \nou determinada pelo Ministério Público, por termos de acordo firmado entre este e o \nresponsável pagador, ou por determinação do órgão jurisdicional em que tramita o \nprocedimento."
+    },
+    {
+     "artigo": "35",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3600,
+     "texto": "Art. 35. O Corregedor Nacional de Justiça apreciará as questões \ncontrovertidas ou proposições decorrentes da aplicação desta Resolução, podendo editar \ninstruções complementares e sobre elas deliberar."
+    },
+    {
+     "artigo": "36",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3700,
+     "texto": "Art. 36. Ficam revogadas as Resoluções CNJ nº 154/2012 e 356/2020."
+    },
+    {
+     "artigo": "37",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 3800,
+     "texto": "Art. 37. Esta Resolução entra em vigor na data de sua publicação. \n  \nMinistro Luís Roberto Barroso"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 25702,
+    "caracteres_convertidos": 25662,
+    "cobertura": 0.9984
+   }
+  },
+  {
+   "doc_id": "resolucao-cnj-685-2026",
+   "titulo": "Resolução CNJ nº 685/2026",
+   "tipo": "norma_cnj",
+   "orgao": "Conselho Nacional de Justiça",
+   "data": "2026-06-26",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [
+    "resolucao-cnj-558-2024"
+   ],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "RESOLUÇÃO Nº 685, DE 26 DE JUNHO DE 2026. \n \nAltera a Resolução CNJ nº 558/2024, que \nestabelece diretrizes para a gestão e \ndestinação de valores e bens oriundos de \npena de multa, perda de bens e valores e \nprestações pecuniárias no âmbito do \nPoder Judiciário. \n  \nO PRESIDENTE DO CONSELHO NACIONAL DE JUSTIÇA (CNJ), \nno uso de suas atribuições legais e regimentais e considerando o que consta no processo \nSEI/CNJ nº 00049/2026 e no julgamento do Pedido de Providência nº 0004338-\n70.2025.2.00.0000, na 10ª Sessão Ordinária, realizada em 24 de junho de 2026, \n  \nRESOLVE:"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "Art. 1º A ementa da Resolução CNJ nº 558/2024, passa a vigorar com a \nseguinte redação: \n“Estabelece diretrizes para a gestão e destinação de valores e bens \noriundos de pena de multa, perda de bens e valores e prestações \npecuniárias decorrentes de condenações criminais, acordo de não \npersecução penal, transação penal, suspensão condicional do \nprocesso, colaboração premiada, acordos de leniência e acordos \nde cooperação internacional no âmbito do Poder Judiciário e dá \noutras providências.” (NR)"
+    },
+    {
+     "artigo": "2",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "Art. 2º A Resolução CNJ nº 558/2024, passa a vigorar com as seguintes \nalterações: \n“"
+    },
+    {
+     "artigo": "1",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "Art. 1º A gestão e destinação de valores e bens oriundos de pena \nde multa, de perda de bens e valores, inclusive por alienação \nantecipada de bens apreendidos, sequestrados ou arrestados, de \ncondenações a prestações pecuniárias em procedimentos \ncriminais, acordo de não persecução penal, transação penal, \n\n \nsuspensão condicional do processo, colaboração premiada, \nacordos de leniência e acordos de cooperação internacional, no \nâmbito do Poder Judiciário, observarão as disposições legais \naplicáveis e as diretrizes previstas nesta Resolução. \n....................................................................................................... \nCAPÍTULO III \nDAS PRESTAÇÕES PECUNIÁRIAS DECORRENTES DE \nCONDENAÇÃO \nCRIMINAL, \nACORDO \nDE \nNÃO \nPERSECUÇÃO \nPENAL, \nTRANSAÇÃO \nPENAL \nESUSPENSÃO CONDICIONAL DO PROCESSO"
+    },
+    {
+     "artigo": "4",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 400,
+     "texto": "Art. 4º Para fins desta Resolução, a prestação pecuniária consiste \nno pagamento em dinheiro à vítima, a seus dependentes ou a \nentidade pública ou privada com destinação social e pode ser \naplicada como pena restritiva de direitos ou como medida \nalternativa decorrente de acordo de não persecução penal, \ntransação penal ou suspensão condicional do processo."
+    },
+    {
+     "artigo": "5",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 500,
+     "texto": "Art. 5º Na execução da prestação pecuniária, os valores pagos \nserão recolhidos em conta judicial vinculada à unidade gestora, \ncom movimentação apenas mediante determinação judicial, \nvedado o recolhimento em espécie em cartório ou secretaria."
+    },
+    {
+     "artigo": "5",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 600,
+     "texto": "Art. 5º-A Os recursos oriundos de prestação pecuniária, quando \nnão destinados à vítima ou aos seus dependentes, poderão ser \ndestinados às medidas previstas no Plano Pena Justa ou nos \nplanos estaduais ou distrital, nos termos de regulamentação \nespecífica, a ser publicada no prazo de 60 (sessenta) dias."
+    },
+    {
+     "artigo": "6",
+     "paragrafos": [
+      "§ 1"
+     ],
+     "parte": 0,
+     "ordem": 700,
+     "texto": "Art. 6º Os recursos oriundos de prestação pecuniária, quando não \ndestinados à vítima ou aos seus dependentes, ainda poderão ser \ndestinados à entidade pública ou privada com finalidade social, \npreviamente conveniada, ou para atividades de caráter essencial \nà segurança pública, educação e saúde, desde que estas atendam \nàs áreas vitais de relevante cunho social, a critério da unidade \ngestora. \n§ 1º ................................................................................................. \n....................................................................................................... \nX - fortaleçam iniciativas desenvolvidas pelas Centrais Integradas \nde Alternativas Penais, pelo Serviço de Atendimento à Pessoa \nCustodiada e por outros serviços equivalentes, bem como para \nimplantação e manutenção de serviço de atenção às pessoas \negressas, especialmente os Escritórios Sociais; e \nXI - implementem iniciativas voltadas à inserção sócio laboral de \npessoas privadas de liberdade e egressas do sistema prisional.”"
+    },
+    {
+     "artigo": "6",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 800,
+     "texto": "Art. 6º-A Nos acordos de não persecução penal, a reparação do \ndano ou a restituição da coisa à vítima observará o disposto no \nart. 28-A, I, do Código de Processo Penal. \n\n \nParágrafo único. A prestação pecuniária pactuada com \nfundamento no art. 28-A, IV, do Código de Processo Penal será \ndestinada à entidade pública ou de interesse social indicada pelo \nJuízo competente, observadas, no que couber, as diretrizes desta \nResolução. \n......................................................................................................."
+    },
+    {
+     "artigo": "15",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 900,
+     "texto": "Art. 15. A perda de bens, valores e ativos que sejam produtos, \nproveito ou instrumentos do crime consiste em efeito secundário \nda condenação penal, previsto nos arts. 91 e 91-Ado Código Penal \ne na legislação penal especial."
+    },
+    {
+     "artigo": "16",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1000,
+     "texto": "Art. 16. ........................................................................................... \nParágrafo único. Aplica-se o disposto no caput aos instrumentos, \nproduto ou proveito do crime renunciados em celebração de \nacordo de não persecução penal, nos termos do art.28-A do \nCódigo de Processo Penal. \n......................................................................................................."
+    },
+    {
+     "artigo": "33",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1100,
+     "texto": "Art. 33. Esta Resolução se aplica a prestações pecuniárias, bens e \nvalores depositados, apreendidos ou renunciados como condição \npara celebração de transações penais, suspensão condicional do \nprocesso e acordos de não persecução penal.\" (NR)"
+    },
+    {
+     "artigo": "3",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1200,
+     "texto": "Art. 3º A Resolução CNJ nº 558/2024, passa a vigorar acrescida do \nseguinte art. 34-A: \n \n“"
+    },
+    {
+     "artigo": "34",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1300,
+     "texto": "Art. 34-A. A definição de diretrizes e prioridades para a \ndestinação dos recursos de que trata esta Resolução contará, \nobservadas as competências legais de cada instituição, coma \nparticipação do Ministério Público, assegurada sua atuação em \ncaráter \ninstitucional \ne \ncolaborativo, \nnos \ntermos \nda \nregulamentação dos tribunais. \nParágrafo único. A participação de que trata o caput não afasta a \ncompetência do Poder Judiciário para a destinação, fiscalização e \nprestação de contas, vedadas a vinculação prévia de receitas e a \nindicação impositiva de beneficiários específicos.” (NR)"
+    },
+    {
+     "artigo": "4",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 1400,
+     "texto": "Art. 4º Esta Resolução entra em vigor na data de sua publicação. \n \nMinistro Edson Fachin"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 6025,
+    "caracteres_convertidos": 6013,
+    "cobertura": 0.998
+   }
+  },
+  {
+   "doc_id": "roteiro-seplan",
+   "titulo": "Roteiro Institucional — Página do Conselho Gestor (SEPLAN)",
+   "tipo": "roteiro",
+   "orgao": "TJPA — SEFIN",
+   "data": "2026-08-01",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": false,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "PODER JUDICIÁRIO \nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ \nSECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  \n \nRoteiro Institucional para Implantação da Página do Conselho Gestor \nCentralizado de Recursos de Valores de Penas de Prestação Pecuniária, \ninstituído pelo Provimento Conjunto nº 2/2026. \n1. Apresentação \nEste roteiro tem por finalidade orientar a estruturação, publicação e manutenção \nda página institucional do Conselho Gestor Centralizado de Recursos de Valores \nde Penas de Prestação Pecuniária, no sítio eletrônico do Tribunal de Justiça do \nEstado do Pará, com foco na transparência, padronização de informações, \nacessibilidade ao público e eficiência no atendimento às unidades judiciárias, \nentidades sociais e demais interessados. \n2. Estrutura Recomendada da Página Institucional \n• \nApresentação do Conselho: breve descrição da finalidade, composição, \natribuições e público-alvo. \n• \nNormativos: disponibilização do Provimento Conjunto nº 2/2026 – \nGP/CGJ e demais atos correlatos. \n• \nMateriais de orientação: cartilha, manual, fluxos operacionais e \norientações para entidades sociais e unidades judiciárias. \n• \nPerguntas Frequentes: seção objetiva com respostas padronizadas às \nprincipais dúvidas. \n• \nCadastro de entidades sociais: acesso ao formulário eletrônico, \nrequisitos documentais e orientações para habilitação. \n• \nTransparência: informações sobre arrecadação, destinação dos valores, \nchamadas públicas e prestação de contas. \n• \nAtendimento: canais de contato, Balcão Virtual, e-mail institucional e \norientações sobre suporte. \n3. Perguntas Frequentes (FAQ) \n1. É permitido realizar o pagamento de valores decorrentes de penas \npecuniárias em espécie na secretaria da vara? \nNão. O recolhimento deverá ser realizado exclusivamente por meio de guia \neletrônica, com a correta identificação do número do processo e do CPF ou \nCNPJ do responsável pelo pagamento, observadas as regras estabelecidas no \nato normativo vigente. \n2. A centralização dos recursos reduz a destinação de valores às comarcas \nde origem?"
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 1,
+     "ordem": 1,
+     "texto": "PODER JUDICIÁRIO \nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ \nSECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  \n \nNão. A centralização busca organizar a gestão dos recursos, assegurar critérios \nobjetivos de destinação e preservar o atendimento a projetos locais, conforme \nos percentuais e regras de redistribuição previstos no normativo aplicável. \n3. Como uma entidade social poderá solicitar acesso aos recursos? \nA entidade deverá realizar cadastro eletrônico, apresentar a documentação \nexigida, acompanhar os editais de chamada pública e observar os critérios de \nhabilitação, seleção, execução e prestação de contas definidos pelo Conselho \nGestor. \n4. Onde o público poderá consultar a destinação dos recursos? \nAs informações deverão ser disponibilizadas na área própria do Portal de \ntransparência, preferencialmente com atualização periódica, contendo dados \nsobre arrecadação, destinação, projetos contemplados, execução financeira e \nprestação de contas. \n5. Quem acompanha e fiscaliza a aplicação dos recursos? \nO acompanhamento deverá ser realizado pelo Conselho Gestor Centralizado, \ncom apoio da comissão técnica competente e mediante análise dos documentos, \nrelatórios e prestações de contas apresentados pelas entidades beneficiárias. \n4. Balcão Virtual de Atendimento \nRecomenda-se a criação de canal de atendimento virtual destinado a orientar \nusuários internos, comarcas, entidades sociais e demais interessados. O \natendimento poderá ser organizado em fluxo automatizado, com triagem inicial \npor assistente virtual e encaminhamento à equipe responsável apenas nas \nsituações que exijam análise específica ou intervenção humana. \n• \nDisponibilizar link de acesso ao Balcão Virtual em local visível da página \ninstitucional. \n• \nInformar horário de funcionamento, público atendido e tipos de demanda \nadmitidos. \n• \nCriar roteiro de triagem para direcionar dúvidas sobre cadastro, editais, \nprestação de contas, guias eletrônicas e informações gerais. \n• \nPrever canal de atendimento humano para demandas complexas, \ninconsistências documentais ou situações não resolvidas pelo fluxo \nautomatizado. \n• \nManter registro estatístico dos atendimentos para subsidiar melhorias no \nFAQ e nos materiais orientativos."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 2,
+     "ordem": 2,
+     "texto": "PODER JUDICIÁRIO \nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ \nSECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  \n \n5. Plano de Implantação e Melhorias Recomendadas \n1. Validação normativa: revisar todos os atos, referências legais e \ndocumentos antes da publicação. \n2. Definição de responsáveis: indicar unidade responsável pela \natualização da página, atendimento e curadoria do FAQ. \n3. Padronização visual: utilizar linguagem institucional, títulos objetivos, \nmenus simples e documentos organizados por categoria. \n4. Acessibilidade: disponibilizar documentos em formatos acessíveis, com \nlinguagem clara e orientações diretas ao usuário. \n5. Fluxo de atualização: estabelecer rotina mensal ou sempre que houver \nalteração normativa, edital, formulário ou procedimento. \n6. Monitoramento: \nacompanhar \ndúvidas \nrecorrentes, \nvolume \nde \natendimento, acessos à página e necessidade de novos conteúdos. \n6. Modelo de Formulário Eletrônico para Cadastro Único de Entidades \nO formulário eletrônico deverá constituir a porta única de ingresso das entidades \npúblicas ou privadas com finalidade social interessadas em participar de \nchamamentos, cadastramentos, seleção de projetos ou outras formas de \ndestinação de recursos oriundos de penas de prestação pecuniária. O cadastro \nnão gera direito automático ao recebimento de recursos, ficando condicionado à \nanálise documental, à habilitação da entidade e às regras de cada edital ou \nprocedimento específico. \n6.1 Identificação da Entidade \n• \nRazão social da entidade. \n• \nNome fantasia, quando houver. \n• \nCNPJ. \n• \nNatureza jurídica: entidade pública, organização da sociedade civil, \nassociação, fundação, instituição religiosa com atuação social, órgão \npúblico ou outra categoria. \n• \nData de constituição. \n• \nÁrea principal de atuação: educação, saúde, assistência social, \nsegurança pública, cultura, esporte, meio ambiente, execução penal, \natendimento a vítimas, prevenção à criminalidade ou outra área de \nrelevante interesse social. \n6.2 Endereço e Dados de Contato \n• \nEndereço completo da sede. \n• \nMunicípio, comarca e unidade federativa. \n• \nCEP. \n• \nTelefone institucional."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 3,
+     "ordem": 3,
+     "texto": "PODER JUDICIÁRIO \nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ \nSECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  \n \n• \nE-mail institucional. \n• \nSite, rede social institucional ou página pública de divulgação, quando \nhouver. \n6.3 Representante Legal e Responsável pelo Cadastro \n• \nNome completo do representante legal. \n• \nCPF. \n• \nCargo ou função exercida na entidade. \n• \nTelefone e e-mail para contato. \n• \nDocumento que comprove os poderes de representação. \n• \nNome, CPF, telefone e e-mail do responsável operacional pelo \npreenchimento do cadastro, caso seja pessoa diversa do representante \nlegal. \n6.4 Perfil Institucional e Experiência \n• \nBreve histórico da entidade. \n• \nMissão institucional. \n• \nPúblico atendido. \n• \nMunicípios ou regiões de atuação. \n• \nPrincipais projetos ou ações desenvolvidas nos últimos três anos. \n• \nExperiência prévia com execução de recursos públicos, convênios, \ntermos de colaboração, fomento, parcerias ou projetos financiados por \nórgãos públicos. \n6.5 Documentos Obrigatórios para Anexação \n• \nComprovante de inscrição e situação cadastral no CNPJ. \n• \nEstatuto, contrato social, lei de criação ou ato constitutivo vigente. \n• \nAta de eleição, termo de posse, portaria, decreto ou documento \nequivalente que comprove a representação legal. \n• \nDocumento de identificação do representante legal. \n• \nComprovante de endereço da sede ou declaração equivalente. \n• \nCertidões de regularidade fiscal, trabalhista e previdenciária, quando \nexigidas pelo edital ou normativo aplicável. \n• \nDeclaração de inexistência de impedimento, conflito de interesses ou \nvínculo incompatível com o recebimento dos recursos. \n• \nDeclaração de ciência quanto às regras de prestação de contas e \nfiscalização. \n6.6 Dados para Participação em Chamamentos e Projetos \n• \nIndicação das áreas de interesse para apresentação de projetos. \n• \nDescrição resumida de possíveis propostas ou linhas de atuação. \n• \nCapacidade estimada de atendimento do público beneficiário."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 4,
+     "ordem": 4,
+     "texto": "PODER JUDICIÁRIO \nTRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ \nSECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  \n \n• \nEstrutura física, equipe técnica e experiência operacional disponível. \n• \nIndicação se a entidade pretende apresentar projeto imediatamente ou \napenas manter cadastro ativo para chamamentos futuros. \n6.7 Declarações e Termo de Responsabilidade \nAo final do formulário, deverá constar campo de aceite eletrônico pelo qual o \nrepresentante legal declare, sob as penas da lei, que as informações prestadas \nsão verdadeiras, que os documentos anexados correspondem aos originais, que \na entidade está ciente das normas aplicáveis à destinação dos recursos, que se \ncompromete a manter os dados atualizados e que autoriza o tratamento dos \ndados pessoais estritamente necessários à análise do cadastro, observada a \nlegislação de proteção de dados pessoais. \n6.8 Regras Operacionais do Sistema \n• \nPrever validação automática de campos obrigatórios, como CNPJ, e-\nmail, telefone, município, comarca e anexos indispensáveis. \n• \nPermitir salvamento parcial do formulário antes do envio definitivo. \n• \nGerar protocolo eletrônico de envio, com data, hora e identificação da \nentidade. \n• \nDisponibilizar opção de atualização cadastral anual ou sempre que \nhouver alteração nos dados da entidade. \n• \nPermitir consulta interna por comarca, área de atuação, natureza \njurídica, situação do cadastro e regularidade documental. \n• \nDefinir status do cadastro: recebido, em análise, pendente de \ncomplementação, habilitado, indeferido, suspenso ou inativo. \n• \nFazer Uploud de documentos com atos constitutivos.MEMORANDO"
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 9789,
+    "caracteres_convertidos": 9785,
+    "cobertura": 0.9996
+   }
+  },
+  {
+   "doc_id": "faq-conselho-gestor",
+   "titulo": "Perguntas Frequentes — Conselho Gestor (FAQ oficial)",
+   "tipo": "faq",
+   "orgao": "TJPA — SEFIN",
+   "data": "2026-08-01",
+   "publico": "todos",
+   "situacao": "vigente",
+   "altera": [],
+   "alterado_por": [],
+   "escopo_publico": true,
+   "no_catalogo": true,
+   "conteudo": [
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 0,
+     "texto": "# Perguntas Frequentes — Conselho Gestor Centralizado\n\nFonte: Roteiro Institucional para Implantação da Página do Conselho Gestor\nCentralizado de Recursos de Valores de Penas de Prestação Pecuniária, seção 3.\nSecretaria de Planejamento, Coordenação e Finanças — TJPA."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 100,
+     "texto": "## 1. É permitido realizar o pagamento de valores decorrentes de penas pecuniárias em espécie na secretaria da vara?\n\nNão. O recolhimento deverá ser realizado exclusivamente por meio de guia eletrônica,\ncom a correta identificação do número do processo e do CPF ou CNPJ do responsável\npelo pagamento, observadas as regras estabelecidas no ato normativo vigente."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 200,
+     "texto": "## 2. A centralização dos recursos reduz a destinação de valores às comarcas de origem?\n\nNão. A centralização busca organizar a gestão dos recursos, assegurar critérios\nobjetivos de destinação e preservar o atendimento a projetos locais, conforme os\npercentuais e regras de redistribuição previstos no normativo aplicável."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 300,
+     "texto": "## 3. Como uma entidade social poderá solicitar acesso aos recursos?\n\nA entidade deverá realizar cadastro eletrônico, apresentar a documentação exigida,\nacompanhar os editais de chamada pública e observar os critérios de habilitação,\nseleção, execução e prestação de contas definidos pelo Conselho Gestor."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 400,
+     "texto": "## 4. Onde o público poderá consultar a destinação dos recursos?\n\nAs informações deverão ser disponibilizadas na área própria do Portal de\nTransparência, preferencialmente com atualização periódica, contendo dados sobre\narrecadação, destinação, projetos contemplados, execução financeira e prestação de\ncontas."
+    },
+    {
+     "artigo": "",
+     "paragrafos": [],
+     "parte": 0,
+     "ordem": 500,
+     "texto": "## 5. Quem acompanha e fiscaliza a aplicação dos recursos?\n\nO acompanhamento deverá ser realizado pelo Conselho Gestor Centralizado, com apoio\nda comissão técnica competente e mediante análise dos documentos, relatórios e\nprestações de contas apresentados pelas entidades beneficiárias."
+    }
+   ],
+   "_integridade": {
+    "caracteres_origem": 1850,
+    "caracteres_convertidos": 1845,
+    "cobertura": 0.9973
+   }
+  }
+ ],
+ "total_artigos": 101,
+ "total_chunks": 131
+}

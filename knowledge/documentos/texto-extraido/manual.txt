@@ -1,0 +1,494 @@
+T R I B U N A L D E J U S T I Ç A D O E S T A D O D O P A R Á
+PRESIDÊNCIA · CORREGEDORIA-GERAL DE JUSTIÇA
+M A N U A L P R Á T I C O
+Gestão e Destinação
+de Valores Penais
+Provimento Conjunto nº 002/2026-GP/CGJ
+Conselho Gestor Centralizado dos Recursos de Valores Penais
+
+Manual Prático · Valores Penais · TJPA
+02
+V I S Ã O G E R A L · P A R A T O D O S
+Como usar este manual
+“Valores Penais com Destino Certo”
+O novo Provimento transforma a arrecadação de penas pecuniárias em um fundo único,
+rastreável e auditável, que financia projetos de ressocialização, alternativas penais, segurança
+pública e demais áreas de relevância social em todas as Regiões Judiciárias do Pará.
+Este manual é dividido por público. Identifique o seu selo:
+VISÃO GERAL · PARA TODOS  - conceitos, governança, alterações, entre outros. Temáticas que
+envolvem todos os públicos.
+USO INTERNO · TJPA  - magistrados, diretores de secretarias, servidores e demais colaboradores. 
+Temáticas que tratam sobre captação, recolhimento, seleção, liberação e implementação.
+USO EXTERNO · ENTIDADES  - Organizações da Sociedade Civil e demais entidades beneficiárias. 
+Temáticas que acerca da habilitação, do cadastramento de projetos e da prestação de contas.
+Base normativa
+Provimento Conjunto nº 002/2026-GP/CGJ e Resolução CNJ nº 558/2024 (atualizada pela
+Resolução CNJ nº 685/2026).
+
+P A R T E 1
+Visão Geral
+Para todos os públicos – concepção do novo modelo.
+O Q U E V O C Ê I R Á E N C O N T R A R :
+• O novo modelo e as três dimensões da mudança
+• Quadro comparativo: antes × depois
+• Governança e atores
+• Ganhos para a sociedade
+03
+
+Parte 1 · Visão geral
+Manual Prático · Valores Penais · TJPA
+04
+V I S Ã O G E R A L · P A R A T O D O S
+O novo modelo
+O Provimento representa uma mudança estrutural na forma como o TJPA arrecada, centraliza e destina
+os recursos de penas pecuniárias, alinhando o Tribunal à Resolução CNJ nº 685/2026 e aos programas
+Pena Justa e Novos Caminhos.
+Três dimensões que avançam de forma coordenada
+1
+Normativo-institucional
+Formaliza colegiados e 
+fluxos: Conselho Gestor e 
+Comissão de Apoio.
+2
+Tecnológico-financeira
+Subconta única, integrações 
+e automação de habilitação e 
+contas.
+3
+Humana
+Adesão e capacitação de 
+magistrados, servidores e do 
+Terceiro Setor.
+Objetivo geral do modelo
+Centralização segura dos recursos, automação dos fluxos de habilitação e prestação de contas e
+efetiva utilização dos recursos, com transparência e rastreabilidade de todos os valores
+arrecadados. Além da capacitação de todos os públicos envolvidos, sejam usuários internos ou
+externos
+
+Parte 1 · Visão geral
+Manual Prático · Valores Penais · TJPA
+05
+V I S Ã O G E R A L · P A R A T O D O S
+O que mudou
+Dimensão
+Antes
+Depois
+Arrecadação
+Contas pulverizadas por vara/comarca, 
+controle heterogêneo.
+Subconta Centralizadora gerida pelo 
+Conselho Gestor, com identificação dos 
+valores recolhidos.
+Recolhimento
+Depósitos dispersos nas subcontas das 
+varas.
+Guia de depósito obrigatória, com 
+informações detalhadas, como número
+do processo e CPF/CNPJ, e repasse
+período dos valores à Subconta
+Centralizadora. 
+Destinação
+Critérios variáveis, decisão
+descentralizada.
+PARE com critérios de relevância social, 
+territorial e distribuição previsível.
+Acesso das 
+entidades
+Critérios não padronizados.
+Edital Semestral, Cadastro Único e 
+custo-efetividade.
+Prestação de 
+contas
+Documentação física dispersa.
+Sistema eletrônico para envoi de notas, 
+extratos, relatórios e demais
+documentos comprobatórios.
+Transparência
+Dados não consolidados.
+Portal de Dados Abertos com 
+balancetes mensais (Art. 34).
+Retorno à comarca
+Sem regra formal.
+40% dos recursos serão destinados à 
+atender projetos desenvolvidos na
+comarca a qual pertence a unidade
+arrecadadora.
+
+Parte 1 · Visão geral
+Manual Prático · Valores Penais · TJPA
+06
+V I S Ã O G E R A L · P A R A T O D O S
+Governança e atores
+Ator
+Papel no modelo
+Conselho Gestor
+Órgão deliberativo com competência para aprovação do PARE, 
+homologação de editais, deliberações sobre seleção e sanções, entre 
+outras. 
+O Conselho será presidido pelo Presidente do Tribunal, ou por
+Desembargador por ele indicado.
+Rito mensal.
+Comissão de Apoio
+Execução tática: subsidia o Conselho Gestor sobre os recursos
+disponíveis, elaboração e publicação de editais, apoia a seleção e 
+monitoramento de projetos e opera o correio eletrônico no SEI. 
+Rito quinzenal.
+Núcleo de Depósitos
+Judiciais
+Estruturação operacional, migração de saldos e controle financeiro da 
+Subconta Centralizadora.
+Unidade Captadora
+Varas criminais, JECRIM e execução penal: fixa a prestação, orienta
+aexpedição de guias, participa da seleção e fiscaliza.
+Ministério Público
+Participa da definição de diretrizes e prioridades e da seleção.
+Entidades (OSC)
+Habilitam-se, propõem e executam projetos e prestam contas.
+Ministério Público
+A participação do MP é institucional e colaborativa e não afasta a competência do Poder
+Judiciário para a destinação, a fiscalização e a prestação de contas, vedadas a vinculação prévia de
+receitas e a indicação impositiva de beneficiários.
+
+Parte 1 · Visão geral
+Manual Prático · Valores Penais · TJPA
+05
+V I S Ã O G E R A L · P A R A T O D O S
+Ganhos para a sociedade
+• A guia eletrônica elimina à ambiguidade sobre o destino do pagamento e protege o jurisdicionado 
+de cobranças indevidas ou extravio.
+• Todos os valores arrecadados passam a ter rastreabilidade completa no processo: desde a origem
+até a prestação de contas acerca da utilização.
+• A utilização de 40% dos recursus no atendimento de projetos desenvolvidos na comarca a qual 
+pertence a unidade arrecadadora assegura que todas as regiões possuam projetos locais custeados.
+• Os recursos alimentam prioritariamente o Pena Justa e o Novos Caminhos, apoiando a reinserção 
+social como política de segurança pública.
+• O Cadastro Único e os critérios objetivos ampliam a concorrência qualificada entre as OSC.
+• O Portal de Dados Abertos permite acompanhar, mensalmente, quanto foi arrecadado e para onde 
+foi destinado.
+• A centralização bancária e a proibição de espécie reduzem o risco de manuseio inadequado de 
+recursos públicos.
+Objetivo
+Mais transparência, mais controle social e resultado social visível em todas as Regiões Judiciárias
+do Pará.
+
+P A R T E 2
+Para o TJPA
+Magistrados, diretores de secretarias, servidores, equipes técnicas e demais colabradores.
+O Q U E V O C Ê I R Á E N C O N T R A R :
+• Unidades captadoras e recolhimento por guia eletrônica
+• Distribuição dos recursos, PARE e prioridades
+• Seleção, alvará e transparência
+• Plano de implementação: fases, indicadores e riscos
+08
+
+Parte 2 · TJPA
+Manual Prático · Valores Penais · TJPA
+09
+U S O I N T E R N O · T J P A
+Unidades captadoras
+Unidades Captadoras: Varas Criminais, JECRIM e Varas de Execução Penal.
+Fluxo de arrecadação
+1
+Decisão / acordo
+A vara captadora fixa a 
+prestação e orienta a 
+emissão da guia.
+2
+Subconta Centralizadora
+Gestão pelo Conselho Gestor.
+3
+Rateio regulamentar
+40% comarca de origem · 
+60% localidades com baixa
+arrecadação.
+Transição (Arts. 19 e 20)
+Migração de 100% dos saldos das comarcas para a Subconta Centralizadora; solicitação de
+bloqueio de novos depósitos nas contas pulverizadas atualmente existentes; projetos em
+execução terão recursos assegurados e submetidos ao Conselho Gestor.
+
+Parte 2 · TJPA
+Manual Prático · Valores Penais · TJPA
+10
+U S O I N T E R N O · T J P A
+Recolhimento por guia eletrônica (Art. 9º)
+1
+Gerar a guia no site do TJPA. 
+APENADO / SECRETARIA
+2
+Pagar exclusivamente na rede bancária oficial, com depósito na Subconta Centralizadora.
+BENEFICIÁRIO
+3
+Acostar o comprovante de pagamento nos autos do processo.
+BENEFICIÁRIO / ADVOGADO
+4
+Identificar automaticamente os valoes depositados e migrar periodicamente para a 
+Subconta Centralizadora.
+NÚLEO DE DEPÓSITOS BANCÁRIOS
+Vedação a fluxos informais de caixa (Art. 9º, §§ 5º e 6º)
+É terminantemente vedado que qualquer servidor ou magistrado receba valores em espécie. Todo
+recolhimento deve ser realizado por guia eletrônica, com valores vinculados à Subconta
+Centralizadora e com movimentação apenas por determinação do Conselho Gestor.
+
+Parte 2 · TJPA
+Manual Prático · Valores Penais · TJPA
+11
+U S O I N T E R N O · T J P A
+Partilha e prioridades (PARE)
+Regra de partilha (Art. 8º, § 1º)
+Percentual
+Aplicação
+40% — Comarca de origem
+Projetos locais da comarca arrecadadora, especialmente Pena Justa 
+e Novos Caminhos.
+60% — Fundo de equidade
+Comarcas com arrecadação inferior a 3% do total do Estado e 
+projetos transversais.
+Prioridades programáticas (Art. 8º) e PARE
+Inc.
+Prioridade
+II
+Medidas do Plano Pena Justa ou dos planos estaduais.
+III
+Centrais Integradas de Alternativas Penais e Atendimento à Pessoa Custodiada.
+IV
+Serviços de atenção à egressos (Escritórios Sociais).
+V
+Inserção sócio laboral de pessoas privadas de liberdade e egressas.
+PARE e vedação
+O PARE define percentuais mínimos, eixos, metas e indicadores. Os percentuais são
+programáticos: não implicam vinculação prévia de receitas nem indicação impositiva de
+beneficiários.
+
+Parte 2 · TJPA
+Manual Prático · Valores Penais · TJPA
+12
+U S O I N T E R N O · T J P A
+Seleção e liberação
+Seleção por ranking público (Art. 25). Os Juízos captadores e o MP participam da seleção regional, com
+decisão final do Conselho Gestor (Art. 28).
+Item
+Diretriz obrigatória
+Formalização
+Termo de Fomento/Colaboração: objeto, metas, cronograma físico-
+financeiro, integridade e LGPD (Art. 26).
+Levantamento
+Alvará judicial eletrônico do Presidente do Conselho Gestor ou 
+desembargador delegado; parcelável por marcos (Art. 29).
+Pagamento
+Direto à conta institucional da entidade, com conciliação automatizada; 
+vedado repasse a pessoa física (Art. 27).
+Emprego restrito
+Aplicação exclusiva no plano aprovado; sem alteração de objeto sem 
+autorização (Arts. 30 e 31).
+Monitoramento e transparência (Arts. 33 a 35)
+O Conselho Gestor pode determinar medidas corretivas, glosa ou restituição, e aplicar sanções. O
+TJPA mantém Portal de Dados Abertos com balancetes mensais (Art. 34).
+
+Parte 2 · TJPA
+Manual Prático · Valores Penais · TJPA
+13
+U S O I N T E R N O · T J P A
+Plano de implementação
+A implementação segue cinco fases, com prazo de 90 dias para a estruturação inicial (Art. 38).
+Fase
+Objetivo central
+Prazo
+1
+Estruturação institucional, normativa e bancária
+até jul/2026
+2
+Desenvolvimento tecnológico e integração
+até 30/09/2026
+3
+Plano de comunicação integrada
+até 31/08/2026
+4
+Capacitação das equipes e da rede de parceiros
+até 30/09/2026
+5
+Publicação do edital e entrada em operação
+após a Fase 4
+Capacitação interna
+Workshop para magistrados, servidores e assessores das varas criminais, juizados e execução
+penal sobre o Provimento e sua operacionalização.
+
+Parte 2 · TJPA
+Manual Prático · Valores Penais · TJPA
+14
+U S O I N T E R N O · T J P A
+Indicadores e riscos
+Indicadores de acompanhamento (KPIs)
+Indicador
+Meta
+Saldos das comarcas migrados à Subconta
+100% em 15 dias
+Homologação da guia eletrônica
+≤ 15 dias
+Módulos tecnológicos em produção
+até 31/08
+Regiões Judiciárias no nivelamento
+até 31/08
+OSC capacitadas antes do edital
+≥ 70%
+Principais riscos e mitigação
+Risco
+Ação de mitigação
+Atraso dos módulos tecnológicos
+Sprints quinzenais com pontos de controle e 
+escalonamento.
+Baixa adesão às capacitações
+Formato híbrido e reforço pela Coordenadoria de 
+Comunicação.
+
+P A R T E 3
+Para as Entidades
+OSC e Entidades beneficiárias.
+• Quem pode receber e quais as vedações
+• Habilitação no módulo eletrônico
+• Como propor projetos após a publicação dos editais
+• Execução e prestação de contas
+15
+O Q U E V O C Ê I R Á E N C O N T R A R :
+
+Parte 3 · Entidades
+Manual Prático · Valores Penais · TJPA
+16
+U S O E X T E R N O · E N T I D A D E S
+Quem pode receber e vedações
+Podem ser beneficiárias entidades públicas ou privadas com finalidade social, previamente conveniadas
+(Art. 13).
+ANPP - entidade indicada pelo Juízo
+Na ANPP, a prestação pecuniária do art. 28-A, IV, do CPP é destinada à entidade indicada pelo
+Juízo competente, observadas as diretrizes legais.
+Vedações absolutas (Arts. 14 e 15)
+Proibição
+Regra
+Custeio institucional
+Para o Sistema de Justiça (Judiciário, MP, Defensoria).
+Político / religioso
+Sem fins político-partidários ou condicionamento a atividade religiosa.
+Conflito de interesses
+Sem entidades cujos dirigentes sejam parentes até 2º grau de 
+magistrado/MP.
+Reembolso / recente
+Sem despesas anteriores à aprovação; entidade deve ter mais de 1 
+ano.
+
+Parte 3 · Entidades
+Manual Prático · Valores Penais · TJPA
+17
+U S O E X T E R N O · E N T I D A D E S
+Como se habilitar (Art. 24)
+A habilitação é feita no Módulo Eletrônico de Habilitação, de forma automatizada, em quatro etapas:
+1
+Cadastro Único
+CNPJ, estatuto, dirigentes, políticas de 
+integridade e LGPD.
+2
+Validação
+Consulta automática a CEIS/CNEP, CADIN, TCE 
+e CGU (APIs).
+3
+Elegibilidade
+Pontuação por critérios e pesos divulgados no 
+edital.
+4
+Parecer
+Parecer eletrônico com trilha de auditoria.
+Documentos e requisitos
+Comprovação de constituição há mais de 1 ano e finalidade social; certidões de regularidade;
+identificação dos dirigentes. Indeferimentos são motivados, com prazo para saneamento (Art. 24,
+§§ 1º e 2º).
+
+Parte 3 · Entidades
+Manual Prático · Valores Penais · TJPA
+18
+U S O E X T E R N O · E N T I D A D E S
+Como propor projetos
+As propostas são inscritas em formulário eletrônico durante o Edital Semestral de Chamada Pública
+(Art. 23), que traz cronograma, pesos e critérios.
+Critérios de avaliação e prioridade
+• Custo-efetividade, impacto social e equidade territorial (desempates objetivos).
+• Alinhamento ao Pena Justa e ao Novos Caminhos.
+• Redução de reincidência; alternativas penais e práticas restaurativas.
+• Atenção a egressos, pessoas vulneráveis e saúde mental.
+• Viabilidade de execução e clareza do plano de trabalho.
+Dica de preparação
+É importante a participação nas Oficinas de Elaboração e Gestão de Projetos antes de inscrever a
+proposta, serão momentos de aprendizado sobre planejamento orçamentário, execução, boas
+práticas e preparação para a prestação de contas.
+
+Parte 3 · Entidades
+Manual Prático · Valores Penais · TJPA
+19
+U S O E X T E R N O · E N T I D A D E S
+Execução e prestação de contas
+Regras de execução
+• Empregue os recursos exclusivamente no objeto aprovado; não altere objeto ou quantitativo sem 
+autorização prévia do Conselho Gestor.
+• O pagamento é feito por alvará eletrônico direto à conta institucional da entidade — vedado a 
+pessoas físicas.
+Prestação de contas eletrônica (Art. 32)
+• Notas fiscais eletrônicas nominais ao projeto;
+• Extratos bancários para conciliação automatizada;
+• Relatórios físicos e fotográficos de execução das metas.
+Como evitar glosas
+Não incluir despesas fora do objeto, sem nota fiscal ou anteriores à aprovação. Emita notas
+corretamente e mantenha as evidências físicas.
+
+Parte 3 · Entidades
+Manual Prático · Valores Penais · TJPA
+20
+U S O E X T E R N O · E N T I D A D E S
+Capacitação e canais de apoio
+Oficinas para o Terceiro Setor
+Oficina
+Foco
+Carga
+1 · Elaboração e Gestão de Projetos
+Critérios do edital, orçamento e boas 
+práticas
+5 h
+2 · Cadastro no Formulário Eletrônico
+Passo a passo, documentos e erros 
+comuns
+3 h
+3 · Prestação de Contas
+Notas, relatórios e prevenção de glosas
+3 h
+Onde tirar dúvidas
+• Página institucional da VEPMA no site do TJPA;
+• Balcão Virtual de atendimento e canais da Comissão de Apoio;
+• Manual Prático, Cartilhas e o FAQ.
+
+Perguntas frequentes
+Manual Prático · Valores Penais · TJPA
+21
+V I S Ã O G E R A L · P A R A T O D O S
+Perguntas frequentes
+TJPA
+Posso pagar valores penais em espécie na secretaria?  Não. Todo recolhimento é feito 
+por guia eletrônica, com número do processo e CPF/CNPJ.
+TJPA
+Minha comarca perde recursos com a centralização?  Não. A comarca arrecadadora 
+tem retorno destinação de 40% dos valores arrecadados; os 60% são redistribuídos
+conforme o PARE.
+ENTIDADES
+Como uma organização social acessa os recursos?  Cadastrando-se no Módulo 
+Eletrônico de Habilitação e participando do Edital Semestral de Chamada Pública.
+TODOS
+Como saber para onde os recursos estão indo?  Pelo Portal de Dados Abertos do TJPA, 
+alimentado mensalmente (Art. 34).
+TODOS
+Quem fiscaliza a aplicação dos recursos?  O Conselho Gestor e a Comissão de Apoio, 
+com participação do MP e prestação de contas eletrônica das entidades.
+Ainda com dúvidas?
+Consulte a página da VEPMA no site do TJPA, o Balcão Virtual e a Comissão de Apoio; as questões
+e casos omissos são decididos pelo Conselho Gestor (Art. 37).
+
+Tribunal de Justiça
+do Estado do Pará
+Conselho Gestor Centralizado
+dos Recursos de Valores Penais
+Manual Prático · Gestão e Destinação de Valores Penais
+Provimento Conjunto nº 002/2026-GP/CGJ · Belém (PA), 2026

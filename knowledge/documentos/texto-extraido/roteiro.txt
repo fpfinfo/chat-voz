@@ -1,0 +1,268 @@
+ 
+ 
+ 
+PODER JUDICIÁRIO 
+TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ 
+SECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  
+ 
+Roteiro Institucional para Implantação da Página do Conselho Gestor 
+Centralizado de Recursos de Valores de Penas de Prestação Pecuniária, 
+instituído pelo Provimento Conjunto nº 2/2026. 
+1. Apresentação 
+Este roteiro tem por finalidade orientar a estruturação, publicação e manutenção 
+da página institucional do Conselho Gestor Centralizado de Recursos de Valores 
+de Penas de Prestação Pecuniária, no sítio eletrônico do Tribunal de Justiça do 
+Estado do Pará, com foco na transparência, padronização de informações, 
+acessibilidade ao público e eficiência no atendimento às unidades judiciárias, 
+entidades sociais e demais interessados. 
+2. Estrutura Recomendada da Página Institucional 
+• 
+Apresentação do Conselho: breve descrição da finalidade, composição, 
+atribuições e público-alvo. 
+• 
+Normativos: disponibilização do Provimento Conjunto nº 2/2026 – 
+GP/CGJ e demais atos correlatos. 
+• 
+Materiais de orientação: cartilha, manual, fluxos operacionais e 
+orientações para entidades sociais e unidades judiciárias. 
+• 
+Perguntas Frequentes: seção objetiva com respostas padronizadas às 
+principais dúvidas. 
+• 
+Cadastro de entidades sociais: acesso ao formulário eletrônico, 
+requisitos documentais e orientações para habilitação. 
+• 
+Transparência: informações sobre arrecadação, destinação dos valores, 
+chamadas públicas e prestação de contas. 
+• 
+Atendimento: canais de contato, Balcão Virtual, e-mail institucional e 
+orientações sobre suporte. 
+3. Perguntas Frequentes (FAQ) 
+1. É permitido realizar o pagamento de valores decorrentes de penas 
+pecuniárias em espécie na secretaria da vara? 
+Não. O recolhimento deverá ser realizado exclusivamente por meio de guia 
+eletrônica, com a correta identificação do número do processo e do CPF ou 
+CNPJ do responsável pelo pagamento, observadas as regras estabelecidas no 
+ato normativo vigente. 
+2. A centralização dos recursos reduz a destinação de valores às comarcas 
+de origem? 
+
+ 
+ 
+ 
+PODER JUDICIÁRIO 
+TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ 
+SECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  
+ 
+Não. A centralização busca organizar a gestão dos recursos, assegurar critérios 
+objetivos de destinação e preservar o atendimento a projetos locais, conforme 
+os percentuais e regras de redistribuição previstos no normativo aplicável. 
+3. Como uma entidade social poderá solicitar acesso aos recursos? 
+A entidade deverá realizar cadastro eletrônico, apresentar a documentação 
+exigida, acompanhar os editais de chamada pública e observar os critérios de 
+habilitação, seleção, execução e prestação de contas definidos pelo Conselho 
+Gestor. 
+4. Onde o público poderá consultar a destinação dos recursos? 
+As informações deverão ser disponibilizadas na área própria do Portal de 
+transparência, preferencialmente com atualização periódica, contendo dados 
+sobre arrecadação, destinação, projetos contemplados, execução financeira e 
+prestação de contas. 
+5. Quem acompanha e fiscaliza a aplicação dos recursos? 
+O acompanhamento deverá ser realizado pelo Conselho Gestor Centralizado, 
+com apoio da comissão técnica competente e mediante análise dos documentos, 
+relatórios e prestações de contas apresentados pelas entidades beneficiárias. 
+4. Balcão Virtual de Atendimento 
+Recomenda-se a criação de canal de atendimento virtual destinado a orientar 
+usuários internos, comarcas, entidades sociais e demais interessados. O 
+atendimento poderá ser organizado em fluxo automatizado, com triagem inicial 
+por assistente virtual e encaminhamento à equipe responsável apenas nas 
+situações que exijam análise específica ou intervenção humana. 
+• 
+Disponibilizar link de acesso ao Balcão Virtual em local visível da página 
+institucional. 
+• 
+Informar horário de funcionamento, público atendido e tipos de demanda 
+admitidos. 
+• 
+Criar roteiro de triagem para direcionar dúvidas sobre cadastro, editais, 
+prestação de contas, guias eletrônicas e informações gerais. 
+• 
+Prever canal de atendimento humano para demandas complexas, 
+inconsistências documentais ou situações não resolvidas pelo fluxo 
+automatizado. 
+• 
+Manter registro estatístico dos atendimentos para subsidiar melhorias no 
+FAQ e nos materiais orientativos. 
+
+ 
+ 
+ 
+PODER JUDICIÁRIO 
+TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ 
+SECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  
+ 
+5. Plano de Implantação e Melhorias Recomendadas 
+1. Validação normativa: revisar todos os atos, referências legais e 
+documentos antes da publicação. 
+2. Definição de responsáveis: indicar unidade responsável pela 
+atualização da página, atendimento e curadoria do FAQ. 
+3. Padronização visual: utilizar linguagem institucional, títulos objetivos, 
+menus simples e documentos organizados por categoria. 
+4. Acessibilidade: disponibilizar documentos em formatos acessíveis, com 
+linguagem clara e orientações diretas ao usuário. 
+5. Fluxo de atualização: estabelecer rotina mensal ou sempre que houver 
+alteração normativa, edital, formulário ou procedimento. 
+6. Monitoramento: 
+acompanhar 
+dúvidas 
+recorrentes, 
+volume 
+de 
+atendimento, acessos à página e necessidade de novos conteúdos. 
+6. Modelo de Formulário Eletrônico para Cadastro Único de Entidades 
+O formulário eletrônico deverá constituir a porta única de ingresso das entidades 
+públicas ou privadas com finalidade social interessadas em participar de 
+chamamentos, cadastramentos, seleção de projetos ou outras formas de 
+destinação de recursos oriundos de penas de prestação pecuniária. O cadastro 
+não gera direito automático ao recebimento de recursos, ficando condicionado à 
+análise documental, à habilitação da entidade e às regras de cada edital ou 
+procedimento específico. 
+6.1 Identificação da Entidade 
+• 
+Razão social da entidade. 
+• 
+Nome fantasia, quando houver. 
+• 
+CNPJ. 
+• 
+Natureza jurídica: entidade pública, organização da sociedade civil, 
+associação, fundação, instituição religiosa com atuação social, órgão 
+público ou outra categoria. 
+• 
+Data de constituição. 
+• 
+Área principal de atuação: educação, saúde, assistência social, 
+segurança pública, cultura, esporte, meio ambiente, execução penal, 
+atendimento a vítimas, prevenção à criminalidade ou outra área de 
+relevante interesse social. 
+6.2 Endereço e Dados de Contato 
+• 
+Endereço completo da sede. 
+• 
+Município, comarca e unidade federativa. 
+• 
+CEP. 
+• 
+Telefone institucional. 
+
+ 
+ 
+ 
+PODER JUDICIÁRIO 
+TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ 
+SECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  
+ 
+• 
+E-mail institucional. 
+• 
+Site, rede social institucional ou página pública de divulgação, quando 
+houver. 
+6.3 Representante Legal e Responsável pelo Cadastro 
+• 
+Nome completo do representante legal. 
+• 
+CPF. 
+• 
+Cargo ou função exercida na entidade. 
+• 
+Telefone e e-mail para contato. 
+• 
+Documento que comprove os poderes de representação. 
+• 
+Nome, CPF, telefone e e-mail do responsável operacional pelo 
+preenchimento do cadastro, caso seja pessoa diversa do representante 
+legal. 
+6.4 Perfil Institucional e Experiência 
+• 
+Breve histórico da entidade. 
+• 
+Missão institucional. 
+• 
+Público atendido. 
+• 
+Municípios ou regiões de atuação. 
+• 
+Principais projetos ou ações desenvolvidas nos últimos três anos. 
+• 
+Experiência prévia com execução de recursos públicos, convênios, 
+termos de colaboração, fomento, parcerias ou projetos financiados por 
+órgãos públicos. 
+6.5 Documentos Obrigatórios para Anexação 
+• 
+Comprovante de inscrição e situação cadastral no CNPJ. 
+• 
+Estatuto, contrato social, lei de criação ou ato constitutivo vigente. 
+• 
+Ata de eleição, termo de posse, portaria, decreto ou documento 
+equivalente que comprove a representação legal. 
+• 
+Documento de identificação do representante legal. 
+• 
+Comprovante de endereço da sede ou declaração equivalente. 
+• 
+Certidões de regularidade fiscal, trabalhista e previdenciária, quando 
+exigidas pelo edital ou normativo aplicável. 
+• 
+Declaração de inexistência de impedimento, conflito de interesses ou 
+vínculo incompatível com o recebimento dos recursos. 
+• 
+Declaração de ciência quanto às regras de prestação de contas e 
+fiscalização. 
+6.6 Dados para Participação em Chamamentos e Projetos 
+• 
+Indicação das áreas de interesse para apresentação de projetos. 
+• 
+Descrição resumida de possíveis propostas ou linhas de atuação. 
+• 
+Capacidade estimada de atendimento do público beneficiário. 
+
+ 
+ 
+ 
+PODER JUDICIÁRIO 
+TRIBUNAL DE JUSTIÇA DO ESTADO DO PARÁ 
+SECRETARIA DE PLANEJAMENTO, COORDENAÇÃO E FINANÇAS  
+ 
+• 
+Estrutura física, equipe técnica e experiência operacional disponível. 
+• 
+Indicação se a entidade pretende apresentar projeto imediatamente ou 
+apenas manter cadastro ativo para chamamentos futuros. 
+6.7 Declarações e Termo de Responsabilidade 
+Ao final do formulário, deverá constar campo de aceite eletrônico pelo qual o 
+representante legal declare, sob as penas da lei, que as informações prestadas 
+são verdadeiras, que os documentos anexados correspondem aos originais, que 
+a entidade está ciente das normas aplicáveis à destinação dos recursos, que se 
+compromete a manter os dados atualizados e que autoriza o tratamento dos 
+dados pessoais estritamente necessários à análise do cadastro, observada a 
+legislação de proteção de dados pessoais. 
+6.8 Regras Operacionais do Sistema 
+• 
+Prever validação automática de campos obrigatórios, como CNPJ, e-
+mail, telefone, município, comarca e anexos indispensáveis. 
+• 
+Permitir salvamento parcial do formulário antes do envio definitivo. 
+• 
+Gerar protocolo eletrônico de envio, com data, hora e identificação da 
+entidade. 
+• 
+Disponibilizar opção de atualização cadastral anual ou sempre que 
+houver alteração nos dados da entidade. 
+• 
+Permitir consulta interna por comarca, área de atuação, natureza 
+jurídica, situação do cadastro e regularidade documental. 
+• 
+Definir status do cadastro: recebido, em análise, pendente de 
+complementação, habilitado, indeferido, suspenso ou inativo. 
+• 
+Fazer Uploud de documentos com atos constitutivos.MEMORANDO 

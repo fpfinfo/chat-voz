@@ -1,0 +1,345 @@
+ 
+Página 1 de 6 
+ 
+ANEXO - FLUXO DE TRABALHO 
+Gestão Centralizada de Valores Penais 
+Provimento Conjunto nº 002/2026-GP/CGJ, de 30 de junho de 2026. 
+ 
+ 
+1. Finalidade  
+Descrever detalhadamente o novo processo de trabalho para o recolhimento, a gestão, a 
+destinação, a liberação, a aplicação e a prestação de contas dos valores penais no âmbito 
+do Poder Judiciário do Estado do Pará, instituído pelo Provimento Conjunto nº 002/2026-
+GP/CGJ. Destina-se a orientar as unidades judiciais captadoras quanto ao que muda em 
+relação ao regime anterior, regulado pelo Provimento nº 0007/2024-GP/CGJ, esclarecendo 
+o papel de cada ator em cada etapa. 
+ 
+2. Alteração do modelo: centralização da gestão dos recursos 
+No regime anterior, cada Juízo funcionava como unidade gestora: abria e movimentava 
+subconta própria, credenciava entidades, habilitava projetos, decidia isoladamente a 
+destinação e recebia a prestação de contas.  
+O novo regime centraliza a gestão financeira em uma única Subconta Centralizadora, 
+administrada pelo Conselho Gestor e operada pelo Núcleo de Depósitos Judiciais/SEFIN, 
+com apoio da Comissão de Apoio, chamamento público semestral único e habilitação, 
+seleção, liberação e prestação de contas automatizadas por sistema eletrônico. A unidade 
+passa a ser unidade captadora, concentrando-se em captar os recursos e participar da 
+seleção dos projetos. 
+ 
+Quadro comparativo - Modelo anterior (Provimento Conjunto nº 007/2024-GP/CGJ) × 
+Modelo atual (Provimento Conjunto nº 002/2026-GP/CGJ) 
+Aspecto 
+Modelo Anterior 
+Provimento Conjunto nº 007/2024-
+GP/CGJ 
+Modelo Atual 
+Provimento Conjunto nº 002/2026-
+GP/CGJ 
+Conta 
+Subconta própria por Juízo/unidade 
+gestora 
+Subconta Centralizadora única (Conselho 
+Gestor) 
+Decisão sobre 
+destinação 
+Cada juiz gestor decidia a destinação e o 
+montante  
+Conselho Gestor delibera; Comissão de 
+Apoio operacionaliza 
+Credenciamento 
+Edital por cada unidade; certidão pela 
+Secretaria 
+Chamamento semestral único do TJPA; 
+habilitação por módulo eletrônico 
+Habilitação de projeto 
+Decisão local do juiz, ouvido o MP 
+Ranking público + participação dos Juízos 
+e do MP + deliberação do Conselho 
+Gestor 
+Liberação de valores 
+Alvará expedido pelo Juízo recebedor 
+Alvará pelo Presidente do Conselho 
+Gestor (ou desembargador delegado 
+Prestação de contas 
+À unidade gestora; homologação judicial 
+local 
+ 
+Automatizada por sistema eletrônico; 
+Conselho Gestor glosa/restitui 
+
+ 
+Página 2 de 6 
+Aspecto 
+Modelo Anterior 
+Provimento Conjunto nº 007/2024-
+GP/CGJ 
+Modelo Atual 
+Provimento Conjunto nº 002/2026-
+GP/CGJ 
+Priorização 
+Critérios gerais da Resolução CNJ 
+558/2024 
+Critérios gerais da Resolução CNJ 
+558/2024 com prioridade programática 
+Pena Justa/Novos Caminhos via PARE 
+Transparência 
+Página do TJPA, até o 5º dia útil 
+Portal de dados abertos, atualização 
+mensal 
+Papel da unidade 
+judicial 
+Unidade gestora (executava todas as 
+etapas) 
+Unidade captadora (capta, orienta, 
+participa da seleção e fiscaliza) 
+3. Partícipes e responsabilidades 
+Partícipe 
+Principais responsabilidades no novo fluxo previsto no Provimento 
+Conjunto nº 002/2026-GP/CGJ 
+Conselho Gestor 
+Órgão deliberativo (formado por representante da Presidência, CGJ, GMF, CEIJ, 
+Direitos Humanos, CEVID e SEFIN). Aprova o PARE, homologa editais, delibera 
+sobre seleção e sanções, aprova indicadores e decide incidentes de integridade. 
+O Presidente (ou Desembargador delegado) expede os alvarás. 
+Comissão de Apoio 
+Servidores(as) que subsidiam o Conselho Gestor com informações gerenciais, 
+elaboram e publicam editais, apoiam a seleção e o monitoramento e operam 
+documentos e fluxos. 
+Unidade Judicial Captadora 
+Varas de juizados criminais, matéria criminal ou execução penal. Fixa a prestação 
+pecuniária, orienta/gera a guia, assegura o depósito na Subconta Centralizadora 
+e a juntada do comprovante, participa da seleção junto ao MP e fiscaliza nos 
+autos. 
+Núcleo de Depósitos 
+Judiciais  
+Gerencia a Subconta Centralizadora e realiza a transferência mensal dos saldos 
+das subcontas atuais. 
+Ministério Público 
+Participa da seleção dos projetos nas respectivas Regiões Judiciárias e 
+comarcas. 
+Entidades beneficiárias 
+Habilitam-se pelo módulo eletrônico, inscrevem projetos, executam o objeto 
+aprovado e prestam contas. 
+ 
+ 
+
+ 
+Página 3 de 6 
+4. Fluxograma do novo processo de trabalho 
+ 
+ 
+ 
+
+ 
+Página 4 de 6 
+5. Descrição do fluxo de trabalho, detalhado por fase 
+Fase 1 - Captação e recolhimento 
+Etapa 
+Ação 
+Responsável 
+Base 
+1.1 
+Fixar a prestação pecuniária em audiência ou sentença 
+(transação penal, ANPP, suspensão condicional do 
+processo ou condenação criminal). 
+Unidade captadora 
+Art. 1º 
+1.2 
+Gerar a guia de depósito na página eletrônica do PJPA - 
+por acesso direto do interessado ou pela Secretaria da 
+unidade, com nº do processo, nome, CPF/CNPJ e valor. 
+Unidade captadora / 
+Parte 
+Art. 9º, caput e §3º 
+1.3 
+Depositar exclusivamente na Subconta Centralizadora. É 
+vedado o depósito nas subcontas antigas e o 
+recolhimento em espécie no cartório ou gabinete. 
+Parte 
+Art. 9º, §2º e §5º 
+1.4 
+Juntar o comprovante de pagamento ao processo judicial 
+em que houve o acordo, a aceitação ou a condenação. 
+Parte / Secretaria 
+Art. 9º, §4º 
+1.5 
+Os recursos ingressam e permanecem na Subconta 
+Centralizadora, gerida pelo Núcleo de Depósitos 
+Judiciais. 
+Núcleo de Depósitos 
+Judiciais 
+Arts. 2º e 8º 
+Fase 2 - Regime de transição 
+Etapa 
+Ação 
+Responsável 
+Base 
+2.1 
+Transferir os saldos das subcontas atualmente 
+existentes para a Subconta Centralizadora. 
+Núcleo de Depósitos 
+Judiciais 
+Art. 19 
+2.2 
+Assegurar os recursos dos projetos em execução e 
+submetê-los à deliberação do Conselho Gestor. 
+Unidade captadora → 
+Conselho Gestor 
+Art. 20 
+2.3 
+Restituir à Subconta Centralizadora eventuais saldos 
+residuais de projetos encerrados. 
+Entidade beneficiária 
+Art. 21 
+Fase 3 - Planejamento e priorização (PARE) 
+Etapa 
+Ação 
+Responsável 
+Base 
+3.1 
+Subsidiar o Conselho Gestor com informações 
+gerenciais sobre os recursos disponíveis. 
+Comissão de Apoio 
+Art. 6º 
+3.2 
+Aprovar o PARE: percentuais mínimos para Pena Justa 
+e Novos Caminhos, eixos temáticos, metas e 
+indicadores, observada a distribuição de 40% (comarca 
+arrecadadora) e 60% (localidades com arrecadação 
+inferior a 3% e demais projetos). 
+Conselho Gestor 
+Arts. 8º §1º, 10 e 
+18 
+Fase 4 - Chamamento público e habilitação 
+Etapa 
+Ação 
+Responsável 
+Base 
+4.1 
+Publicar, semestralmente, o Edital de Chamamento 
+Público com critérios objetivos, pesos e calendário. 
+Conselho Gestor 
+Art. 23 
+4.2 
+Habilitar as entidades pelo módulo eletrônico: Cadastro 
+Único, validação automática de certidões (CEIS/CNEP, 
+CADIN, TCE/CGU), avaliação de elegibilidade e parecer 
+eletrônico com trilha de auditoria. 
+Entidade / Sistema 
+Art. 24 
+4.3 
+Divulgar a lista de entidades habilitadas; indeferimentos 
+motivados, com notificação e prazo para saneamento. 
+Comissão de Apoio 
+Art. 24, §1º e §2º 
+Fase 5 - Inscrição e seleção dos projetos 
+Etapa 
+Ação 
+Responsável 
+Base 
+5.1 
+Inscrever projetos por meio de formulário eletrônico. 
+Entidade beneficiária 
+Art. 7º 
+5.2 
+Ordenar os projetos por ranking público, segundo 
+critérios e pesos do edital, com desempates objetivos 
+(impacto, custo-efetividade, equidade territorial). 
+Comissão de Apoio / 
+Sistema 
+Art. 25 
+
+ 
+Página 5 de 6 
+Etapa 
+Ação 
+Responsável 
+Base 
+5.3 
+Participar da seleção dos projetos nas respectivas 
+Regiões Judiciárias e comarcas. 
+Unidade captadora + 
+Ministério Público 
+Art. 28 
+5.4 
+Deliberar, em caráter final, sobre a seleção. Da decisão 
+cabe pedido de reconsideração em 5 dias. 
+Conselho Gestor 
+Art. 28, §3º 
+Fase 6 - Formalização e liberação 
+Passo Ação 
+Responsável 
+Base 
+6.1 
+Formalizar a parceria por Termo de 
+Fomento/Colaboração (objeto, metas, cronograma físico-
+financeiro, integridade e cláusulas de LGPD). 
+Conselho Gestor / 
+Entidade 
+Art. 26 
+6.2 
+Liberar os recursos por marcos validados no sistema, 
+com conciliação bancária automatizada; admitida a 
+liberação parcial por etapas. 
+Comissão de Apoio / 
+Sistema 
+Arts. 27 e 29, p.ú. 
+6.3 
+Expedir o alvará judicial para o levantamento dos 
+valores. 
+Presidente do Conselho 
+Gestor (ou 
+desembargador 
+delegado) 
+Art. 29 
+Fase 7 - Execução, prestação de contas e monitoramento 
+Etapa 
+Ação 
+Responsável 
+Base 
+7.1 
+Executar o projeto exclusivamente no objeto aprovado; 
+alteração de objeto ou quantitativo somente com 
+autorização prévia do Conselho Gestor. 
+Entidade beneficiária 
+Arts. 30 e 31 
+7.2 
+Prestar contas por meio eletrônico: nota fiscal, extrato 
+bancário, comprovação da execução física e relatório 
+físico-financeiro. 
+Entidade / Sistema 
+Art. 32 
+7.3 
+Determinar medidas corretivas, glosa ou restituição e 
+aplicar sanções (advertência, glosa, suspensão, 
+restituição, inidoneidade e comunicação aos órgãos de 
+controle). 
+Conselho Gestor 
+Arts. 33 e 35 
+7.4 
+Manter o Portal de Transparência com dados abertos e 
+atualização mensal. 
+Comissão de Apoio / 
+Sistema 
+Art. 34 
+ 
+ 
+
+ 
+Página 6 de 6 
+6. Papel específico da unidade judicial captadora 
+• Passa a fazer (Provimento Conjunto nº 002/2026-GP/CGJ) 
+[+]  Gerar/orientar a emissão da guia e assegurar o depósito na Subconta Centralizadora única. 
+[+]  Garantir a juntada do comprovante ao processo e a vedação do recolhimento em espécie. 
+[+]  Participar da seleção dos projetos, em conjunto com o Ministério Público, na sua Região 
+Judiciária e comarca. 
+[+]  Fiscalizar, nos autos, a destinação dos recursos objeto de suas decisões. 
+[+]  Submeter ao Conselho Gestor os projetos em execução e observar as prioridades do PARE. 
+ 
+• Deixa de fazer (Provimento Conjunto nº 007/2024-GP/CGJ) 
+[-]  Abrir e movimentar subconta própria da unidade. 
+[-]  Publicar edital de credenciamento próprio e emitir certidão de credenciamento. 
+[-]  Decidir isoladamente sobre a habilitação do projeto e o montante a destinar. 
+[-]  Expedir alvará de levantamento. 
+[-]  Receber e homologar a prestação de contas na própria unidade. 
+ 
+ 

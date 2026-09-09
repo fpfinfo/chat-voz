@@ -14,8 +14,10 @@ node_modules/
 # Vercel
 .vercel
 
-# Fontes de dados brutas (PDFs, textos extraídos) — não fazem parte da app
-knowledge/documentos/
+# PDFs de origem grandes (~12–13 MB cada); o conteúdo revisado está em
+# knowledge/documentos/texto-fonte/. Mantidos fora do git por peso.
+knowledge/documentos/PDFs/provimento-conjunto-no-002-2026-gp-cgj-pdf.pdf
+knowledge/documentos/PDFs/Docs Anexos ilovepdf_merged-7.pdf
 
 # OS
 .DS_Store
