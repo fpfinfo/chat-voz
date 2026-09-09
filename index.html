@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat de Voz com Avatar Animado</title>
+    <title>IARA - Chat de Voz com Avatar Animado</title>
+    <!-- Carrega o sistema RAG antes do script principal -->
+    <script src="api/rag-system.js" defer></script>
     <style>
         * {
             margin: 0;
@@ -413,7 +415,7 @@
     <div class="chat-container">
         <!-- Header -->
         <div class="chat-header">
-            <h1>🎙️ Assistente de Voz IA</h1>
+            <h1>🎙️ IARA - Inteligência de Alocação de Recursos e Apoio</h1>
             <p>Fale comigo e eu responderei!</p>
         </div>
 
@@ -489,8 +491,9 @@
             <div class="message assistant">
                 <div class="message-avatar">👩</div>
                 <div class="message-content">
-                    Olá! Sou sua assistente virtual. 🌟<br><br>
+                    Olá! Eu sou a <strong>IARA</strong> - Inteligência de Alocação de Recursos e Apoio. 🌟<br><br>
                     Você pode falar comigo clicando no botão do microfone 🎤 ou digitando sua mensagem.<br><br>
+                    Tenho acesso a uma base de conhecimento e posso ajudar com diversas perguntas.<br><br>
                     Como posso ajudar você hoje?
                 </div>
             </div>
@@ -684,10 +687,25 @@
             }
         }
 
-        // Gerar resposta (simulada - substitua por chamada à API real)
-        function generateResponse(userMessage) {
+        // Gerar resposta com base na base de conhecimento (RAG)
+        async function generateResponse(userMessage) {
             const lowerMessage = userMessage.toLowerCase();
             
+            // Primeiro, tenta buscar na base de conhecimento
+            if (window.KnowledgeBase) {
+                try {
+                    const ragResult = await window.KnowledgeBase.query(userMessage);
+                    
+                    if (ragResult.found && ragResult.response) {
+                        console.log('📚 Resposta da base de conhecimento:', ragResult.sources);
+                        return ragResult.response;
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Erro ao buscar na base de conhecimento:', error);
+                }
+            }
+            
+            // Fallback para respostas padrão se não encontrar na base
             if (lowerMessage.includes('olá') || lowerMessage.includes('oi')) {
                 return "Olá! Como posso ajudar você hoje?";
             } else if (lowerMessage.includes('como vai') || lowerMessage.includes('tudo bem')) {
@@ -700,7 +718,7 @@
                 const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 return `Hoje é ${now.toLocaleDateString('pt-BR', options)}.`;
             } else if (lowerMessage.includes('nome')) {
-                return "Meu nome é Aura, sua assistente virtual!";
+                return "Meu nome é IARA - Inteligência de Alocação de Recursos e Apoio. Como posso ajudar você hoje?";
             } else if (lowerMessage.includes('ajuda') || lowerMessage.includes('fazer')) {
                 return "Posso ajudar respondendo perguntas, fornecendo informações, ou apenas conversando com você! O que gostaria de saber?";
             } else if (lowerMessage.includes('obrigad') || lowerMessage.includes('valeu')) {
@@ -731,18 +749,21 @@
             statusText.textContent = 'Pensando...';
             showTypingIndicator();
             
-            // Simular tempo de processamento
-            setTimeout(() => {
+            // Processar resposta de forma assíncrona (RAG)
+            (async () => {
+                // Simular tempo de processamento
+                await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 800));
+                
                 removeTypingIndicator();
                 
-                // Gerar e adicionar resposta
-                const response = generateResponse(message);
+                // Gerar e adicionar resposta (agora assíncrono)
+                const response = await generateResponse(message);
                 addMessage(response, false);
                 
                 // Falar a resposta
                 speak(response);
                 
-            }, 1000 + Math.random() * 1000);
+            })();
         }
 
         // Event Listeners
@@ -763,8 +784,19 @@
         });
 
         // Inicializar
-        loadVoices();
-        setupRecognition();
+        async function init() {
+            // Carrega a base de conhecimento
+            if (window.KnowledgeBase) {
+                console.log('🔄 Carregando base de conhecimento...');
+                await window.KnowledgeBase.loadKnowledge();
+                console.log('✅ Base de conhecimento pronta!');
+            }
+            
+            loadVoices();
+            setupRecognition();
+        }
+        
+        init();
     </script>
 </body>
 </html>
