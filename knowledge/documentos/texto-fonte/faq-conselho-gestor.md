@@ -6,9 +6,30 @@ Secretaria de Planejamento, Coordenação e Finanças — TJPA.
 
 ## 1. É permitido realizar o pagamento de valores decorrentes de penas pecuniárias em espécie na secretaria da vara?
 
-Não. O recolhimento deverá ser realizado exclusivamente por meio de guia eletrônica,
-com a correta identificação do número do processo e do CPF ou CNPJ do responsável
-pelo pagamento, observadas as regras estabelecidas no ato normativo vigente.
+Não. O recolhimento deverá ser realizado exclusivamente por meio de guia eletrônica
+de depósito judicial, com a correta identificação do número do processo e do CPF ou
+CNPJ do responsável pelo pagamento, observadas as regras estabelecidas no ato
+normativo vigente.
+
+A emissão da Guia de Depósito Judicial é feita diretamente pelo link:
+<https://apps.tjpa.jus.br/DepositosJudiciaisOnline/EmitirGuiaDepositoJudicialOnline>
+
+## Como emitir a Guia de Depósito Judicial Online no TJPA?
+
+Para emitir a Guia de Depósito Judicial para recolhimento de valores penais
+(prestação pecuniária, transação penal, ANPP, suspensão condicional do processo)
+ou depósitos judiciais no TJPA, basta acessar o link:
+
+<https://apps.tjpa.jus.br/DepositosJudiciaisOnline/EmitirGuiaDepositoJudicialOnline>
+
+Passo a passo:
+
+1. Acesse o portal de Depósitos Judiciais Online;
+2. Selecione a Comarca e a Vara/Unidade competente;
+3. Informe o número do processo judicial;
+4. Preencha o CPF ou CNPJ e o nome do pagador;
+5. Gere a guia e pague na rede bancária oficial;
+6. Anexe o comprovante de pagamento aos autos.
 
 ## 2. A centralização dos recursos reduz a destinação de valores às comarcas de origem?
 
