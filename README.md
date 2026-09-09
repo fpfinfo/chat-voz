@@ -45,9 +45,6 @@ Um assistente virtual moderno com avatar animado feminino ("Aura") que responde 
 ├── README.md               # Esta documentação
 ├── rag_estruturado.json    # Base de conhecimento do TJPA (Provimento 2/2026, portarias, resoluções, FAQ)
 ├── catalogo.json           # Catálogo dos documentos da base
-├── knowledge/
-│   ├── faq.json            # Conteúdo de exemplo (não usado pelo index.html)
-│   └── sobre.md            # Conteúdo de exemplo (não usado pelo index.html)
 ├── lib/
 │   └── rag-system.js       # Módulo RAG (client-side) — lê rag_estruturado.json
 └── vercel.json             # Configuração de deploy estático
@@ -78,9 +75,10 @@ recorre a respostas locais para saudações e perguntas triviais.
 4. A IARA buscará trechos relevantes do arquivo
 
 **Perguntas que funcionam:**
-- "Qual o horário de atendimento?" (se estiver no FAQ)
-- "Me conte sobre a empresa" (se estiver no sobre.md)
-- "O que o documento diz sobre [palavra-chave]?"
+- "O que diz o artigo 1 do provimento?"
+- "Como uma entidade social solicita acesso aos recursos?"
+- "Quais os percentuais de destinação dos recursos?"
+- "Prazo para prestação de contas"
 
 ### Deploy na Vercel
 
@@ -110,17 +108,26 @@ addMessage('iara', 'Olá! Sou a IARA...');
 
 ### Adicionar Mais Conhecimento
 
-1. **Edite `knowledge/faq.json`**:
+A base fica em `rag_estruturado.json`, no formato:
+
 ```json
 {
-  "pergunta": "Nova pergunta?",
-  "resposta": "Nova resposta."
+  "documentos": [
+    {
+      "doc_id": "novo-doc",
+      "titulo": "Título do documento",
+      "tipo": "norma",
+      "situacao": "vigente",
+      "conteudo": [
+        { "artigo": "1", "paragrafos": [], "ordem": 100, "texto": "Art. 1º ..." }
+      ]
+    }
+  ]
 }
 ```
 
-2. **Crie arquivos `.md`** na pasta `knowledge/`
-
-3. **Atualize `lib/rag-system.js`** para incluir novos arquivos
+Acrescente novos objetos em `documentos[]` (ou novos blocos em `conteudo[]`). O
+`lib/rag-system.js` já achata e indexa tudo automaticamente — não precisa alterar código.
 
 ### Integrar com IA Generativa
 

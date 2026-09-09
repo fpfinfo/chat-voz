@@ -63,9 +63,9 @@ Caso prefira publicar direto do terminal sem passar pelo GitHub:
 ## 🛠️ Arquivos de Configuração
 
 ### `vercel.json`
-O site é **estático e multipágina** (`index.html`, `voice-chat.html`, `voice-chat-avatar.html`), sem
-etapa de build. A Vercel serve todos os arquivos do repositório automaticamente, então a configuração
-é mínima:
+O site é **estático**, sem etapa de build. A Vercel serve todos os arquivos do repositório
+automaticamente (`index.html`, `lib/rag-system.js`, `rag_estruturado.json`, `catalogo.json`),
+então a configuração é mínima:
 
 ```json
 {
@@ -83,7 +83,7 @@ etapa de build. A Vercel serve todos os arquivos do repositório automaticamente
       ]
     },
     {
-      "source": "/knowledge/(.*)",
+      "source": "/(.*)\\.json",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
       ]
@@ -93,7 +93,7 @@ etapa de build. A Vercel serve todos os arquivos do repositório automaticamente
 ```
 
 > ⚠️ **Não** use `builds` apontando só para `index.html` nem um `routes` com `"/(.*)" → "/index.html"`:
-> isso impede o deploy das outras páginas e faz os `fetch()` de `knowledge/*.json` retornarem o HTML.
+> isso impede o deploy dos demais arquivos e faz o `fetch('rag_estruturado.json')` retornar o HTML.
 > Como não há roteador no cliente, nenhum *fallback* de SPA é necessário.
 
 ### `lib/rag-system.js`

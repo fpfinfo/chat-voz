@@ -14,6 +14,9 @@ node_modules/
 # Vercel
 .vercel
 
+# Fontes de dados brutas (PDFs, textos extraídos) — não fazem parte da app
+knowledge/documentos/
+
 # OS
 .DS_Store
 Thumbs.db

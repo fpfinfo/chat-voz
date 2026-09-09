@@ -1,8 +1,6 @@
 # Não enviar documentação e fontes de dados brutos para o deploy
 DEPLOY.md
 README.md
-knowledge/README.md
-knowledge/COMO_USAR.md
-knowledge/documentos/
+knowledge/
 .git
 .gitignore
