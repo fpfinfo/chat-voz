@@ -388,6 +388,7 @@
         let recognition;
         let synth = window.speechSynthesis;
         let voices = [];
+        let iaraVoice = null;
         // --- DOM Elements ---
         const micBtn = document.getElementById('mic-btn');
         const statusText = document.getElementById('status-text');
@@ -414,12 +415,20 @@
 
             // Welcome message if history is empty
             if (messagesContainer.children.length === 0) {
-                addMessage('iara', 'Olá! Sou a IARA, assistente do Conselho Gestor Centralizado de Recursos de Valores Penais do TJPA. Pergunte sobre o Provimento Conjunto 2/2026, recolhimento, habilitação de entidades, prestação de contas ou transparência.');
+                addMessage('iara', 'Olá! Sou a IARA (Inteligência de Alocação de Recursos e Apoio), assistente do Conselho Gestor Centralizado de Recursos de Valores Penais do TJPA. Pergunte sobre o Provimento Conjunto 2/2026, recolhimento, habilitação de entidades, prestação de contas ou transparência.');
             }
         });
         function loadVoices() {
-            voices = synth.getVoices().filter(voice => voice.lang.includes('pt'));
-            if (voices.length === 0) voices = synth.getVoices();
+            const vs = synth.getVoices();
+            voices = vs.filter(v => /pt[-_]?br/i.test(v.lang) || /portugu/i.test(v.name));
+            if (!voices.length) voices = vs.filter(v => /^pt/i.test(v.lang));
+            // Prioriza vozes neurais/naturais (Edge/Windows: Francisca, Thalita;
+            // Chrome: Google pt-BR) — muito menos robótico que a voz padrão.
+            iaraVoice =
+                 voices.find(v => /natural|neural/i.test(v.name))
+              || voices.find(v => /google/i.test(v.name))
+              || voices.find(v => /(francisca|thalita|luciana|maria|vit[oó]ria|camila|helo[ií]sa|brenda)/i.test(v.name))
+              || voices[0] || null;
         }
         function setupSpeechRecognition() {
             if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
@@ -464,11 +473,7 @@
                 recognition.stop();
                 stopListeningVisuals();
             } else {
-                if (isSpeaking) {
-                    synth.cancel();
-                    isSpeaking = false;
-                    avatarContainer.classList.remove('speaking');
-                }
+                stopSpeak();
                 recognition.start();
             }
         }
@@ -530,7 +535,6 @@
             if (lowerInput.includes('nome') || lowerInput.includes('quem é você') || lowerInput.includes('quem e voce')) return 'Sou a IARA, Inteligência de Alocação de Recursos e Apoio, assistente do Conselho Gestor Centralizado de Recursos de Valores Penais do TJPA.';
             if (lowerInput.includes('hora')) return `Agora são ${new Date().toLocaleTimeString('pt-BR')}.`;
             if (lowerInput.includes('data') || lowerInput.includes('que dia')) return `Hoje é ${new Date().toLocaleDateString('pt-BR')}.`;
-            if (lowerInput.includes('guia') || lowerInput.includes('deposito') || lowerInput.includes('depósito') || lowerInput.includes('recolhimento') || lowerInput.includes('pagar')) return 'Para emitir a Guia de Depósito Judicial no TJPA, acesse o sistema de Depósitos Judiciais Online: https://apps.tjpa.jus.br/DepositosJudiciaisOnline/EmitirGuiaDepositoJudicialOnline . No portal, selecione a comarca, a vara, informe o número do processo e o CPF ou CNPJ do responsável.';
             if (lowerInput.includes('ajuda') || lowerInput.includes('o que você faz') || lowerInput.includes('o que voce faz')) return 'Posso responder sobre o Provimento Conjunto 2/2026, recolhimento por guia eletrônica, habilitação de entidades, Plano de Aplicação de Recursos (PARE), prestação de contas e transparência. O que você precisa saber?';
             return 'Não encontrei isso na base de conhecimento do Conselho Gestor. Você pode reformular ou perguntar, por exemplo, sobre prazos, percentuais de destinação, habilitação de entidades ou prestação de contas.';
         }
@@ -557,31 +561,74 @@
             const chatArea = document.getElementById('chat-area');
             chatArea.scrollTop = chatArea.scrollHeight;
         }
+        // Normaliza siglas e abreviações jurídicas que o TTS leria errado.
+        function normalizarFala(t) {
+            return String(t)
+                .replace(/[*_`#>]+/g, ' ')
+                .replace(/\bTJPA\b/g, 'T J P A')
+                .replace(/\bCNJ\b/g, 'Conselho Nacional de Justiça')
+                .replace(/-\s*GP\/CGJ\b/gi, ', G P, C G J')
+                .replace(/\bGP\/CGJ\b/gi, 'G P, C G J')
+                .replace(/\bCGJ\b/g, 'C G J')
+                .replace(/\bANPP\b/g, 'A N P P')
+                .replace(/\bLGPD\b/g, 'L G P D')
+                .replace(/\bPARE\b/g, 'Plano de Aplicação de Recursos')
+                .replace(/\barts?\.\s*/gi, m => /arts/i.test(m) ? 'artigos ' : 'artigo ')
+                .replace(/\bincs?\.\s*/gi, 'inciso ')
+                .replace(/§\s*/g, 'parágrafo ')
+                .replace(/\bn[º°o]\.?\s*(?=\d)/gi, 'número ')
+                .replace(/(\d{1,4})\s*\/\s*(\d{2,4})\b/g, '$1 de $2')
+                .replace(/R\$\s*/g, '')
+                .replace(/(\d+(?:[.,]\d+)?)\s*%/g, '$1 por cento')
+                .replace(/º|ª/g, ' ')
+                .replace(/\s{2,}/g, ' ')
+                .trim();
+        }
+        let falaFila = [], falaToken = 0, falaKeep = null;
+        function pararFalaKeep() { if (falaKeep) { clearInterval(falaKeep); falaKeep = null; } }
+        function stopSpeak() {
+            falaToken++; falaFila = []; pararFalaKeep();
+            if (synth) synth.cancel();
+            isSpeaking = false;
+            avatarContainer.classList.remove('speaking');
+        }
         function speak(text) {
-            if (synth.speaking) synth.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'pt-BR';
-            utterance.rate = 1;
-            utterance.pitch = 1;
-            // Select best voice
-            const preferredVoice = voices.find(v => v.name.includes('Google') || v.name.includes('Brazil'));
-            if (preferredVoice) utterance.voice = preferredVoice;
-            utterance.onstart = () => {
+            stopSpeak();
+            if (!text) { updateStatus('Pronta para ajudar', '#10b981'); return; }
+            const tk = falaToken;
+            const limpo = normalizarFala(text);
+            // Uma frase por utterance: a entonação reinicia a cada frase.
+            falaFila = (limpo.match(/[^.!?…:;]+[.!?…:;]*/g) || [limpo]).map(s => s.trim()).filter(Boolean);
+            falarProxima(tk, true);
+        }
+        function falarProxima(tk, primeira) {
+            if (tk !== falaToken) return;
+            if (!falaFila.length) {
+                pararFalaKeep(); isSpeaking = false;
+                updateStatus('Pronta para ajudar', '#10b981');
+                avatarContainer.classList.remove('speaking');
+                return;
+            }
+            const u = new SpeechSynthesisUtterance(falaFila.shift());
+            u.lang = 'pt-BR'; u.rate = 0.97; u.pitch = 1.0;
+            if (iaraVoice) u.voice = iaraVoice;
+            if (primeira) u.onstart = () => {
                 isSpeaking = true;
                 updateStatus('Falando...', '#667eea');
                 avatarContainer.classList.add('speaking');
+                pararFalaKeep();
+                falaKeep = setInterval(() => {   // contorna o corte ~15 s do Chrome
+                    if (synth.speaking) synth.resume(); else pararFalaKeep();
+                }, 10000);
             };
-            utterance.onend = () => {
-                isSpeaking = false;
+            u.onend = () => falarProxima(tk, false);
+            u.onerror = () => {
+                if (tk !== falaToken) return;
+                pararFalaKeep(); isSpeaking = false;
                 updateStatus('Pronta para ajudar', '#10b981');
                 avatarContainer.classList.remove('speaking');
             };
-            utterance.onerror = () => {
-                isSpeaking = false;
-                updateStatus('Erro na fala', '#ef4444');
-                avatarContainer.classList.remove('speaking');
-            };
-            synth.speak(utterance);
+            synth.speak(u);
         }
         // --- History Management ---
         function saveHistory() {
@@ -603,6 +650,7 @@
         }
         function clearChat() {
             if(confirm('Deseja realmente limpar todo o histórico?')) {
+                stopSpeak();
                 localStorage.removeItem('iara_chat_history');
                 messagesContainer.innerHTML = '';
                 addMessage('iara', 'Conversa limpa! Como posso ajudar agora?');
