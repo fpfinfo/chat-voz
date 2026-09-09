@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat de Voz com Avatar Animado</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 900px;
+            height: 85vh;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Header */
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .chat-header h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .chat-header p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Avatar Area */
+        .avatar-section {
+            background: linear-gradient(180deg, #f8f9ff 0%, #eef1ff 100%);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 2px solid #e0e7ff;
+            position: relative;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 180px;
+            height: 180px;
+            margin-bottom: 15px;
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid #667eea;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            background: white;
+            position: relative;
+        }
+
+        .avatar svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Animações do Avatar */
+        .avatar.idle .eye {
+            animation: blink 4s infinite;
+        }
+
+        .avatar.listening {
+            animation: pulse-listen 1.5s infinite;
+        }
+
+        .avatar.speaking .mouth {
+            animation: talk 0.3s infinite alternate;
+        }
+
+        .avatar.thinking .head {
+            animation: think 2s infinite ease-in-out;
+        }
+
+        @keyframes blink {
+            0%, 90%, 100% { transform: scaleY(1); }
+            95% { transform: scaleY(0.1); }
+        }
+
+        @keyframes pulse-listen {
+            0%, 100% { 
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3), 0 0 0 0 rgba(102, 126, 234, 0.4);
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5), 0 0 0 15px rgba(102, 126, 234, 0);
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes talk {
+            0% { d: path("M 45 135 Q 60 135 75 135"); }
+            100% { d: path("M 45 130 Q 60 145 75 130"); }
+        }
+
+        @keyframes think {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-3px) rotate(-2deg); }
+            75% { transform: translateY(-3px) rotate(2deg); }
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #4ade80;
+            animation: pulse-dot 2s infinite;
+        }
+
+        .status-dot.listening {
+            background: #f59e0b;
+            animation: pulse-dot 1s infinite;
+        }
+
+        .status-dot.speaking {
+            background: #667eea;
+            animation: pulse-dot 0.5s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        /* Chat Messages */
+        .chat-messages {
+            flex: 1;
+            padding: 25px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #fafbff;
+        }
+
+        .message {
+            display: flex;
+            gap: 15px;
+            max-width: 80%;
+            animation: messageSlide 0.3s ease-out;
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            align-self: flex-end;
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .message.assistant .message-avatar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .message.user .message-avatar {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .message-content {
+            padding: 15px 20px;
+            border-radius: 18px;
+            line-height: 1.5;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .message.assistant .message-content {
+            background: white;
+            color: #333;
+            border-bottom-left-radius: 5px;
+        }
+
+        .message.user .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 5px;
+            padding: 15px 20px;
+            background: white;
+            border-radius: 18px;
+            border-bottom-left-radius: 5px;
+            width: fit-content;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #667eea;
+            animation: typingBounce 1.4s infinite;
+        }
+
+        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes typingBounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        /* Input Area */
+        .chat-input-area {
+            padding: 20px 30px;
+            background: white;
+            border-top: 2px solid #e0e7ff;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .input-wrapper {
+            flex: 1;
+            position: relative;
+        }
+
+        #userInput {
+            width: 100%;
+            padding: 15px 20px;
+            padding-right: 120px;
+            border: 2px solid #e0e7ff;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        #userInput:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .btn-send {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-mic {
+            background: white;
+            color: #667eea;
+            border: 2px solid #667eea;
+        }
+
+        .btn-mic.active {
+            background: #f59e0b;
+            color: white;
+            border-color: #f59e0b;
+            animation: pulse-mic 1s infinite;
+        }
+
+        @keyframes pulse-mic {
+            0%, 100% { box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3); }
+            50% { box-shadow: 0 4px 25px rgba(245, 158, 11, 0.6); }
+        }
+
+        /* Scrollbar */
+        .chat-messages::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .chat-messages::-webkit-scrollbar-track {
+            background: #f1f5ff;
+            border-radius: 10px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb {
+            background: #c7d2fe;
+            border-radius: 10px;
+        }
+
+        .chat-messages::-webkit-scrollbar-thumb:hover {
+            background: #a5b4fc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .chat-container {
+                height: 95vh;
+                border-radius: 16px;
+            }
+
+            .chat-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .avatar-container {
+                width: 140px;
+                height: 140px;
+            }
+
+            .avatar-section {
+                padding: 20px;
+            }
+
+            .chat-messages {
+                padding: 15px;
+            }
+
+            .chat-input-area {
+                padding: 15px 20px;
+            }
+
+            .btn {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <!-- Header -->
+        <div class="chat-header">
+            <h1>🎙️ Assistente de Voz IA</h1>
+            <p>Fale comigo e eu responderei!</p>
+        </div>
+
+        <!-- Avatar Section -->
+        <div class="avatar-section">
+            <div class="avatar-container">
+                <div class="avatar idle" id="avatar">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Background -->
+                        <circle cx="100" cy="100" r="100" fill="#fef3c7"/>
+                        
+                        <!-- Hair Back -->
+                        <ellipse cx="100" cy="85" rx="75" ry="70" fill="#4a3728"/>
+                        <ellipse cx="100" cy="95" rx="70" ry="60" fill="#5d4037"/>
+                        
+                        <!-- Neck -->
+                        <rect x="85" y="140" width="30" height="40" fill="#ffe0bd"/>
+                        
+                        <!-- Shoulders/Shirt -->
+                        <path d="M 50 180 Q 100 200 150 180 L 150 200 L 50 200 Z" fill="#667eea"/>
+                        <path d="M 70 180 Q 100 190 130 180" fill="none" stroke="#5a67d8" stroke-width="2"/>
+                        
+                        <!-- Face -->
+                        <ellipse cx="100" cy="110" rx="55" ry="60" fill="#ffe0bd"/>
+                        
+                        <!-- Hair Front -->
+                        <path d="M 45 90 Q 50 40 100 35 Q 150 40 155 90 Q 155 70 100 65 Q 45 70 45 90" fill="#5d4037"/>
+                        <path d="M 50 85 Q 55 50 100 45 Q 145 50 150 85" fill="#4a3728"/>
+                        
+                        <!-- Left Eye -->
+                        <g class="eye" style="transform-origin: 75px 105px;">
+                            <ellipse cx="75" cy="105" rx="12" ry="14" fill="white"/>
+                            <circle cx="77" cy="103" r="6" fill="#2d3748"/>
+                            <circle cx="79" cy="101" r="2" fill="white"/>
+                        </g>
+                        
+                        <!-- Right Eye -->
+                        <g class="eye" style="transform-origin: 125px 105px;">
+                            <ellipse cx="125" cy="105" rx="12" ry="14" fill="white"/>
+                            <circle cx="127" cy="103" r="6" fill="#2d3748"/>
+                            <circle cx="129" cy="101" r="2" fill="white"/>
+                        </g>
+                        
+                        <!-- Eyebrows -->
+                        <path d="M 65 92 Q 75 88 85 92" fill="none" stroke="#4a3728" stroke-width="3" stroke-linecap="round"/>
+                        <path d="M 115 92 Q 125 88 135 92" fill="none" stroke="#4a3728" stroke-width="3" stroke-linecap="round"/>
+                        
+                        <!-- Nose -->
+                        <path d="M 100 115 Q 97 125 100 130" fill="none" stroke="#d69e7a" stroke-width="2" stroke-linecap="round"/>
+                        
+                        <!-- Mouth -->
+                        <path class="mouth" d="M 85 145 Q 100 155 115 145" fill="none" stroke="#d69e7a" stroke-width="3" stroke-linecap="round"/>
+                        
+                        <!-- Cheeks -->
+                        <ellipse cx="70" cy="125" rx="8" ry="5" fill="#ffb6c1" opacity="0.6"/>
+                        <ellipse cx="130" cy="125" rx="8" ry="5" fill="#ffb6c1" opacity="0.6"/>
+                        
+                        <!-- Hair Details -->
+                        <path d="M 55 75 Q 60 60 70 65" fill="none" stroke="#705040" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M 145 75 Q 140 60 130 65" fill="none" stroke="#705040" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="status-indicator">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="statusText">Pronta para ouvir</span>
+            </div>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="chat-messages" id="chatMessages">
+            <div class="message assistant">
+                <div class="message-avatar">👩</div>
+                <div class="message-content">
+                    Olá! Sou sua assistente virtual. 🌟<br><br>
+                    Você pode falar comigo clicando no botão do microfone 🎤 ou digitando sua mensagem.<br><br>
+                    Como posso ajudar você hoje?
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chat-input-area">
+            <div class="input-wrapper">
+                <input type="text" id="userInput" placeholder="Digite sua mensagem ou use o microfone..." autocomplete="off">
+            </div>
+            <div class="button-group">
+                <button class="btn btn-mic" id="micBtn" title="Falar">
+                    🎤
+                </button>
+                <button class="btn btn-send" id="sendBtn" title="Enviar">
+                    ➤
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Elementos do DOM
+        const userInput = document.getElementById('userInput');
+        const sendBtn = document.getElementById('sendBtn');
+        const micBtn = document.getElementById('micBtn');
+        const chatMessages = document.getElementById('chatMessages');
+        const avatar = document.getElementById('avatar');
+        const statusDot = document.getElementById('statusDot');
+        const statusText = document.getElementById('statusText');
+
+        // Variáveis de estado
+        let isListening = false;
+        let isSpeaking = false;
+        let recognition = null;
+        let synth = window.speechSynthesis;
+        let voices = [];
+
+        // Inicializar síntese de voz
+        function loadVoices() {
+            voices = synth.getVoices();
+        }
+
+        if (speechSynthesis.onvoiceschanged !== undefined) {
+            speechSynthesis.onvoiceschanged = loadVoices;
+        }
+
+        // Configurar reconhecimento de voz
+        function setupRecognition() {
+            if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+                const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                recognition = new SpeechRecognition();
+                recognition.continuous = false;
+                recognition.interimResults = true;
+                recognition.lang = 'pt-BR';
+
+                recognition.onstart = () => {
+                    isListening = true;
+                    micBtn.classList.add('active');
+                    avatar.className = 'avatar listening';
+                    statusDot.className = 'status-dot listening';
+                    statusText.textContent = 'Ouvindo...';
+                };
+
+                recognition.onresult = (event) => {
+                    const transcript = Array.from(event.results)
+                        .map(result => result[0].transcript)
+                        .join('');
+                    
+                    userInput.value = transcript;
+                    
+                    if (event.results[0].isFinal) {
+                        sendMessage();
+                    }
+                };
+
+                recognition.onerror = (event) => {
+                    console.error('Erro no reconhecimento:', event.error);
+                    stopListening();
+                };
+
+                recognition.onend = () => {
+                    stopListening();
+                };
+            } else {
+                micBtn.style.display = 'none';
+                alert('Seu navegador não suporta reconhecimento de voz. Use Chrome ou Edge.');
+            }
+        }
+
+        function startListening() {
+            if (recognition && !isListening) {
+                recognition.start();
+            }
+        }
+
+        function stopListening() {
+            isListening = false;
+            micBtn.classList.remove('active');
+            if (!isSpeaking) {
+                avatar.className = 'avatar idle';
+                statusDot.className = 'status-dot';
+                statusText.textContent = 'Pronta para ouvir';
+            }
+        }
+
+        // Síntese de voz
+        function speak(text) {
+            if (synth.speaking) {
+                synth.cancel();
+            }
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            
+            // Selecionar voz em português
+            const portugueseVoice = voices.find(voice => 
+                voice.lang.includes('pt-BR') || voice.lang.includes('pt_BR')
+            );
+            
+            if (portugueseVoice) {
+                utterance.voice = portugueseVoice;
+            }
+            
+            utterance.lang = 'pt-BR';
+            utterance.rate = 1.0;
+            utterance.pitch = 1.1;
+
+            utterance.onstart = () => {
+                isSpeaking = true;
+                avatar.className = 'avatar speaking';
+                statusDot.className = 'status-dot speaking';
+                statusText.textContent = 'Falando...';
+            };
+
+            utterance.onend = () => {
+                isSpeaking = false;
+                avatar.className = 'avatar idle';
+                statusDot.className = 'status-dot';
+                statusText.textContent = 'Pronta para ouvir';
+            };
+
+            utterance.onerror = () => {
+                isSpeaking = false;
+                avatar.className = 'avatar idle';
+                statusDot.className = 'status-dot';
+                statusText.textContent = 'Pronta para ouvir';
+            };
+
+            synth.speak(utterance);
+        }
+
+        // Adicionar mensagem ao chat
+        function addMessage(text, isUser) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
+            
+            const avatarEmoji = isUser ? '👤' : '👩';
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">${avatarEmoji}</div>
+                <div class="message-content">${text}</div>
+            `;
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // Mostrar indicador de digitação
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message assistant';
+            typingDiv.id = 'typingIndicator';
+            
+            typingDiv.innerHTML = `
+                <div class="message-avatar">👩</div>
+                <div class="typing-indicator">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            `;
+            
+            chatMessages.appendChild(typingDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function removeTypingIndicator() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            if (typingIndicator) {
+                typingIndicator.remove();
+            }
+        }
+
+        // Gerar resposta (simulada - substitua por chamada à API real)
+        function generateResponse(userMessage) {
+            const lowerMessage = userMessage.toLowerCase();
+            
+            if (lowerMessage.includes('olá') || lowerMessage.includes('oi')) {
+                return "Olá! Como posso ajudar você hoje?";
+            } else if (lowerMessage.includes('como vai') || lowerMessage.includes('tudo bem')) {
+                return "Estou muito bem, obrigada! E você? Como posso ser útil?";
+            } else if (lowerMessage.includes('hora') || lowerMessage.includes('que horas')) {
+                const now = new Date();
+                return `Agora são ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}.`;
+            } else if (lowerMessage.includes('data') || lowerMessage.includes('dia')) {
+                const now = new Date();
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                return `Hoje é ${now.toLocaleDateString('pt-BR', options)}.`;
+            } else if (lowerMessage.includes('nome')) {
+                return "Meu nome é Aura, sua assistente virtual!";
+            } else if (lowerMessage.includes('ajuda') || lowerMessage.includes('fazer')) {
+                return "Posso ajudar respondendo perguntas, fornecendo informações, ou apenas conversando com você! O que gostaria de saber?";
+            } else if (lowerMessage.includes('obrigad') || lowerMessage.includes('valeu')) {
+                return "De nada! Estou aqui sempre que precisar. 😊";
+            } else {
+                return "Interessante! Me conte mais sobre isso ou faça outra pergunta. Estou aqui para ajudar!";
+            }
+        }
+
+        // Enviar mensagem
+        function sendMessage() {
+            const message = userInput.value.trim();
+            
+            if (!message) return;
+            
+            // Adicionar mensagem do usuário
+            addMessage(message, true);
+            userInput.value = '';
+            
+            // Parar de ouvir se estiver ouvindo
+            if (isListening && recognition) {
+                recognition.stop();
+            }
+            
+            // Mostrar indicador de digitação
+            avatar.className = 'avatar thinking';
+            statusDot.className = 'status-dot';
+            statusText.textContent = 'Pensando...';
+            showTypingIndicator();
+            
+            // Simular tempo de processamento
+            setTimeout(() => {
+                removeTypingIndicator();
+                
+                // Gerar e adicionar resposta
+                const response = generateResponse(message);
+                addMessage(response, false);
+                
+                // Falar a resposta
+                speak(response);
+                
+            }, 1000 + Math.random() * 1000);
+        }
+
+        // Event Listeners
+        sendBtn.addEventListener('click', sendMessage);
+        
+        micBtn.addEventListener('click', () => {
+            if (isListening) {
+                recognition.stop();
+            } else {
+                startListening();
+            }
+        });
+
+        userInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        // Inicializar
+        loadVoices();
+        setupRecognition();
+    </script>
+</body>
+</html>
