@@ -1,108 +1,195 @@
-# 🎙️ Aura - Chat de Voz com IA e Base de Conhecimento
+# 🎙️ IARA - Inteligência de Alocação de Recursos e Apoio
 
-Um chatbot moderno com avatar animado feminino que responde por voz e texto, utilizando um sistema RAG (Retrieval-Augmented Generation) para basear suas respostas em documentos personalizados.
+Um assistente virtual moderno com avatar animado feminino ("Aura") que responde por voz e texto, com capacidade de análise de documentos e sistema RAG (Retrieval-Augmented Generation) para basear suas respostas em conteúdos personalizados.
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades Principais
 
-- **🎤 Reconhecimento de Voz**: Fale com o chat e ele entende sua pergunta
-- **🔊 Respostas em Áudio**: Ouve as respostas do chat em português
-- **👩 Avatar Animado "Aura"**: Personagem feminina com expressões faciais
-  - Pisca os olhos automaticamente
-  - Move a boca quando fala
-  - Reage quando ouve você
-  - Inclina a cabeça quando está pensando
-- **📚 Base de Conhecimento (RAG)**: Responde com base em arquivos que você configura
-- **💬 Interface Moderna**: Design inspirado no ChatGPT/Gemini
-- **📱 Responsivo**: Funciona em desktop e mobile
+### 🎤 Interação por Voz Completa
+- **Reconhecimento de Fala (Speech-to-Text)**: Fale naturalmente com a IARA
+- **Síntese de Voz (Text-to-Speech)**: Receba respostas faladas em português do Brasil
+- **Transcrição em Tempo Real**: Veja o texto sendo gerado enquanto você fala
+- **Detecção Automática**: Envio automático após detectar fim da fala
+
+### 👩💼 Avatar Animado "Aura" com Sincronia Labial
+- **Movimento Labial Realista**: A boca se move durante a fala
+- **Expressões Faciais**: Piscar automático e reações naturais
+- **Estados Visuais Dinâmicos**:
+  - 🟢 **Pronta** (verde) - Estado idle
+  - 🔴 **Ouvindo** (vermelho + pulsação) - Captando áudio
+  - 🟡 **Pensando** (âmbar + inclinação da cabeça) - Processando
+  - 🔵 **Falando** (azul + sincronia labial) - Respondendo
+
+### 📁 Análise de Documentos (RAG Local) - Opção B Implementada
+- **Upload de Arquivos**: Carregue `.txt`, `.md` ou `.pdf` via interface
+- **Contexto em Tempo Real**: Conteúdo armazenado na sessão atual
+- **Busca por Palavras-Chave**: Respostas baseadas nos documentos enviados
+- **Feedback Visual**: Toast notifications de confirmação
+
+### 💬 Chat Inteligente com Histórico - Opção A Implementada
+- **Histórico Persistente**: Conversas salvas no localStorage
+- **Sugestões Interativas**: Chips de perguntas frequentes
+- **Indicador de Digitação**: Animação de "pensando"
+- **Limpar Conversa**: Botão dedicado para resetar
+
+### 🎨 Interface Moderna e Responsiva
+- **Design Premium**: Gradientes roxo/azul inspirados no Gemini
+- **Mobile-First**: Funciona perfeitamente em qualquer dispositivo
+- **Animações Fluidas**: Transições suaves em todos os elementos
+- **Acessibilidade**: Contraste WCAG e indicadores visuais claros
 
 ## 📁 Estrutura do Projeto
 
 ```
 /workspace
-├── index.html              # Aplicação principal do chat
-├── api/
-│   └── rag-system.js       # Sistema RAG para busca em documentos
+├── index.html              # Aplicação completa (HTML + CSS + JS)
+├── README.md               # Esta documentação
 ├── knowledge/
-│   ├── README.md           # Guia da base de conhecimento
-│   ├── COMO_USAR.md        # Instruções detalhadas
-│   ├── faq.json            # Perguntas frequentes (editável)
-│   └── sobre.md            # Informações da empresa (editável)
-└── vercel.json             # Configuração para deploy na Vercel
+│   ├── faq.json            # Base de conhecimento FAQ
+│   └── sobre.md            # Informações institucionais
+├── api/
+│   └── rag-system.js       # Módulo RAG para busca documental
+└── vercel.json             # Configuração de deploy SPA
 ```
 
 ## 🚀 Como Usar
 
-### Localmente
+### Uso Imediato (Sem Instalação)
 
-1. Abra o arquivo `index.html` no seu navegador (Chrome ou Edge recomendados)
-2. Permita o acesso ao microfone quando solicitado
-3. Clique no botão do microfone 🎤 e faça sua pergunta
-4. Ou digite sua pergunta no campo de texto
+1. **Abra o `index.html`** no Chrome ou Edge
+2. **Permita o microfone** quando solicitado
+3. **Interaja**:
+   - Clique no 🎤 e fale
+   - Ou digite no campo de texto
+   - Ou clique nos chips de sugestão
+   - Ou carregue arquivos pelo ícone 📎
 
-### Com Base de Conhecimento
+### Casos de Uso com Documentos
 
-O chat responde perguntas baseadas nos arquivos da pasta `knowledge/`:
+**Exemplo de fluxo:**
+1. Clique no ícone de clipe 📎
+2. Selecione um arquivo `manual.txt` ou `documento.md`
+3. Pergunte: "O que diz sobre [tópico]?"
+4. A IARA buscará trechos relevantes do arquivo
 
-**Exemplos de perguntas que funcionam:**
-- "Qual o horário de atendimento?"
-- "Quais formas de pagamento vocês aceitam?"
-- "Me conte sobre a empresa"
-- "Vocês fazem entregas?"
+**Perguntas que funcionam:**
+- "Qual o horário de atendimento?" (se estiver no FAQ)
+- "Me conte sobre a empresa" (se estiver no sobre.md)
+- "O que o documento diz sobre [palavra-chave]?"
 
-**Para adicionar mais conhecimento:**
+### Deploy na Vercel
 
-1. Edite `knowledge/faq.json` para adicionar novas perguntas e respostas
-2. Crie novos arquivos `.md` ou `.txt` na pasta `knowledge/`
-3. Atualize `api/rag-system.js` para incluir os novos arquivos
+```bash
+# Configure o remote do GitHub
+git remote add origin https://github.com/SEU_USUARIO/iara-chat.git
+git branch -M main
+git push -u origin main
 
-Veja `knowledge/COMO_USAR.md` para instruções detalhadas.
+# Depois importe em vercel.com
+```
 
-## 🌐 Deploy na Vercel
+✅ O `vercel.json` já está configurado para rotas SPA.
 
-1. Faça push deste repositório para o GitHub
-2. Conecte seu repositório na Vercel
-3. A Vercel fará o deploy automaticamente
+## 🔧 Personalização Avançada
 
-⚠️ **Importante**: O arquivo `vercel.json` já está configurado para lidar com rotas SPA.
+### Mudar o Nome e Identidade
 
-## 🔧 Personalização
+Edite no `index.html`:
+```javascript
+// Mensagem de boas-vindas
+addMessage('iara', 'Olá! Sou a IARA...');
 
-### Mudar o Avatar
+// Título
+<h1>IARA</h1>
+```
 
-Edite o SVG na seção `.avatar` do `index.html`
+### Adicionar Mais Conhecimento
 
-### Mudar Cores
+1. **Edite `knowledge/faq.json`**:
+```json
+{
+  "pergunta": "Nova pergunta?",
+  "resposta": "Nova resposta."
+}
+```
 
-Altere os gradientes CSS no `<style>` do `index.html`
+2. **Crie arquivos `.md`** na pasta `knowledge/`
 
-### Adicionar Mais Vozes
+3. **Atualize `api/rag-system.js`** para incluir novos arquivos
 
-O sistema usa a Web Speech API do navegador. Para mais vozes, instale pacotes de idioma no seu sistema operacional.
+### Integrar com IA Generativa
 
-### Integrar com IA Real
+Substitua a função `generateResponse()` por uma chamada à API:
 
-Substitua a função `generateResponse()` no `index.html` por uma chamada à API da OpenAI, Google Gemini, etc.
+```javascript
+async function generateResponse(input) {
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Authorization': 'Bearer SUA_KEY' },
+    body: JSON.stringify({
+      model: 'gpt-4',
+      messages: [{ role: 'user', content: input }]
+    })
+  });
+  const data = await response.json();
+  return data.choices[0].message.content;
+}
+```
 
-## 🛠️ Tecnologias
+### Customizar o Avatar
 
-- **HTML5/CSS3**: Interface moderna com animações
-- **JavaScript Vanilla**: Sem dependências externas
-- **Web Speech API**: Reconhecimento e síntese de voz
-- **Sistema RAG Customizado**: Busca por palavras-chave em documentos
+Edite o SVG inline no HTML ou substitua por uma imagem:
+```css
+.avatar-svg {
+  /* Modifique cores, tamanhos, etc. */
+}
+```
 
-## 📝 Próximas Melhorias
+## 🛠️ Tecnologias Utilizadas
 
-- [ ] Busca semântica com embeddings
-- [ ] Suporte a PDF e DOCX
-- [ ] Upload de arquivos via interface
-- [ ] Integração com APIs de IA
-- [ ] Histórico de conversas persistente
-- [ ] Múltiplos avatares personalizáveis
+| Tecnologia | Finalidade |
+|------------|------------|
+| HTML5/CSS3 | Estrutura e estilização |
+| JavaScript Vanilla | Lógica sem dependências |
+| Web Speech API | Voz (reconhecimento + síntese) |
+| FileReader API | Leitura de arquivos locais |
+| localStorage | Persistência de histórico |
+| SVG Inline | Avatar vetorial animado |
+
+## ⚠️ Limitações e Notas
+
+1. **PDF**: Extração de texto requer PDF.js. Atualmente PDFs são "anexados" mas não têm leitura completa sem bibliotecas externas.
+
+2. **Navegadores**: Melhor suporte no Chrome/Edge. Firefox pode ter limitações na Web Speech API.
+
+3. **Contexto**: Documentos são mantidos apenas na sessão (somem ao fechar aba).
+
+4. **RAG Simples**: Busca por palavras-chave. Para busca semântica, use embeddings.
+
+## 🔮 Roadmap de Melhorias
+
+- [ ] Integração OpenAI/Gemini para IA real
+- [ ] PDF.js para leitura completa de PDFs
+- [ ] Modo escuro/claro automático
+- [ ] Exportar conversas (PDF/TXT)
+- [ ] Multi-idiomas (i18n)
+- [ ] Upload drag-and-drop
+- [ ] Analytics de uso
+- [ ] PWA (instalar como app)
 
 ## 📄 Licença
 
-MIT - Use livremente!
+MIT License - Use livremente para projetos pessoais e comerciais!
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas! Sugestões:
+- Reportar bugs
+- Melhorias de UX/UI
+- Novas funcionalidades
+- Traduções
 
 ---
 
-**Desenvolvido com ❤️ para criar assistentes virtuais mais humanos**
+**Desenvolvido com ❤️ para democratizar assistentes virtuais inteligentes.**
+
+*IARA - Inteligência de Alocação de Recursos e Apoio*

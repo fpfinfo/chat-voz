@@ -3,800 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IARA - Chat de Voz com Avatar Animado</title>
-    <!-- Carrega o sistema RAG antes do script principal -->
-    <script src="api/rag-system.js" defer></script>
+    <title>IARA - Inteligência de Alocação de Recursos e Apoio</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --bg-color: #f3f4f6;
+            --chat-bg: #ffffff;
+            --user-msg-bg: #667eea;
+            --user-msg-text: #ffffff;
+            --iara-msg-bg: #f3f4f6;
+            --iara-msg-text: #1f2937;
+            --text-color: #1f2937;
+            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: var(--bg-color);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            overflow: hidden;
         }
-
-        .chat-container {
+        .container {
             width: 100%;
-            max-width: 900px;
-            height: 85vh;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 24px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            height: 90vh;
+            background: var(--chat-bg);
+            border-radius: 20px;
+            box-shadow: var(--shadow);
             display: flex;
             flex-direction: column;
             overflow: hidden;
-            backdrop-filter: blur(10px);
+            position: relative;
         }
-
         /* Header */
-        .chat-header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        header {
+            padding: 20px;
+            background: var(--primary-gradient);
             color: white;
-            padding: 20px 30px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .chat-header h1 {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-
-        .chat-header p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        /* Avatar Area */
-        .avatar-section {
-            background: linear-gradient(180deg, #f8f9ff 0%, #eef1ff 100%);
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 2px solid #e0e7ff;
-            position: relative;
-        }
-
-        .avatar-container {
-            position: relative;
-            width: 180px;
-            height: 180px;
-            margin-bottom: 15px;
-        }
-
-        .avatar {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 4px solid #667eea;
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
-            background: white;
-            position: relative;
-        }
-
-        .avatar svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        /* Animações do Avatar */
-        .avatar.idle .eye {
-            animation: blink 4s infinite;
-        }
-
-        .avatar.listening {
-            animation: pulse-listen 1.5s infinite;
-        }
-
-        .avatar.speaking .mouth {
-            animation: talk 0.3s infinite alternate;
-        }
-
-        .avatar.thinking .head {
-            animation: think 2s infinite ease-in-out;
-        }
-
-        @keyframes blink {
-            0%, 90%, 100% { transform: scaleY(1); }
-            95% { transform: scaleY(0.1); }
-        }
-
-        @keyframes pulse-listen {
-            0%, 100% { 
-                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3), 0 0 0 0 rgba(102, 126, 234, 0.4);
-                transform: scale(1);
-            }
-            50% { 
-                box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5), 0 0 0 15px rgba(102, 126, 234, 0);
-                transform: scale(1.05);
-            }
-        }
-
-        @keyframes talk {
-            0% { d: path("M 45 135 Q 60 135 75 135"); }
-            100% { d: path("M 45 130 Q 60 145 75 130"); }
-        }
-
-        @keyframes think {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-3px) rotate(-2deg); }
-            75% { transform: translateY(-3px) rotate(2deg); }
-        }
-
-        .status-indicator {
             display: flex;
             align-items: center;
-            gap: 10px;
-            padding: 10px 20px;
-            background: white;
-            border-radius: 25px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            font-size: 0.95rem;
-            color: #555;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 10;
         }
-
-        .status-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #4ade80;
-            animation: pulse-dot 2s infinite;
-        }
-
-        .status-dot.listening {
-            background: #f59e0b;
-            animation: pulse-dot 1s infinite;
-        }
-
-        .status-dot.speaking {
-            background: #667eea;
-            animation: pulse-dot 0.5s infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.2); }
-        }
-
-        /* Chat Messages */
-        .chat-messages {
-            flex: 1;
-            padding: 25px;
-            overflow-y: auto;
+        .header-title {
             display: flex;
-            flex-direction: column;
-            gap: 20px;
-            background: #fafbff;
-        }
-
-        .message {
-            display: flex;
+            align-items: center;
             gap: 15px;
-            max-width: 80%;
-            animation: messageSlide 0.3s ease-out;
         }
-
-        @keyframes messageSlide {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .message.user {
-            align-self: flex-end;
-            flex-direction: row-reverse;
-        }
-
-        .message-avatar {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-        }
-
-        .message.assistant .message-avatar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .message.user .message-avatar {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .message-content {
-            padding: 15px 20px;
-            border-radius: 18px;
-            line-height: 1.5;
-            position: relative;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .message.assistant .message-content {
-            background: white;
-            color: #333;
-            border-bottom-left-radius: 5px;
-        }
-
-        .message.user .message-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border-bottom-right-radius: 5px;
-        }
-
-        .typing-indicator {
-            display: flex;
-            gap: 5px;
-            padding: 15px 20px;
-            background: white;
-            border-radius: 18px;
-            border-bottom-left-radius: 5px;
-            width: fit-content;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-        }
-
-        .typing-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #667eea;
-            animation: typingBounce 1.4s infinite;
-        }
-
-        .typing-dot:nth-child(2) { animation-delay: 0.2s; }
-        .typing-dot:nth-child(3) { animation-delay: 0.4s; }
-
-        @keyframes typingBounce {
-            0%, 60%, 100% { transform: translateY(0); }
-            30% { transform: translateY(-10px); }
-        }
-
-        /* Input Area */
-        .chat-input-area {
-            padding: 20px 30px;
-            background: white;
-            border-top: 2px solid #e0e7ff;
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-
-        .input-wrapper {
-            flex: 1;
-            position: relative;
-        }
-
-        #userInput {
-            width: 100%;
-            padding: 15px 20px;
-            padding-right: 120px;
-            border: 2px solid #e0e7ff;
-            border-radius: 25px;
-            font-size: 1rem;
-            outline: none;
-            transition: all 0.3s;
-            font-family: inherit;
-        }
-
-        #userInput:focus {
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-        }
-
-        .button-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn {
+        .avatar-mini {
             width: 50px;
             height: 50px;
-            border: none;
             border-radius: 50%;
+            background: white;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .status-indicator {
+            width: 12px;
+            height: 12px;
+            background-color: #10b981; /* Green for ready */
+            border-radius: 50%;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+        }
+        .status-text {
+            font-size: 0.9rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+        .clear-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+        .clear-btn:hover { background: rgba(255,255,255,0.3); }
+        /* Main Chat Area */
+        .chat-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        .avatar-container {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 20px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .avatar-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 10px 15px rgba(118, 75, 162, 0.3));
+        }
+        /* Avatar Animations */
+        @keyframes blink { 0%, 90%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+        @keyframes pulse-listen { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        @keyframes speak-mouth { 0%, 100% { ry: 5; } 50% { ry: 15; } }
+        @keyframes think-tilt { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-5deg); } }
+        .eye { transform-origin: center; animation: blink 4s infinite; }
+        .listening .avatar-svg { animation: pulse-listen 1.5s infinite ease-in-out; }
+        .speaking .mouth { animation: speak-mouth 0.3s infinite; }
+        .thinking .avatar-container { animation: think-tilt 2s infinite ease-in-out; }
+        /* Messages */
+        .messages-container {
+            width: 100%;
+            max-width: 700px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: auto;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+        .message {
+            max-width: 80%;
+            padding: 12px 18px;
+            border-radius: 18px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            position: relative;
+            animation: fadeIn 0.3s ease-up;
+            word-wrap: break-word;
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .message.user {
+            align-self: flex-end;
+            background: var(--user-msg-bg);
+            color: var(--user-msg-text);
+            border-bottom-right-radius: 4px;
+        }
+        .message.iara {
+            align-self: flex-start;
+            background: var(--iara-msg-bg);
+            color: var(--iara-msg-text);
+            border-bottom-left-radius: 4px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .message.iara img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: white;
+            padding: 2px;
+        }
+        .typing-indicator {
+            display: none;
+            align-self: flex-start;
+            background: var(--iara-msg-bg);
+            padding: 10px 15px;
+            border-radius: 18px;
+            border-bottom-left-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .typing-indicator span {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background-color: #9ca3af;
+            border-radius: 50%;
+            animation: typing 1.4s infinite ease-in-out both;
+            margin: 0 2px;
+        }
+        .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typing { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+        /* Controls */
+        .controls {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e5e7eb;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            justify-content: center;
+        }
+        .input-group {
+            flex: 1;
+            max-width: 600px;
+            position: relative;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid #e5e7eb;
+            border-radius: 30px;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus { border-color: #667eea; }
+        .btn-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.3rem;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: absolute;
         }
-
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-        }
-
-        .btn-send {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .btn-mic {
-            background: white;
-            color: #667eea;
-            border: 2px solid #667eea;
-        }
-
-        .btn-mic.active {
-            background: #f59e0b;
-            color: white;
-            border-color: #f59e0b;
-            animation: pulse-mic 1s infinite;
-        }
-
-        @keyframes pulse-mic {
-            0%, 100% { box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3); }
-            50% { box-shadow: 0 4px 25px rgba(245, 158, 11, 0.6); }
-        }
-
-        /* Scrollbar */
-        .chat-messages::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .chat-messages::-webkit-scrollbar-track {
-            background: #f1f5ff;
-            border-radius: 10px;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb {
-            background: #c7d2fe;
-            border-radius: 10px;
-        }
-
-        .chat-messages::-webkit-scrollbar-thumb:hover {
-            background: #a5b4fc;
-        }
-
+        .btn-send { right: 5px; background: var(--primary-gradient); color: white; top: 50%; transform: translateY(-50%); }
+        .btn-send:hover { transform: translateY(-50%) scale(1.05); }
+        
+        .btn-mic { left: 5px; background: white; border: 2px solid #e5e7eb; color: #4b5563; top: 50%; transform: translateY(-50%); }
+        .btn-mic:hover { border-color: #667eea; color: #667eea; }
+        .btn-mic.listening { background: #fee2e2; border-color: #ef4444; color: #ef4444; animation: pulse-mic 1.5s infinite; }
+        
+        @keyframes pulse-mic { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
         /* Responsive */
         @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-
-            .chat-container {
-                height: 95vh;
-                border-radius: 16px;
-            }
-
-            .chat-header h1 {
-                font-size: 1.4rem;
-            }
-
-            .avatar-container {
-                width: 140px;
-                height: 140px;
-            }
-
-            .avatar-section {
-                padding: 20px;
-            }
-
-            .chat-messages {
-                padding: 15px;
-            }
-
-            .chat-input-area {
-                padding: 15px 20px;
-            }
-
-            .btn {
-                width: 45px;
-                height: 45px;
-            }
+            .container { height: 100vh; border-radius: 0; }
+            .avatar-container { width: 150px; height: 150px; }
+            .message { max-width: 90%; }
         }
     </style>
 </head>
 <body>
-    <div class="chat-container">
-        <!-- Header -->
-        <div class="chat-header">
-            <h1>🎙️ IARA - Inteligência de Alocação de Recursos e Apoio</h1>
-            <p>Fale comigo e eu responderei!</p>
-        </div>
-
-        <!-- Avatar Section -->
-        <div class="avatar-section">
-            <div class="avatar-container">
-                <div class="avatar idle" id="avatar">
-                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Background -->
-                        <circle cx="100" cy="100" r="100" fill="#fef3c7"/>
-                        
-                        <!-- Hair Back -->
-                        <ellipse cx="100" cy="85" rx="75" ry="70" fill="#4a3728"/>
-                        <ellipse cx="100" cy="95" rx="70" ry="60" fill="#5d4037"/>
-                        
-                        <!-- Neck -->
-                        <rect x="85" y="140" width="30" height="40" fill="#ffe0bd"/>
-                        
-                        <!-- Shoulders/Shirt -->
-                        <path d="M 50 180 Q 100 200 150 180 L 150 200 L 50 200 Z" fill="#667eea"/>
-                        <path d="M 70 180 Q 100 190 130 180" fill="none" stroke="#5a67d8" stroke-width="2"/>
-                        
-                        <!-- Face -->
-                        <ellipse cx="100" cy="110" rx="55" ry="60" fill="#ffe0bd"/>
-                        
-                        <!-- Hair Front -->
-                        <path d="M 45 90 Q 50 40 100 35 Q 150 40 155 90 Q 155 70 100 65 Q 45 70 45 90" fill="#5d4037"/>
-                        <path d="M 50 85 Q 55 50 100 45 Q 145 50 150 85" fill="#4a3728"/>
-                        
-                        <!-- Left Eye -->
-                        <g class="eye" style="transform-origin: 75px 105px;">
-                            <ellipse cx="75" cy="105" rx="12" ry="14" fill="white"/>
-                            <circle cx="77" cy="103" r="6" fill="#2d3748"/>
-                            <circle cx="79" cy="101" r="2" fill="white"/>
-                        </g>
-                        
-                        <!-- Right Eye -->
-                        <g class="eye" style="transform-origin: 125px 105px;">
-                            <ellipse cx="125" cy="105" rx="12" ry="14" fill="white"/>
-                            <circle cx="127" cy="103" r="6" fill="#2d3748"/>
-                            <circle cx="129" cy="101" r="2" fill="white"/>
-                        </g>
-                        
-                        <!-- Eyebrows -->
-                        <path d="M 65 92 Q 75 88 85 92" fill="none" stroke="#4a3728" stroke-width="3" stroke-linecap="round"/>
-                        <path d="M 115 92 Q 125 88 135 92" fill="none" stroke="#4a3728" stroke-width="3" stroke-linecap="round"/>
-                        
-                        <!-- Nose -->
-                        <path d="M 100 115 Q 97 125 100 130" fill="none" stroke="#d69e7a" stroke-width="2" stroke-linecap="round"/>
-                        
-                        <!-- Mouth -->
-                        <path class="mouth" d="M 85 145 Q 100 155 115 145" fill="none" stroke="#d69e7a" stroke-width="3" stroke-linecap="round"/>
-                        
-                        <!-- Cheeks -->
-                        <ellipse cx="70" cy="125" rx="8" ry="5" fill="#ffb6c1" opacity="0.6"/>
-                        <ellipse cx="130" cy="125" rx="8" ry="5" fill="#ffb6c1" opacity="0.6"/>
-                        
-                        <!-- Hair Details -->
-                        <path d="M 55 75 Q 60 60 70 65" fill="none" stroke="#705040" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M 145 75 Q 140 60 130 65" fill="none" stroke="#705040" stroke-width="2" stroke-linecap="round"/>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <div class="avatar-mini">
+                    <svg viewBox="0 0 100 100" style="width:100%; height:100%;">
+                        <circle cx="50" cy="50" r="48" fill="#fff"/>
+                        <path d="M30 45 Q50 30 70 45 Q85 55 80 75 Q50 90 20 75 Q15 55 30 45" fill="#f5d0c0"/>
+                        <path d="M25 40 Q50 10 75 40 L75 30 Q50 0 25 30 Z" fill="#4a3b32"/>
+                        <circle cx="35" cy="50" r="4" fill="#333"/>
+                        <circle cx="65" cy="50" r="4" fill="#333"/>
+                        <path d="M40 65 Q50 75 60 65" stroke="#d48c8c" stroke-width="3" fill="none"/>
                     </svg>
+                    <div class="status-indicator" id="status-dot"></div>
+                </div>
+                <div>
+                    <h1 style="font-size: 1.2rem;">IARA</h1>
+                    <p class="status-text" id="status-text">Pronta para ajudar</p>
                 </div>
             </div>
-            
-            <div class="status-indicator">
-                <div class="status-dot" id="statusDot"></div>
-                <span id="statusText">Pronta para ouvir</span>
+            <button class="clear-btn" onclick="clearChat()">Limpar Conversa</button>
+        </header>
+        <div class="chat-area" id="chat-area">
+            <div class="avatar-container" id="avatar-container">
+                <!-- SVG Avatar Detalhado -->
+                <svg class="avatar-svg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="skinGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#f5d0c0;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#eecfb9;stop-opacity:1" />
+                        </linearGradient>
+                        <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#4a3b32;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#2c221b;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Hair Back -->
+                    <path d="M40 60 Q100 20 160 60 L170 140 Q100 180 30 140 Z" fill="url(#hairGrad)" />
+                    <!-- Neck -->
+                    <rect x="85" y="110" width="30" height="40" fill="url(#skinGrad)" />
+                    <!-- Shoulders/Shirt -->
+                    <path d="M40 150 Q100 190 160 150 L180 200 L20 200 Z" fill="#667eea" />
+                    <!-- Face -->
+                    <ellipse cx="100" cy="90" rx="55" ry="65" fill="url(#skinGrad)" />
+                    <!-- Hair Front -->
+                    <path d="M45 70 Q50 30 100 30 Q150 30 155 70 Q160 50 140 40 Q100 10 60 40 Q40 50 45 70" fill="url(#hairGrad)" />
+                    <!-- Eyes Group -->
+                    <g class="eyes">
+                        <ellipse class="eye" cx="75" cy="85" rx="8" ry="10" fill="#fff" />
+                        <circle cx="75" cy="85" r="4" fill="#333" />
+                        <ellipse class="eye" cx="125" cy="85" rx="8" ry="10" fill="#fff" />
+                        <circle cx="125" cy="85" r="4" fill="#333" />
+                    </g>
+                    <!-- Nose -->
+                    <path d="M95 95 Q100 105 105 95" stroke="#d48c8c" stroke-width="2" fill="none" opacity="0.6"/>
+                    <!-- Mouth -->
+                    <path class="mouth" d="M85 115 Q100 125 115 115" stroke="#d48c8c" stroke-width="3" fill="none" stroke-linecap="round" />
+                    <!-- Blush -->
+                    <ellipse cx="65" cy="105" rx="10" ry="5" fill="#ffb7b2" opacity="0.4" />
+                    <ellipse cx="135" cy="105" rx="10" ry="5" fill="#ffb7b2" opacity="0.4" />
+                </svg>
+            </div>
+            <div class="messages-container" id="messages-container">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="typing-indicator" id="typing-indicator">
+                <span></span><span></span><span></span>
             </div>
         </div>
-
-        <!-- Chat Messages -->
-        <div class="chat-messages" id="chatMessages">
-            <div class="message assistant">
-                <div class="message-avatar">👩</div>
-                <div class="message-content">
-                    Olá! Eu sou a <strong>IARA</strong> - Inteligência de Alocação de Recursos e Apoio. 🌟<br><br>
-                    Você pode falar comigo clicando no botão do microfone 🎤 ou digitando sua mensagem.<br><br>
-                    Tenho acesso a uma base de conhecimento e posso ajudar com diversas perguntas.<br><br>
-                    Como posso ajudar você hoje?
-                </div>
-            </div>
-        </div>
-
-        <!-- Input Area -->
-        <div class="chat-input-area">
-            <div class="input-wrapper">
-                <input type="text" id="userInput" placeholder="Digite sua mensagem ou use o microfone..." autocomplete="off">
-            </div>
-            <div class="button-group">
-                <button class="btn btn-mic" id="micBtn" title="Falar">
-                    🎤
+        <div class="controls">
+            <div class="input-group">
+                <input type="text" id="user-input" placeholder="Digite sua mensagem ou clique no microfone..." onkeypress="handleKeyPress(event)">
+                <button class="btn-icon btn-send" onclick="sendMessage()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
                 </button>
-                <button class="btn btn-send" id="sendBtn" title="Enviar">
-                    ➤
+                <button class="btn-icon btn-mic" id="mic-btn" onclick="toggleListening()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
                 </button>
             </div>
         </div>
     </div>
-
     <script>
-        // Elementos do DOM
-        const userInput = document.getElementById('userInput');
-        const sendBtn = document.getElementById('sendBtn');
-        const micBtn = document.getElementById('micBtn');
-        const chatMessages = document.getElementById('chatMessages');
-        const avatar = document.getElementById('avatar');
-        const statusDot = document.getElementById('statusDot');
-        const statusText = document.getElementById('statusText');
-
-        // Variáveis de estado
+        // --- State Management ---
         let isListening = false;
         let isSpeaking = false;
-        let recognition = null;
+        let recognition;
         let synth = window.speechSynthesis;
         let voices = [];
-
-        // Inicializar síntese de voz
+        // --- DOM Elements ---
+        const micBtn = document.getElementById('mic-btn');
+        const statusText = document.getElementById('status-text');
+        const statusDot = document.getElementById('status-dot');
+        const avatarContainer = document.getElementById('avatar-container');
+        const messagesContainer = document.getElementById('messages-container');
+        const userInput = document.getElementById('user-input');
+        const typingIndicator = document.getElementById('typing-indicator');
+        // --- Initialization ---
+        window.addEventListener('DOMContentLoaded', () => {
+            loadVoices();
+            loadHistory();
+            if (synth.onvoiceschanged !== undefined) {
+                synth.onvoiceschanged = loadVoices;
+            }
+            setupSpeechRecognition();
+            
+            // Welcome message if history is empty
+            if (messagesContainer.children.length === 0) {
+                addMessage('iara', 'Olá! Sou a IARA, sua Inteligência de Alocação de Recursos e Apoio. Como posso ajudar você hoje?');
+            }
+        });
         function loadVoices() {
-            voices = synth.getVoices();
+            voices = synth.getVoices().filter(voice => voice.lang.includes('pt'));
+            if (voices.length === 0) voices = synth.getVoices();
         }
-
-        if (speechSynthesis.onvoiceschanged !== undefined) {
-            speechSynthesis.onvoiceschanged = loadVoices;
-        }
-
-        // Configurar reconhecimento de voz
-        function setupRecognition() {
+        function setupSpeechRecognition() {
             if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
                 recognition = new SpeechRecognition();
                 recognition.continuous = false;
-                recognition.interimResults = true;
                 recognition.lang = 'pt-BR';
-
+                recognition.interimResults = false;
                 recognition.onstart = () => {
                     isListening = true;
-                    micBtn.classList.add('active');
-                    avatar.className = 'avatar listening';
-                    statusDot.className = 'status-dot listening';
-                    statusText.textContent = 'Ouvindo...';
+                    updateStatus('Ouvindo...', '#ef4444');
+                    micBtn.classList.add('listening');
                 };
-
                 recognition.onresult = (event) => {
-                    const transcript = Array.from(event.results)
-                        .map(result => result[0].transcript)
-                        .join('');
-                    
+                    const transcript = event.results[0][0].transcript;
                     userInput.value = transcript;
-                    
-                    if (event.results[0].isFinal) {
-                        sendMessage();
+                    sendMessage();
+                };
+                recognition.onerror = (event) => {
+                    console.error('Speech recognition error', event.error);
+                    stopListeningVisuals();
+                    if (event.error === 'no-speech') {
+                        updateStatus('Não ouvi nada. Tente novamente.', '#f59e0b');
+                    } else {
+                        updateStatus('Erro no microfone.', '#ef4444');
                     }
                 };
-
-                recognition.onerror = (event) => {
-                    console.error('Erro no reconhecimento:', event.error);
-                    stopListening();
-                };
-
                 recognition.onend = () => {
-                    stopListening();
+                    if (isListening) {
+                        stopListeningVisuals();
+                    }
                 };
             } else {
                 micBtn.style.display = 'none';
                 alert('Seu navegador não suporta reconhecimento de voz. Use Chrome ou Edge.');
             }
         }
-
-        function startListening() {
-            if (recognition && !isListening) {
+        function toggleListening() {
+            if (!recognition) return;
+            if (isListening) {
+                recognition.stop();
+                stopListeningVisuals();
+            } else {
+                if (isSpeaking) {
+                    synth.cancel();
+                    isSpeaking = false;
+                    avatarContainer.classList.remove('speaking');
+                }
                 recognition.start();
             }
         }
-
-        function stopListening() {
+        function stopListeningVisuals() {
             isListening = false;
-            micBtn.classList.remove('active');
-            if (!isSpeaking) {
-                avatar.className = 'avatar idle';
-                statusDot.className = 'status-dot';
-                statusText.textContent = 'Pronta para ouvir';
-            }
+            micBtn.classList.remove('listening');
+            updateStatus('Pronta para ajudar', '#10b981');
         }
-
-        // Síntese de voz
+        function updateStatus(text, color) {
+            statusText.textContent = text;
+            statusDot.style.backgroundColor = color;
+        }
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') sendMessage();
+        }
+        // --- Chat Logic ---
+        function sendMessage() {
+            const text = userInput.value.trim();
+            if (!text) return;
+            addMessage('user', text);
+            userInput.value = '';
+            // Show typing indicator
+            typingIndicator.style.display = 'block';
+            scrollToBottom();
+            updateStatus('Pensando...', '#f59e0b');
+            avatarContainer.classList.add('thinking');
+            // Simulate delay for "thinking"
+            setTimeout(() => {
+                const response = generateResponse(text);
+                typingIndicator.style.display = 'none';
+                avatarContainer.classList.remove('thinking');
+                addMessage('iara', response);
+                speak(response);
+            }, 1500);
+        }
+        function generateResponse(input) {
+            const lowerInput = input.toLowerCase();
+            if (lowerInput.includes('olá') || lowerInput.includes('oi')) return 'Olá! Como posso ajudar você com seus recursos hoje?';
+            if (lowerInput.includes('nome')) return 'Sou a IARA, Inteligência de Alocação de Recursos e Apoio.';
+            if (lowerInput.includes('hora')) return `Agora são ${new Date().toLocaleTimeString('pt-BR')}.`;
+            if (lowerInput.includes('data')) return `Hoje é ${new Date().toLocaleDateString('pt-BR')}.`;
+            if (lowerInput.includes('ajuda')) return 'Posso ajudar com alocação de recursos, dúvidas gerais e organização. O que você precisa?';
+            return 'Interessante! Pode me contar mais detalhes? Estou aqui para ajudar.';
+        }
+        function addMessage(sender, text) {
+            const msgDiv = document.createElement('div');
+            msgDiv.classList.add('message', sender);
+            
+            if (sender === 'iara') {
+                const img = document.createElement('img');
+                img.src = "data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23fff'/%3E%3Cpath d='M30 45 Q50 30 70 45 Q85 55 80 75 Q50 90 20 75 Q15 55 30 45' fill='%23f5d0c0'/%3E%3Cpath d='M25 40 Q50 10 75 40 L75 30 Q50 0 25 30 Z' fill='%234a3b32'/%3E%3Ccircle cx='35' cy='50' r='4' fill='%23333'/%3E%3Ccircle cx='65' cy='50' r='4' fill='%23333'/%3E%3Cpath d='M40 65 Q50 75 60 65' stroke='%23d48c8c' stroke-width='3' fill='none'/%3E%3C/svg%3E";
+                msgDiv.appendChild(img);
+                
+                const textSpan = document.createElement('span');
+                textSpan.textContent = text;
+                msgDiv.appendChild(textSpan);
+            } else {
+                msgDiv.textContent = text;
+            }
+            messagesContainer.appendChild(msgDiv);
+            saveHistory();
+            scrollToBottom();
+        }
+        function scrollToBottom() {
+            const chatArea = document.getElementById('chat-area');
+            chatArea.scrollTop = chatArea.scrollHeight;
+        }
         function speak(text) {
-            if (synth.speaking) {
-                synth.cancel();
-            }
-
+            if (synth.speaking) synth.cancel();
             const utterance = new SpeechSynthesisUtterance(text);
-            
-            // Selecionar voz em português
-            const portugueseVoice = voices.find(voice => 
-                voice.lang.includes('pt-BR') || voice.lang.includes('pt_BR')
-            );
-            
-            if (portugueseVoice) {
-                utterance.voice = portugueseVoice;
-            }
-            
             utterance.lang = 'pt-BR';
-            utterance.rate = 1.0;
-            utterance.pitch = 1.1;
-
+            utterance.rate = 1;
+            utterance.pitch = 1;
+            // Select best voice
+            const preferredVoice = voices.find(v => v.name.includes('Google') || v.name.includes('Brazil'));
+            if (preferredVoice) utterance.voice = preferredVoice;
             utterance.onstart = () => {
                 isSpeaking = true;
-                avatar.className = 'avatar speaking';
-                statusDot.className = 'status-dot speaking';
-                statusText.textContent = 'Falando...';
+                updateStatus('Falando...', '#667eea');
+                avatarContainer.classList.add('speaking');
             };
-
             utterance.onend = () => {
                 isSpeaking = false;
-                avatar.className = 'avatar idle';
-                statusDot.className = 'status-dot';
-                statusText.textContent = 'Pronta para ouvir';
+                updateStatus('Pronta para ajudar', '#10b981');
+                avatarContainer.classList.remove('speaking');
             };
-
             utterance.onerror = () => {
                 isSpeaking = false;
-                avatar.className = 'avatar idle';
-                statusDot.className = 'status-dot';
-                statusText.textContent = 'Pronta para ouvir';
+                updateStatus('Erro na fala', '#ef4444');
+                avatarContainer.classList.remove('speaking');
             };
-
             synth.speak(utterance);
         }
-
-        // Adicionar mensagem ao chat
-        function addMessage(text, isUser) {
-            const messageDiv = document.createElement('div');
-            messageDiv.className = `message ${isUser ? 'user' : 'assistant'}`;
-            
-            const avatarEmoji = isUser ? '👤' : '👩';
-            
-            messageDiv.innerHTML = `
-                <div class="message-avatar">${avatarEmoji}</div>
-                <div class="message-content">${text}</div>
-            `;
-            
-            chatMessages.appendChild(messageDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
+        // --- History Management ---
+        function saveHistory() {
+            const messages = [];
+            document.querySelectorAll('.message').forEach(msg => {
+                messages.push({
+                    sender: msg.classList.contains('user') ? 'user' : 'iara',
+                    text: msg.textContent
+                });
+            });
+            localStorage.setItem('iara_chat_history', JSON.stringify(messages));
         }
-
-        // Mostrar indicador de digitação
-        function showTypingIndicator() {
-            const typingDiv = document.createElement('div');
-            typingDiv.className = 'message assistant';
-            typingDiv.id = 'typingIndicator';
-            
-            typingDiv.innerHTML = `
-                <div class="message-avatar">👩</div>
-                <div class="typing-indicator">
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                    <div class="typing-dot"></div>
-                </div>
-            `;
-            
-            chatMessages.appendChild(typingDiv);
-            chatMessages.scrollTop = chatMessages.scrollHeight;
-        }
-
-        function removeTypingIndicator() {
-            const typingIndicator = document.getElementById('typingIndicator');
-            if (typingIndicator) {
-                typingIndicator.remove();
+        function loadHistory() {
+            const saved = localStorage.getItem('iara_chat_history');
+            if (saved) {
+                const messages = JSON.parse(saved);
+                messages.forEach(msg => addMessage(msg.sender, msg.text));
             }
         }
-
-        // Gerar resposta com base na base de conhecimento (RAG)
-        async function generateResponse(userMessage) {
-            const lowerMessage = userMessage.toLowerCase();
-            
-            // Primeiro, tenta buscar na base de conhecimento
-            if (window.KnowledgeBase) {
-                try {
-                    const ragResult = await window.KnowledgeBase.query(userMessage);
-                    
-                    if (ragResult.found && ragResult.response) {
-                        console.log('📚 Resposta da base de conhecimento:', ragResult.sources);
-                        return ragResult.response;
-                    }
-                } catch (error) {
-                    console.warn('⚠️ Erro ao buscar na base de conhecimento:', error);
-                }
-            }
-            
-            // Fallback para respostas padrão se não encontrar na base
-            if (lowerMessage.includes('olá') || lowerMessage.includes('oi')) {
-                return "Olá! Como posso ajudar você hoje?";
-            } else if (lowerMessage.includes('como vai') || lowerMessage.includes('tudo bem')) {
-                return "Estou muito bem, obrigada! E você? Como posso ser útil?";
-            } else if (lowerMessage.includes('hora') || lowerMessage.includes('que horas')) {
-                const now = new Date();
-                return `Agora são ${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}.`;
-            } else if (lowerMessage.includes('data') || lowerMessage.includes('dia')) {
-                const now = new Date();
-                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                return `Hoje é ${now.toLocaleDateString('pt-BR', options)}.`;
-            } else if (lowerMessage.includes('nome')) {
-                return "Meu nome é IARA - Inteligência de Alocação de Recursos e Apoio. Como posso ajudar você hoje?";
-            } else if (lowerMessage.includes('ajuda') || lowerMessage.includes('fazer')) {
-                return "Posso ajudar respondendo perguntas, fornecendo informações, ou apenas conversando com você! O que gostaria de saber?";
-            } else if (lowerMessage.includes('obrigad') || lowerMessage.includes('valeu')) {
-                return "De nada! Estou aqui sempre que precisar. 😊";
-            } else {
-                return "Interessante! Me conte mais sobre isso ou faça outra pergunta. Estou aqui para ajudar!";
+        function clearChat() {
+            if(confirm('Deseja realmente limpar todo o histórico?')) {
+                localStorage.removeItem('iara_chat_history');
+                messagesContainer.innerHTML = '';
+                addMessage('iara', 'Conversa limpa! Como posso ajudar agora?');
             }
         }
-
-        // Enviar mensagem
-        function sendMessage() {
-            const message = userInput.value.trim();
-            
-            if (!message) return;
-            
-            // Adicionar mensagem do usuário
-            addMessage(message, true);
-            userInput.value = '';
-            
-            // Parar de ouvir se estiver ouvindo
-            if (isListening && recognition) {
-                recognition.stop();
-            }
-            
-            // Mostrar indicador de digitação
-            avatar.className = 'avatar thinking';
-            statusDot.className = 'status-dot';
-            statusText.textContent = 'Pensando...';
-            showTypingIndicator();
-            
-            // Processar resposta de forma assíncrona (RAG)
-            (async () => {
-                // Simular tempo de processamento
-                await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 800));
-                
-                removeTypingIndicator();
-                
-                // Gerar e adicionar resposta (agora assíncrono)
-                const response = await generateResponse(message);
-                addMessage(response, false);
-                
-                // Falar a resposta
-                speak(response);
-                
-            })();
-        }
-
-        // Event Listeners
-        sendBtn.addEventListener('click', sendMessage);
-        
-        micBtn.addEventListener('click', () => {
-            if (isListening) {
-                recognition.stop();
-            } else {
-                startListening();
-            }
-        });
-
-        userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-
-        // Inicializar
-        async function init() {
-            // Carrega a base de conhecimento
-            if (window.KnowledgeBase) {
-                console.log('🔄 Carregando base de conhecimento...');
-                await window.KnowledgeBase.loadKnowledge();
-                console.log('✅ Base de conhecimento pronta!');
-            }
-            
-            loadVoices();
-            setupRecognition();
-        }
-        
-        init();
     </script>
 </body>
 </html>
