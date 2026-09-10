@@ -45,9 +45,8 @@ Um assistente virtual moderno com avatar animado feminino ("Aura") que responde 
 ├── README.md               # Esta documentação
 ├── rag_estruturado.json    # Base de conhecimento do TJPA (Provimento 2/2026, portarias, resoluções, FAQ)
 ├── catalogo.json           # Catálogo dos documentos da base
-├── lib/
-│   └── rag-system.js       # Módulo RAG (client-side) — lê rag_estruturado.json
-└── vercel.json             # Configuração de deploy estático
+└── lib/
+    └── rag-system.js       # Módulo RAG (client-side) — lê rag_estruturado.json
 ```
 
 O `index.html` carrega `lib/rag-system.js` e responde consultando `rag_estruturado.json`
@@ -80,18 +79,13 @@ recorre a respostas locais para saudações e perguntas triviais.
 - "Quais os percentuais de destinação dos recursos?"
 - "Prazo para prestação de contas"
 
-### Deploy na Vercel
+### Observação sobre este repositório
 
-```bash
-# Configure o remote do GitHub
-git remote add origin https://github.com/SEU_USUARIO/iara-chat.git
-git branch -M main
-git push -u origin main
-
-# Depois importe em vercel.com
-```
-
-✅ O `vercel.json` já está configurado para rotas SPA.
+Este é o **protótipo standalone** da IARA — abre direto do `index.html`, com o
+RAG rodando no navegador a partir de `rag_estruturado.json`. O atendimento
+virtual **em produção** roda no n8n do TJPA (workflow `chat-IARA`, página e
+backend servidos por `https://n8n.tjpa.jus.br/webhook/chat-iara`); ver o
+repositório `CONSELHO_GESTOR`.
 
 ## 🔧 Personalização Avançada
 
