@@ -136,9 +136,11 @@ O avatar agora é um **vídeo** (não mais uma foto estática): a boca da IARA s
 verdade, com sincronia labial gerada por Wav2Lip a partir da foto aprovada + uma amostra
 da voz do Gemini.
 
-- `iara-falando.mp4` — vídeo 480x480, 7s, ~48 KB (já embutido em base64 no HTML)
+- `iara-falando.mp4` — vídeo 480x480, 7s, ~41 KB (já embutido em base64 no HTML)
 - `iara-poster.jpg` — quadro de repouso (mostrado enquanto ela não fala)
 - Quando o estado é **falando**, o vídeo toca em loop; nos outros estados fica pausado.
+- A arte é de **meio corpo, com o braço acenando** (conforme a referência oficial).
+- O estado `is-greeting` aplica uma animação de **aceno** (balanço) no avatar.
 
 > Para trocar a fala do vídeo por outra, gere um novo Wav2Lip com a foto + o áudio desejado
 > e substitua o `iara-falando.mp4` (o base64 dentro do HTML).
