@@ -136,6 +136,28 @@
             animation: iara-tilt 2.2s ease-in-out infinite;
         }
         @keyframes iara-breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.015); } }
+        /* Movimento contínuo tipo vídeo: respira, balança e gira de leve */
+        @keyframes iara-vivo {
+            0%   { transform: scale(1.00) translateX(0px) rotate(0deg); }
+            20%  { transform: scale(1.015) translateX(2.5px) rotate(0.7deg); }
+            45%  { transform: scale(1.025) translateX(1px) rotate(0.2deg); }
+            70%  { transform: scale(1.015) translateX(-2.5px) rotate(-0.7deg); }
+            100% { transform: scale(1.00) translateX(0px) rotate(0deg); }
+        }
+        .avatar-foto { animation: iara-vivo 9s ease-in-out infinite !important; }
+        /* Ondas de fala (aparecem enquanto a IARA fala) */
+        .fala-ondas { display: none; align-items: flex-end; justify-content: center; gap: 4px; height: 20px; margin-top: 10px; }
+        .fala-ondas.ativa { display: flex; }
+        .fala-ondas span {
+            width: 4px; border-radius: 3px; background: linear-gradient(180deg,#667eea,#764ba2);
+            animation: onda 0.75s ease-in-out infinite;
+        }
+        .fala-ondas span:nth-child(1) { height: 8px;  animation-delay: 0s; }
+        .fala-ondas span:nth-child(2) { height: 16px; animation-delay: .1s; }
+        .fala-ondas span:nth-child(3) { height: 20px; animation-delay: .2s; }
+        .fala-ondas span:nth-child(4) { height: 13px; animation-delay: .3s; }
+        .fala-ondas span:nth-child(5) { height: 9px;  animation-delay: .4s; }
+        @keyframes onda { 0%, 100% { transform: scaleY(.35); } 50% { transform: scaleY(1.15); } }
         @keyframes iara-tilt { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-3.5deg); } }
         @keyframes iara-ping { 0% { opacity: .85; transform: scale(1); } 100% { opacity: 0; transform: scale(1.12); } }
         @media (prefers-reduced-motion: reduce) { .avatar-foto { animation: none !important; } }
@@ -319,6 +341,15 @@
                         <input type="range" id="voz-rate" min="0.7" max="1.3" step="0.01">
                     </div>
                     <div class="voz-linha">
+                        <label for="voz-neural">Voz neural (Gemini)</label>
+                        <select id="voz-neural">
+                            <option value="">Desligada (voz do navegador)</option>
+                            <option value="Kore">Kore (feminina)</option>
+                            <option value="Aoede">Aoede (feminina)</option>
+                            <option value="Leda">Leda (feminina)</option>
+                        </select>
+                    </div>
+                    <div class="voz-linha">
                         <label for="voz-pitch">Tom <span class="voz-val" id="voz-pitch-val">1.00</span></label>
                         <input type="range" id="voz-pitch" min="0.7" max="1.3" step="0.01">
                     </div>
@@ -336,6 +367,7 @@
                 <!-- SVG Avatar Detalhado -->
                 <img class="avatar-foto" src="assets/iara-avatar.jpg" alt="IARA — assistente virtual do Conselho Gestor">
             </div>
+            <div class="fala-ondas" id="fala-ondas" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="messages-container" id="messages-container">
                 <!-- Messages will appear here -->
             </div>
@@ -355,6 +387,7 @@
             </div>
         </div>
     </div>
+    <script src="config.local.js" onerror="window.__semConfig=1"></script>
     <script src="lib/rag-system.js"></script>
     <script>
         // --- State Management ---
@@ -685,15 +718,85 @@
         function stopSpeak() {
             falaToken++; falaFila = []; pararFalaKeep();
             if (synth) synth.cancel();
+            pararAudioNeural();
+            const ond0 = document.getElementById('fala-ondas'); if (ond0) ond0.classList.remove('ativa');
             isSpeaking = false;
             avatarContainer.classList.remove('speaking');
         }
-        function speak(text) {
+        // ===== VOZ NEURAL (Gemini TTS) =====
+        // Usa a chave de config.local.js (teste local). Sem chave, cai na voz do navegador.
+        const GEMINI_KEY = (window.GEMINI_KEY || '').trim();
+        let audioNeural = null;
+        function pcmParaWavBlob(b64, rate) {
+            const bin = atob(b64);
+            const pcm = new Uint8Array(bin.length);
+            for (let i = 0; i < bin.length; i++) pcm[i] = bin.charCodeAt(i);
+            const buf = new ArrayBuffer(44 + pcm.length);
+            const v = new DataView(buf);
+            const str = (off, t) => { for (let k = 0; k < t.length; k++) v.setUint8(off + k, t.charCodeAt(k)); };
+            str(0, 'RIFF'); v.setUint32(4, 36 + pcm.length, true); str(8, 'WAVE');
+            str(12, 'fmt '); v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true);
+            v.setUint32(24, rate, true); v.setUint32(28, rate * 2, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true);
+            str(36, 'data'); v.setUint32(40, pcm.length, true);
+            new Uint8Array(buf).set(pcm, 44);
+            return new Blob([buf], { type: 'audio/wav' });
+        }
+        function pararAudioNeural() { if (audioNeural) { try { audioNeural.pause(); } catch (e) {} audioNeural = null; } }
+        function tocarAudioNeural(b64, rate, tk) {
+            try {
+                const url = URL.createObjectURL(pcmParaWavBlob(b64, rate || 24000));
+                const a = new Audio(url);
+                audioNeural = a;
+                a.onended = a.onerror = () => {
+                    URL.revokeObjectURL(url); audioNeural = null;
+                    if (tk === undefined || tk === falaToken) {
+                        isSpeaking = false; pararFalaKeep();
+                        updateStatus('Pronta para ajudar', '#10b981');
+                        avatarContainer.classList.remove('speaking');
+                        const ondN = document.getElementById('fala-ondas'); if (ondN) ondN.classList.remove('ativa');
+                    }
+                };
+                a.play();
+                return true;
+            } catch (e) { return false; }
+        }
+        async function falarNeural(texto, tk) {
+            if (!GEMINI_KEY) return false;
+            try {
+                const r = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_KEY },
+                    body: JSON.stringify({
+                        contents: [{ parts: [{ text: texto }] }],
+                        generationConfig: {
+                            responseModalities: ['AUDIO'],
+                            speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: (window.GEMINI_TTS_VOICE || 'Kore') } } }
+                        }
+                    })
+                });
+                if (!r.ok) { console.warn('Gemini TTS falhou:', r.status); return false; }
+                const j = await r.json();
+                const parte = j && j.candidates && j.candidates[0] && j.candidates[0].content
+                    && j.candidates[0].content.parts && j.candidates[0].content.parts[0]
+                    && (j.candidates[0].content.parts[0].inlineData || j.candidates[0].content.parts[0].inline_data);
+                if (!parte || !parte.data) return false;
+                const m = /rate=(\d+)/.exec(parte.mimeType || '');
+                return tocarAudioNeural(parte.data, m ? parseInt(m[1], 10) : 24000, tk);
+            } catch (e) { console.warn('Voz neural indisponível:', e); return false; }
+        }
+
+        async function speak(text) {
             stopSpeak();
             if (!text) { updateStatus('Pronta para ajudar', '#10b981'); return; }
             const tk = falaToken;
             const limpo = normalizarFala(text);
-            // Uma frase por utterance: a entonação reinicia a cada frase.
+            // 1) voz neural (Gemini) — quando configurada
+            isSpeaking = true;
+            avatarContainer.classList.add('speaking');
+            updateStatus('Falando...', '#667eea');
+            if (await falarNeural(limpo, tk)) return;
+            if (tk !== falaToken) return;
+            // 2) reserva: voz do navegador (uma frase por utterance)
             falaFila = (limpo.match(/[^.!?…:;]+[.!?…:;]*/g) || [limpo]).map(s => s.trim()).filter(Boolean);
             falarProxima(tk, true);
         }
@@ -703,6 +806,7 @@
                 pararFalaKeep(); isSpeaking = false;
                 updateStatus('Pronta para ajudar', '#10b981');
                 avatarContainer.classList.remove('speaking');
+                const ondF = document.getElementById('fala-ondas'); if (ondF) ondF.classList.remove('ativa');
                 return;
             }
             const u = new SpeechSynthesisUtterance(falaFila.shift());
@@ -712,6 +816,7 @@
                 isSpeaking = true;
                 updateStatus('Falando...', '#667eea');
                 avatarContainer.classList.add('speaking');
+                const ond = document.getElementById('fala-ondas'); if (ond) ond.classList.add('ativa');
                 pararFalaKeep();
                 falaKeep = setInterval(() => {   // contorna o corte ~15 s do Chrome
                     if (synth.speaking) synth.resume(); else pararFalaKeep();
@@ -810,6 +915,14 @@
                 VOZ_PREF.pitch = parseFloat(e.target.value);
                 document.getElementById('voz-pitch-val').textContent = VOZ_PREF.pitch.toFixed(2);
             });
+            const dn = document.getElementById('voz-neural');
+            if (dn) {
+                dn.value = window.GEMINI_TTS_VOICE || '';
+                dn.addEventListener('change', e => {
+                    window.GEMINI_TTS_VOICE = e.target.value;
+                    if (e.target.value) speak('Voz neural ativada. Esta é a minha nova voz.');
+                });
+            }
             // fecha o painel ao clicar fora
             document.addEventListener('click', ev => {
                 const p = document.getElementById('voz-painel');
