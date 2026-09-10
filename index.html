@@ -389,6 +389,21 @@
         let synth = window.speechSynthesis;
         let voices = [];
         let iaraVoice = null;
+        // --- Microfone: janela-filha quando a página roda "sandboxed" ---
+        // O n8n serve esta página com CSP `sandbox` (sem allow-same-origin), o que
+        // deixa a origem opaca (location.origin === "null") e o navegador bloqueia o
+        // microfone AQUI. Como o CSP tem `allow-popups-to-escape-sandbox`, um
+        // window.open() para uma URL HTTPS real abre uma janela FORA do sandbox, com
+        // origem real, onde o microfone funciona. Essa janela (mic.html) captura a
+        // fala e devolve a transcrição por postMessage.
+        // Servido de origem real (localhost, file://, host próprio): usa o
+        // reconhecimento embutido normal, sem janela-filha.
+        const MIC_HELPER_URL = 'https://fpfinfo.github.io/chat-voz/mic.html';
+        const NEEDS_MIC_POPUP = /[?&]micpopup=1/.test(location.search)
+            || ((location.origin === 'null' || location.origin === null) && location.protocol !== 'file:');
+        let micHelperOrigin = '';
+        try { micHelperOrigin = new URL(MIC_HELPER_URL).origin; } catch (e) {}
+        let micPopupWin = null;
         // --- DOM Elements ---
         const micBtn = document.getElementById('mic-btn');
         const statusText = document.getElementById('status-text');
@@ -431,6 +446,10 @@
               || voices[0] || null;
         }
         function setupSpeechRecognition() {
+            if (NEEDS_MIC_POPUP) {
+                // Reconhecimento roda na janela-filha (mic.html). Nada a configurar aqui.
+                return;
+            }
             if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
                 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
                 recognition = new SpeechRecognition();
@@ -468,6 +487,7 @@
             }
         }
         function toggleListening() {
+            if (NEEDS_MIC_POPUP) { openMicPopup(); return; }
             if (!recognition) return;
             if (isListening) {
                 recognition.stop();
@@ -487,6 +507,56 @@
             statusText.textContent = text;
             statusDot.style.backgroundColor = color;
         }
+        // --- Microfone via janela-filha (mic.html) ---
+        function openMicPopup() {
+            if (isSpeaking) stopSpeak();
+            if (micPopupWin && !micPopupWin.closed) { micPopupWin.focus(); return; }
+            const w = 380, h = 520;
+            const x = window.screenX + Math.max(0, (window.outerWidth  - w) / 2);
+            const y = window.screenY + Math.max(0, (window.outerHeight - h) / 2);
+            micPopupWin = window.open(
+                MIC_HELPER_URL, 'iara_mic',
+                'width=' + w + ',height=' + h + ',left=' + x + ',top=' + y + ',resizable=yes'
+            );
+            if (!micPopupWin) {
+                updateStatus('Permita a janela do microfone e tente de novo.', '#f59e0b');
+                return;
+            }
+            isListening = true;
+            micBtn.classList.add('listening');
+            avatarContainer.classList.add('listening');
+            updateStatus('Fale na janela do microfone...', '#ef4444');
+            // Rede de segurança: se a janela for fechada sem resposta, limpa o estado.
+            const watch = setInterval(() => {
+                if (!micPopupWin || micPopupWin.closed) {
+                    clearInterval(watch);
+                    if (isListening) stopListeningVisuals();
+                }
+            }, 500);
+        }
+        window.addEventListener('message', (event) => {
+            if (micHelperOrigin && event.origin !== micHelperOrigin) return;
+            const data = event.data;
+            if (!data || data.source !== 'iara-mic') return;
+            if (data.type === 'result' && data.transcript) {
+                stopListeningVisuals();
+                userInput.value = data.transcript;
+                sendMessage();
+            } else if (data.type === 'error') {
+                stopListeningVisuals();
+                const msgs = {
+                    'no-speech': 'Não ouvi nada. Tente novamente.',
+                    'audio-capture': 'Microfone não encontrado.',
+                    'not-allowed': 'Permissão de microfone negada.',
+                    'service-not-allowed': 'Permissão de microfone negada.',
+                    'network': 'Sem conexão com o serviço de voz.',
+                    'unsupported': 'Use o Chrome ou o Edge para falar com a IARA.'
+                };
+                updateStatus(msgs[data.error] || 'Não consegui ouvir.', '#f59e0b');
+            } else if (data.type === 'cancel') {
+                stopListeningVisuals();
+            }
+        });
         function handleKeyPress(event) {
             if (event.key === 'Enter') sendMessage();
         }

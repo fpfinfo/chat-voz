@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IARA — Microfone</title>
+<style>
+  :root {
+    --grad: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --ink: #1f2937;
+    --muted: #6b7280;
+    --ok: #10b981;
+    --rec: #ef4444;
+    --warn: #f59e0b;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+  html, body { height: 100%; }
+  body {
+    background: #f3f4f6;
+    color: var(--ink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    padding: 24px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--muted);
+    letter-spacing: .02em;
+  }
+  .mic {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: var(--grad);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 26px -6px rgba(102, 126, 234, .55);
+    transition: transform .15s ease, box-shadow .2s ease;
+  }
+  .mic:hover { transform: scale(1.04); }
+  .mic:active { transform: scale(.97); }
+  .mic svg { width: 54px; height: 54px; }
+  body.listening .mic {
+    background: var(--rec);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, .45);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(239, 68, 68, .45); }
+    70%  { box-shadow: 0 0 0 26px rgba(239, 68, 68, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+  }
+  .status {
+    font-size: 1.02rem;
+    font-weight: 600;
+    min-height: 1.4em;
+  }
+  .transcript {
+    font-size: .95rem;
+    color: var(--muted);
+    max-width: 320px;
+    min-height: 1.3em;
+    font-style: italic;
+  }
+  .hint {
+    font-size: .8rem;
+    color: var(--muted);
+    max-width: 320px;
+  }
+  body.error .status { color: var(--warn); }
+  body.done .status { color: var(--ok); }
+  body.listening .status { color: var(--rec); }
+  @media (prefers-reduced-motion: reduce) {
+    body.listening .mic { animation: none; }
+  }
+</style>
+</head>
+<body>
+  <h1>IARA — Atendimento por voz</h1>
+  <button class="mic" id="mic" aria-label="Falar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+      <line x1="12" y1="19" x2="12" y2="23"></line>
+      <line x1="8" y1="23" x2="16" y2="23"></line>
+    </svg>
+  </button>
+  <div class="status" id="status">Preparando o microfone…</div>
+  <div class="transcript" id="transcript"></div>
+  <div class="hint" id="hint">Fale sua pergunta. A janela fecha sozinha ao terminar.</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // A página-mãe (IARA no n8n) tem origem opaca ("null"), então não dá para
+  // restringir o destino do postMessage. A transcrição não é sigilosa e vai
+  // marcada com source:"iara-mic" para a mãe filtrar. Trocar MIC_HELPER_URL
+  // no index.html por um host do TJPA não exige mudar nada aqui.
+  var TARGET = window.opener || window.parent;
+
+  var micBtn    = document.getElementById("mic");
+  var statusEl  = document.getElementById("status");
+  var transEl   = document.getElementById("transcript");
+  var hintEl    = document.getElementById("hint");
+
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var recognition = null;
+  var settled = false;   // já mandamos um resultado/erro definitivo?
+  var running = false;
+
+  function post(msg) {
+    if (!TARGET) return;
+    try {
+      msg.source = "iara-mic";
+      TARGET.postMessage(msg, "*");
+    } catch (e) { /* mãe pode ter fechado */ }
+  }
+
+  function setBody(cls) {
+    document.body.className = cls || "";
+  }
+
+  function say(text) { statusEl.textContent = text; }
+
+  post({ type: "ready" });
+
+  if (!SR) {
+    setBody("error");
+    say("Navegador sem suporte a voz");
+    hintEl.textContent = "Abra a IARA no Google Chrome ou no Microsoft Edge para falar.";
+    micBtn.disabled = true;
+    post({ type: "error", error: "unsupported" });
+    return;
+  }
+
+  recognition = new SR();
+  recognition.lang = "pt-BR";
+  recognition.continuous = false;
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 1;
+
+  recognition.onstart = function () {
+    running = true;
+    settled = false;
+    setBody("listening");
+    say("Ouvindo… pode falar");
+    transEl.textContent = "";
+    hintEl.textContent = "Toque no microfone para parar antes da hora.";
+  };
+
+  recognition.onresult = function (event) {
+    var interim = "", finalText = "";
+    for (var i = event.resultIndex; i < event.results.length; i++) {
+      var chunk = event.results[i][0].transcript;
+      if (event.results[i].isFinal) finalText += chunk;
+      else interim += chunk;
+    }
+    if (interim) transEl.textContent = interim;
+    if (finalText.trim()) {
+      settled = true;
+      transEl.textContent = finalText.trim();
+      setBody("done");
+      say("Entendi!");
+      hintEl.textContent = "Enviando para a IARA…";
+      post({ type: "result", transcript: finalText.trim() });
+      setTimeout(function () { window.close(); }, 750);
+    }
+  };
+
+  recognition.onerror = function (event) {
+    if (settled) return;
+    settled = true;
+    running = false;
+    setBody("error");
+    var map = {
+      "no-speech":           "Não ouvi nada",
+      "audio-capture":       "Microfone não encontrado",
+      "not-allowed":         "Permissão de microfone negada",
+      "service-not-allowed": "Permissão de microfone negada",
+      "network":             "Sem conexão com o serviço de voz"
+    };
+    say(map[event.error] || "Não consegui ouvir");
+    hintEl.textContent = "Toque no microfone para tentar de novo.";
+    post({ type: "error", error: event.error });
+  };
+
+  recognition.onend = function () {
+    running = false;
+    if (!settled) {
+      // Encerrou sem resultado (ex.: silêncio) e sem disparar onerror.
+      setBody("");
+      say("Toque para falar");
+      hintEl.textContent = "Toque no microfone e faça sua pergunta.";
+    }
+  };
+
+  function start() {
+    if (running) return;
+    settled = false;
+    setBody("");
+    say("Iniciando…");
+    try {
+      recognition.start();
+    } catch (e) {
+      // "already started" — ignora.
+    }
+  }
+
+  micBtn.addEventListener("click", function () {
+    if (running) {
+      try { recognition.stop(); } catch (e) {}
+    } else {
+      start();
+    }
+  });
+
+  // Autoinicia: dá tempo da janela pintar e do prompt de permissão aparecer.
+  window.addEventListener("load", function () {
+    setTimeout(start, 350);
+  });
+
+  // Se o usuário fechar a janela no meio, avisa a mãe para limpar o estado.
+  window.addEventListener("pagehide", function () {
+    if (!settled) post({ type: "cancel" });
+  });
+})();
+</script>
+</body>
+</html>
