@@ -130,10 +130,24 @@ converter no n8n. Validado: blob gerado com cabeçalho RIFF/WAVE correto.
 
 ---
 
+## 🎬 Avatar em VÍDEO (boca mexendo)
+
+O avatar agora é um **vídeo** (não mais uma foto estática): a boca da IARA se move de
+verdade, com sincronia labial gerada por Wav2Lip a partir da foto aprovada + uma amostra
+da voz do Gemini.
+
+- `iara-falando.mp4` — vídeo 480x480, 7s, ~48 KB (já embutido em base64 no HTML)
+- `iara-poster.jpg` — quadro de repouso (mostrado enquanto ela não fala)
+- Quando o estado é **falando**, o vídeo toca em loop; nos outros estados fica pausado.
+
+> Para trocar a fala do vídeo por outra, gere um novo Wav2Lip com a foto + o áudio desejado
+> e substitua o `iara-falando.mp4` (o base64 dentro do HTML).
+
 ## 📝 Histórico desta versão
 
-- **Avatar**: arte ilustrada semi-realista aprovada (cabelo castanho ondulado, olhos
-  grandes, blazer teal + blusa branca), exibida em círculo com anel de estado.
+- **Avatar**: arte ilustrada semi-realista (cabelo castanho ondulado, olhos grandes,
+  blazer teal + blusa branca), exibida em círculo com anel de estado.
+- **Vídeo com sincronia labial**: a boca se move (Wav2Lip), com poster de repouso.
 - **Estados**: anel muda de cor conforme o estado (pronta/ouvindo/pensando/falando).
 - **Voz**: normalização de fala ampliada, ranking de vozes neurais, sliders de
   velocidade/tom (⚙️) e suporte a áudio neural vindo do backend.

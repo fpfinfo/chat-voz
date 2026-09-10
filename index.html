@@ -365,7 +365,10 @@
         <div class="chat-area" id="chat-area">
             <div class="avatar-container" id="avatar-container">
                 <!-- SVG Avatar Detalhado -->
-                <img class="avatar-foto" src="assets/iara-avatar.jpg" alt="IARA — assistente virtual do Conselho Gestor">
+                <video class="avatar-foto" id="avatar-video" poster="assets/iara-poster.jpg" muted loop playsinline preload="auto"
+                       aria-label="IARA — assistente virtual do Conselho Gestor">
+                    <source src="assets/iara-falando.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="fala-ondas" id="fala-ondas" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="messages-container" id="messages-container">
@@ -721,8 +724,18 @@
             pararAudioNeural();
             const ond0 = document.getElementById('fala-ondas'); if (ond0) ond0.classList.remove('ativa');
             isSpeaking = false;
-            avatarContainer.classList.remove('speaking');
+            avatarContainer.classList.remove('speaking'); videoParar();
         }
+        // ===== VÍDEO DO AVATAR (boca mexendo) =====
+        function videoFalar() {
+            const v = document.getElementById('avatar-video');
+            if (v) { try { v.currentTime = 0; v.play(); } catch (e) {} }
+        }
+        function videoParar() {
+            const v = document.getElementById('avatar-video');
+            if (v) { try { v.pause(); } catch (e) {} }
+        }
+
         // ===== VOZ NEURAL (Gemini TTS) =====
         // Usa a chave de config.local.js (teste local). Sem chave, cai na voz do navegador.
         const GEMINI_KEY = (window.GEMINI_KEY || '').trim();
@@ -752,7 +765,7 @@
                     if (tk === undefined || tk === falaToken) {
                         isSpeaking = false; pararFalaKeep();
                         updateStatus('Pronta para ajudar', '#10b981');
-                        avatarContainer.classList.remove('speaking');
+                        avatarContainer.classList.remove('speaking'); videoParar();
                         const ondN = document.getElementById('fala-ondas'); if (ondN) ondN.classList.remove('ativa');
                     }
                 };
@@ -792,7 +805,7 @@
             const limpo = normalizarFala(text);
             // 1) voz neural (Gemini) — quando configurada
             isSpeaking = true;
-            avatarContainer.classList.add('speaking');
+            avatarContainer.classList.add('speaking'); videoFalar();
             updateStatus('Falando...', '#667eea');
             if (await falarNeural(limpo, tk)) return;
             if (tk !== falaToken) return;
@@ -805,7 +818,7 @@
             if (!falaFila.length) {
                 pararFalaKeep(); isSpeaking = false;
                 updateStatus('Pronta para ajudar', '#10b981');
-                avatarContainer.classList.remove('speaking');
+                avatarContainer.classList.remove('speaking'); videoParar();
                 const ondF = document.getElementById('fala-ondas'); if (ondF) ondF.classList.remove('ativa');
                 return;
             }
@@ -815,7 +828,7 @@
             if (primeira) u.onstart = () => {
                 isSpeaking = true;
                 updateStatus('Falando...', '#667eea');
-                avatarContainer.classList.add('speaking');
+                avatarContainer.classList.add('speaking'); videoFalar();
                 const ond = document.getElementById('fala-ondas'); if (ond) ond.classList.add('ativa');
                 pararFalaKeep();
                 falaKeep = setInterval(() => {   // contorna o corte ~15 s do Chrome
@@ -842,7 +855,7 @@
                 if (tk !== falaToken) return;
                 pararFalaKeep(); isSpeaking = false;
                 updateStatus('Pronta para ajudar', '#10b981');
-                avatarContainer.classList.remove('speaking');
+                avatarContainer.classList.remove('speaking'); videoParar();
             };
             synth.speak(u);
         }
