@@ -111,6 +111,11 @@
             position: relative;
             transition: transform 0.3s ease;
         }
+        .avatar-box{display:block;position:relative;overflow:hidden;border-radius:50%}
+        .avatar-box .avatar-vid{width:100%;height:100%;object-fit:cover;border-radius:50%;display:block}
+        .avatar-box .avatar-aceno{display:none}
+        .avatar-container.is-greeting .avatar-box .avatar-aceno{display:block}
+        .avatar-container.is-greeting .avatar-box .avatar-normal{display:none}
         .avatar-foto {
             width: 100%;
             height: 100%;
@@ -365,10 +370,7 @@
         <div class="chat-area" id="chat-area">
             <div class="avatar-container" id="avatar-container">
                 <!-- SVG Avatar Detalhado -->
-                <video class="avatar-foto" id="avatar-video" poster="assets/iara-poster.jpg" muted loop playsinline preload="auto"
-                       aria-label="IARA — assistente virtual do Conselho Gestor">
-                    <source src="assets/iara-falando.mp4" type="video/mp4">
-                </video>
+                <div class="avatar-foto avatar-box" id="avatar-foto"><video class="avatar-vid avatar-normal" poster="assets/iara-poster.jpg" muted loop playsinline preload="auto"><source src="assets/iara-falando.mp4" type="video/mp4"></video><video class="avatar-vid avatar-aceno" poster="assets/iara-aceno-poster.jpg" muted loop playsinline preload="auto"><source src="assets/iara-aceno.mp4" type="video/mp4"></video></div>
             </div>
             <div class="fala-ondas" id="fala-ondas" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
             <div class="messages-container" id="messages-container">
@@ -727,13 +729,24 @@
             avatarContainer.classList.remove('speaking'); videoParar();
         }
         // ===== VÍDEO DO AVATAR (boca mexendo) =====
-        function videoFalar() {
-            const v = document.getElementById('avatar-video');
-            if (v) { try { v.currentTime = 0; v.play(); } catch (e) {} }
+        function acenarIara() {
+            avatarContainer.classList.add("is-greeting");
+            var a = document.querySelector(".avatar-aceno");
+            if (a) { try { a.currentTime = 0; } catch (e) {} a.play().catch(function () {}); }
+            clearTimeout(window.__acenoT);
+            window.__acenoT = setTimeout(function () {
+                avatarContainer.classList.remove("is-greeting");
+                if (a) a.pause();
+            }, 3000);
         }
+        function videoFalar() {
+            const v = document.querySelector('.avatar-normal');
+            if (v) { try { v.play(); } catch (e) {} }
+        }
+        window.addEventListener("load", function () { setTimeout(acenarIara, 900); });
         function videoParar() {
-            const v = document.getElementById('avatar-video');
-            if (v) { try { v.pause(); } catch (e) {} }
+            const v = document.querySelector('.avatar-normal');
+            if (v) { try { v.pause(); v.currentTime = 0; } catch (e) {} }
         }
 
         // ===== VOZ NEURAL (Gemini TTS) =====
