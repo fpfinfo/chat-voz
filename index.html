@@ -221,7 +221,7 @@
         }
         input[type="text"] {
             width: 100%;
-            padding: 15px 50px 15px 20px;
+            padding: 15px 62px 15px 62px;
             border: 2px solid #e5e7eb;
             border-radius: 30px;
             font-size: 1rem;
@@ -256,6 +256,29 @@
             .avatar-container { width: 150px; height: 150px; }
             .message { max-width: 90%; }
         }
+
+        /* --- Painel de voz --- */
+        .voz-wrap { position: relative; }
+        .voz-painel {
+            position: fixed; top: 68px; right: 12px; z-index: 60; width: min(320px, calc(100vw - 24px));
+            background: #fff; border: 1px solid #e2e8f0; border-radius: 14px;
+            box-shadow: 0 18px 40px rgba(15,23,42,.18); padding: 16px 18px;
+            display: flex; flex-direction: column; gap: 12px; text-align: left;
+        }
+        .voz-painel[hidden] { display: none; }
+        .voz-painel h3 { font-size: .95rem; color: #1f2937; margin-bottom: 2px; }
+        .voz-linha { display: flex; flex-direction: column; gap: 5px; }
+        .voz-linha label { font-size: .78rem; font-weight: 600; color: #475569; }
+        .voz-linha select { width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 9px; font-size: .85rem; background: #f8fafc; }
+        .voz-linha input[type=range] { width: 100%; accent-color: #667eea; }
+        .voz-val { font-weight: 400; color: #64748b; float: right; }
+        .voz-acoes { display: flex; gap: 8px; }
+        .voz-acoes button {
+            flex: 1; padding: 8px 10px; border-radius: 9px; border: none; cursor: pointer;
+            font-size: .82rem; font-weight: 600; background: linear-gradient(135deg,#667eea,#764ba2); color: #fff;
+        }
+        .voz-acoes button.sec { background: #eef2f7; color: #334155; }
+        .voz-dica { font-size: .72rem; color: #94a3b8; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -282,84 +305,127 @@
                     <p class="status-text" id="status-text">Pronta para ajudar</p>
                 </div>
             </div>
+            <div class="voz-wrap">
+                <button class="clear-btn" onclick="abrirConfigVoz()" title="Configurações de voz">⚙️ Voz</button>
+                <div class="voz-painel" id="voz-painel" hidden>
+                    <h3>Configurações de voz</h3>
+                    <div class="voz-linha">
+                        <label for="voz-select">Voz</label>
+                        <select id="voz-select"></select>
+                    </div>
+                    <div class="voz-linha">
+                        <label for="voz-rate">Velocidade <span class="voz-val" id="voz-rate-val">1.00</span></label>
+                        <input type="range" id="voz-rate" min="0.7" max="1.3" step="0.01">
+                    </div>
+                    <div class="voz-linha">
+                        <label for="voz-pitch">Tom <span class="voz-val" id="voz-pitch-val">1.00</span></label>
+                        <input type="range" id="voz-pitch" min="0.7" max="1.3" step="0.01">
+                    </div>
+                    <div class="voz-acoes">
+                        <button onclick="testarVoz()">🔊 Testar</button>
+                        <button class="sec" onclick="fecharConfigVoz()">Fechar</button>
+                    </div>
+                    <p class="voz-dica">Para a voz mais natural, use o <b>Microsoft Edge</b> (vozes “Natural”/“Online”) — no Chrome/Windows, instale vozes neurais pt-BR.</p>
+                </div>
+            </div>
             <button class="clear-btn" onclick="clearChat()">Limpar Conversa</button>
         </header>
         <div class="chat-area" id="chat-area">
             <div class="avatar-container" id="avatar-container">
                 <!-- SVG Avatar Detalhado -->
                 <svg class="avatar-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg"
-                     role="img" aria-label="Retrato ilustrado da IARA">
-                    <defs>
-                        <radialGradient id="gBg" cx="50%" cy="42%" r="65%">
-                            <stop offset="0%" stop-color="#eef7f2"/><stop offset="100%" stop-color="#d5e9e4"/>
-                        </radialGradient>
-                        <linearGradient id="gRing" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0b5c8f"/><stop offset="100%" stop-color="#17754a"/>
-                        </linearGradient>
-                        <linearGradient id="gHair" x1="20%" y1="0%" x2="80%" y2="100%">
-                            <stop offset="0%" stop-color="#7a4327"/><stop offset="55%" stop-color="#5a3018"/><stop offset="100%" stop-color="#43220f"/>
-                        </linearGradient>
-                        <linearGradient id="gSkin" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" stop-color="#f7d6c0"/><stop offset="100%" stop-color="#e7b593"/>
-                        </linearGradient>
-                        <linearGradient id="gBlazer" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#134e79"/><stop offset="100%" stop-color="#1c7a5a"/>
-                        </linearGradient>
-                    </defs>
-                    <circle cx="130" cy="130" r="126" fill="url(#gBg)"/>
-                    <circle class="halo" cx="130" cy="120" r="86" fill="#0b5c8f"/>
-                    <g class="iara-fig">
-                        <path d="M60 96 Q78 34 130 30 Q182 34 200 96 Q214 150 198 210 Q165 190 130 190 Q95 190 62 210 Q46 150 60 96Z" fill="url(#gHair)"/>
-                        <path d="M112 150 h36 v34 q-18 12 -36 0 Z" fill="url(#gSkin)"/>
-                        <path d="M112 150 h36 v10 q-18 12 -36 0 Z" fill="#00000018"/>
-                        <path d="M40 250 Q54 196 96 178 L130 200 L164 178 Q206 196 220 250 Z" fill="url(#gBlazer)"/>
-                        <path d="M112 180 L130 214 L148 180 Q130 190 112 180Z" fill="#fdfdfa"/>
-                        <path d="M96 178 L130 200 L118 214 L104 196 Z" fill="#0e4467"/>
-                        <path d="M164 178 L130 200 L142 214 L156 196 Z" fill="#155f45"/>
-                        <g stroke="#dcefe7" stroke-width="1.6" fill="#f0f8f4">
-                            <line x1="150" y1="196" x2="159" y2="190"/><line x1="150" y1="196" x2="160" y2="203"/><line x1="159" y1="190" x2="160" y2="203"/>
-                            <circle cx="150" cy="196" r="2.7"/><circle cx="159" cy="190" r="2.7"/><circle cx="160" cy="203" r="2.7"/>
-                        </g>
-                        <ellipse cx="82" cy="122" rx="8" ry="11" fill="url(#gSkin)"/>
-                        <ellipse cx="178" cy="122" rx="8" ry="11" fill="url(#gSkin)"/>
-                        <circle cx="82" cy="134" r="2.4" fill="#2fa88a"/>
-                        <circle cx="178" cy="134" r="2.4" fill="#2fa88a"/>
-                        <ellipse cx="130" cy="118" rx="46" ry="53" fill="url(#gSkin)"/>
-                        <path d="M84 74 Q92 40 130 38 Q168 40 176 74 Q180 58 168 50 Q150 60 130 58 Q110 60 92 50 Q80 58 84 74Z" fill="url(#gHair)"/>
-                        <path d="M84 74 Q70 116 78 168 Q66 150 64 118 Q64 90 84 74Z" fill="url(#gHair)"/>
-                        <path d="M176 74 Q190 116 182 168 Q194 150 196 118 Q196 90 176 74Z" fill="url(#gHair)"/>
-                        <path d="M130 40 Q108 46 96 66 Q118 56 130 58 Q142 56 164 66 Q152 46 130 40Z" fill="#8a5236" opacity=".55"/>
-                        <path d="M100 100 Q110 94 122 99" stroke="#5a3320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-                        <path d="M138 99 Q150 94 160 100" stroke="#5a3320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-                        <g>
-                            <ellipse class="eye" cx="111" cy="113" rx="9" ry="6.5" fill="#fff"/>
-                            <circle cx="111" cy="113" r="4.4" fill="#3f7d4f"/>
-                            <circle cx="111" cy="113" r="2" fill="#1c130c"/>
-                            <circle cx="112.6" cy="111.3" r="1.3" fill="#fff"/>
-                        </g>
-                        <g>
-                            <ellipse class="eye" cx="149" cy="113" rx="9" ry="6.5" fill="#fff"/>
-                            <circle cx="149" cy="113" r="4.4" fill="#3f7d4f"/>
-                            <circle cx="149" cy="113" r="2" fill="#1c130c"/>
-                            <circle cx="150.6" cy="111.3" r="1.3" fill="#fff"/>
-                        </g>
-                        <path d="M128 120 Q124 132 131 135" stroke="#d19a80" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7"/>
-                        <ellipse cx="102" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
-                        <ellipse cx="158" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
-                        <ellipse class="mouth-open" cx="130" cy="146" rx="8" ry="6" fill="#7d3b3b"/>
-                        <path class="smile" d="M116 144 Q130 156 144 144" stroke="#c26a6a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
-                    </g>
-                    <circle cx="130" cy="130" r="122" fill="none" stroke="url(#gRing)" stroke-width="5"/>
-                    <circle class="ring-pulse" cx="130" cy="130" r="122" fill="none" stroke="#ef4444" stroke-width="3"/>
-                    <g class="float-card" transform="translate(196 66)">
-                        <rect x="-4" y="-4" width="56" height="42" rx="7" fill="#ffffff" stroke="#cfe3ef" stroke-width="1.5"/>
-                        <rect x="4" y="20" width="6" height="12" rx="1.5" fill="#0b5c8f"/>
-                        <rect x="15" y="12" width="6" height="20" rx="1.5" fill="#1c7a5a"/>
-                        <rect x="26" y="6" width="6" height="26" rx="1.5" fill="#0b5c8f"/>
-                        <circle cx="41" cy="10" r="6" fill="#f4c542" stroke="#d9a825" stroke-width="1.2"/>
-                        <text x="24" y="-8" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="7" fill="#5b6b74">Transparência</text>
-                    </g>
-                </svg>
+                                 role="img" aria-label="Retrato ilustrado da IARA">
+                                <defs>
+                                    <radialGradient id="gBg" cx="50%" cy="42%" r="65%">
+                                        <stop offset="0%" stop-color="#eef7f2"/><stop offset="100%" stop-color="#d5e9e4"/>
+                                    </radialGradient>
+                                    <linearGradient id="gRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#0b5c8f"/><stop offset="100%" stop-color="#17754a"/>
+                                    </linearGradient>
+                                    <linearGradient id="gHair" x1="20%" y1="0%" x2="80%" y2="100%">
+                                        <stop offset="0%" stop-color="#7a4327"/><stop offset="55%" stop-color="#5a3018"/><stop offset="100%" stop-color="#43220f"/>
+                                    </linearGradient>
+                                    <linearGradient id="gSkin" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" stop-color="#f7d6c0"/><stop offset="100%" stop-color="#e7b593"/>
+                                    </linearGradient>
+                                    <linearGradient id="gBlazer" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#134e79"/><stop offset="100%" stop-color="#1c7a5a"/>
+                                    </linearGradient>
+                                
+                <radialGradient id="gVin2" cx="50%" cy="45%" r="68%">
+                  <stop offset="58%" stop-color="#0b5c8f" stop-opacity="0"/>
+                  <stop offset="100%" stop-color="#0b5c8f" stop-opacity=".17"/>
+                </radialGradient>
+                <linearGradient id="gHairSheen" x1="0%" y1="0%" x2="38%" y2="100%">
+                  <stop offset="0%" stop-color="#e9bd93" stop-opacity=".5"/>
+                  <stop offset="100%" stop-color="#e9bd93" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="gBlazerHi" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#ffffff" stop-opacity=".16"/>
+                  <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                </linearGradient>
+                <filter id="fShadow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="4.5"/></filter>
+                <filter id="fShadow2" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter>
+            </defs>
+                                <circle cx="130" cy="130" r="126" fill="url(#gBg)"/>
+                                <circle cx="130" cy="130" r="126" fill="url(#gVin2)"/>
+                                <circle class="halo" cx="130" cy="120" r="86" fill="#0b5c8f"/>
+                                <g class="iara-fig">
+                                    <path d="M60 96 Q78 34 130 30 Q182 34 200 96 Q214 150 198 210 Q165 190 130 190 Q95 190 62 210 Q46 150 60 96Z" fill="url(#gHair)"/>
+                                    <path d="M112 150 h36 v34 q-18 12 -36 0 Z" fill="url(#gSkin)"/>
+                                    <ellipse cx="130" cy="158" rx="24" ry="10" fill="#8a4a2c" opacity=".4" filter="url(#fShadow)"/>
+                                    <path d="M40 250 Q54 196 96 178 L130 200 L164 178 Q206 196 220 250 Z" fill="url(#gBlazer)"/><path d="M40 250 Q54 196 96 178 L112 186 Q78 208 66 250 Z" fill="url(#gBlazerHi)"/>
+                                    <path d="M112 180 L130 214 L148 180 Q130 190 112 180Z" fill="#fdfdfa"/>
+                                    <path d="M96 178 L130 200 L118 214 L104 196 Z" fill="#0e4467"/>
+                                    <path d="M164 178 L130 200 L142 214 L156 196 Z" fill="#155f45"/>
+                                    <g stroke="#dcefe7" stroke-width="1.6" fill="#f0f8f4">
+                                        <line x1="150" y1="196" x2="159" y2="190"/><line x1="150" y1="196" x2="160" y2="203"/><line x1="159" y1="190" x2="160" y2="203"/>
+                                        <circle cx="150" cy="196" r="2.7"/><circle cx="159" cy="190" r="2.7"/><circle cx="160" cy="203" r="2.7"/>
+                                    </g>
+                                    <ellipse cx="82" cy="122" rx="8" ry="11" fill="url(#gSkin)"/>
+                                    <ellipse cx="178" cy="122" rx="8" ry="11" fill="url(#gSkin)"/>
+                                    <circle cx="82" cy="134" r="2.4" fill="#2fa88a"/>
+                                    <circle cx="178" cy="134" r="2.4" fill="#2fa88a"/>
+                                    <ellipse cx="130" cy="118" rx="46" ry="53" fill="url(#gSkin)"/><path d="M85 118 Q85 76 111 66 Q97 88 97 120 Q97 151 109 167 Q85 149 85 118 Z" fill="#c98f6e" opacity=".3" filter="url(#fShadow)"/><path d="M175 118 Q175 76 149 66 Q163 88 163 120 Q163 151 151 167 Q175 149 175 118 Z" fill="#c98f6e" opacity=".24" filter="url(#fShadow)"/>
+                                    <path d="M84 74 Q92 40 130 38 Q168 40 176 74 Q180 58 168 50 Q150 60 130 58 Q110 60 92 50 Q80 58 84 74Z" fill="url(#gHair)"/>
+                                    <path d="M84 74 Q70 116 78 168 Q66 150 64 118 Q64 90 84 74Z" fill="url(#gHair)"/>
+                                    <path d="M176 74 Q190 116 182 168 Q194 150 196 118 Q196 90 176 74Z" fill="url(#gHair)"/>
+                                    <path d="M130 40 Q108 46 96 66 Q118 56 130 58 Q142 56 164 66 Q152 46 130 40Z" fill="#8a5236" opacity=".55"/><path d="M95 82 Q87 120 92 162 Q97 122 103 90 Z" fill="url(#gHairSheen)" opacity=".75"/><path d="M168 84 Q175 120 170 160 Q166 122 161 92 Z" fill="url(#gHairSheen)" opacity=".5"/>
+                                    <path d="M100 100 Q110 94 122 99" stroke="#5a3320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+                                    <path d="M138 99 Q150 94 160 100" stroke="#5a3320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+                                    <g>
+                                        <ellipse class="eye" cx="111" cy="113" rx="9" ry="6.5" fill="#fff"/>
+                                        <circle cx="111" cy="113" r="4.4" fill="#3f7d4f"/>
+                                        <circle cx="111" cy="113" r="2" fill="#1c130c"/>
+                                        <circle cx="112.6" cy="111.3" r="1.3" fill="#fff"/>
+                                    </g>
+                                    <path d="M102.2 108.5 Q111 102.4 119.8 108.5" stroke="#2b1e12" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                    <path d="M103 105.5 L101 103.2 M107.5 103.4 L106.4 100.8 M115.5 103.4 L116.8 100.9 M119.2 105.6 L121.3 103.4" stroke="#2b1e12" stroke-width="1.5" stroke-linecap="round"/>
+                                    <g>
+                                        <ellipse class="eye" cx="149" cy="113" rx="9" ry="6.5" fill="#fff"/>
+                                        <circle cx="149" cy="113" r="4.4" fill="#3f7d4f"/>
+                                        <circle cx="149" cy="113" r="2" fill="#1c130c"/>
+                                        <circle cx="150.6" cy="111.3" r="1.3" fill="#fff"/>
+                                    </g>
+                                    <path d="M140.2 108.5 Q149 102.4 157.8 108.5" stroke="#2b1e12" stroke-width="2.3" fill="none" stroke-linecap="round"/>
+                                    <path d="M141 105.5 L139 103.2 M145.5 103.4 L144.4 100.8 M153.5 103.4 L154.8 100.9 M157.2 105.6 L159.3 103.4" stroke="#2b1e12" stroke-width="1.5" stroke-linecap="round"/>
+                                    <path d="M128 120 Q124 132 131 135" stroke="#d19a80" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7"/>
+                                    <ellipse cx="102" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
+                                    <ellipse cx="158" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
+                                    <ellipse class="mouth-open" cx="130" cy="146" rx="8" ry="6" fill="#7d3b3b"/>
+                                    <path class="smile" d="M116 144 Q130 156 144 144" stroke="#c26a6a" stroke-width="3.4" fill="none" stroke-linecap="round"/><path class="smile" d="M120 150.5 Q130 158 140 150.5" stroke="#ffffff" stroke-width="1.2" fill="none" stroke-linecap="round" opacity=".22"/>
+                                </g>
+                                <circle cx="130" cy="130" r="122" fill="none" stroke="url(#gRing)" stroke-width="5"/>
+                                <circle class="ring-pulse" cx="130" cy="130" r="122" fill="none" stroke="#ef4444" stroke-width="3"/>
+                                <g class="float-card" transform="translate(196 66)">
+                                    <rect x="-4" y="-4" width="56" height="42" rx="7" fill="#ffffff" stroke="#cfe3ef" stroke-width="1.5"/>
+                                    <rect x="4" y="20" width="6" height="12" rx="1.5" fill="#0b5c8f"/>
+                                    <rect x="15" y="12" width="6" height="20" rx="1.5" fill="#1c7a5a"/>
+                                    <rect x="26" y="6" width="6" height="26" rx="1.5" fill="#0b5c8f"/>
+                                    <circle cx="41" cy="10" r="6" fill="#f4c542" stroke="#d9a825" stroke-width="1.2"/>
+                                    <text x="24" y="-8" text-anchor="middle" font-family="'Segoe UI', sans-serif" font-size="7" fill="#5b6b74">Transparência</text>
+                                </g>
+                            </svg>
             </div>
             <div class="messages-container" id="messages-container">
                 <!-- Messages will appear here -->
@@ -389,6 +455,15 @@
         let synth = window.speechSynthesis;
         let voices = [];
         let iaraVoice = null;
+        // --- Preferências de voz (persistidas no navegador) ---
+        const VOZ_PREF = {
+            get rate()  { const v = parseFloat(localStorage.getItem('iara_rate'));  return isNaN(v) ? 0.97 : v; },
+            set rate(v) { localStorage.setItem('iara_rate', v); },
+            get pitch() { const v = parseFloat(localStorage.getItem('iara_pitch')); return isNaN(v) ? 1.0  : v; },
+            set pitch(v){ localStorage.setItem('iara_pitch', v); },
+            get voz()   { return localStorage.getItem('iara_voz') || ''; },
+            set voz(v)  { localStorage.setItem('iara_voz', v); },
+        };
         // --- Microfone: janela-filha quando a página roda "sandboxed" ---
         // O n8n serve esta página com CSP `sandbox` (sem allow-same-origin), o que
         // deixa a origem opaca (location.origin === "null") e o navegador bloqueia o
@@ -434,16 +509,23 @@
             }
         });
         function loadVoices() {
-            const vs = synth.getVoices();
-            voices = vs.filter(v => /pt[-_]?br/i.test(v.lang) || /portugu/i.test(v.name));
-            if (!voices.length) voices = vs.filter(v => /^pt/i.test(v.lang));
-            // Prioriza vozes neurais/naturais (Edge/Windows: Francisca, Thalita;
-            // Chrome: Google pt-BR) — muito menos robótico que a voz padrão.
-            iaraVoice =
-                 voices.find(v => /natural|neural/i.test(v.name))
-              || voices.find(v => /google/i.test(v.name))
-              || voices.find(v => /(francisca|thalita|luciana|maria|vit[oó]ria|camila|helo[ií]sa|brenda)/i.test(v.name))
-              || voices[0] || null;
+            const todas = synth.getVoices();
+            let vs = todas.filter(v => /pt[-_]?br/i.test(v.lang) || /portugu/i.test(v.name));
+            if (!vs.length) vs = todas.filter(v => /^pt/i.test(v.lang));
+            // Ranking: vozes neurais/naturais > Google > nomes conhecidos > pt-BR genérico
+            const peso = v => {
+                let p = 0;
+                if (/natural|neural|online/i.test(v.name)) p += 100;
+                if (/google/i.test(v.name)) p += 50;
+                if (/(francisca|thalita|luciana|maria|vit[oó]ria|camila|helo[ií]sa|brenda|joana|in[eê]s|yara)/i.test(v.name)) p += 30;
+                if (/pt[-_]?br/i.test(v.lang)) p += 20;
+                return p;
+            };
+            vs.sort((a, b) => peso(b) - peso(a));
+            voices = vs;
+            const salva = VOZ_PREF.voz ? vs.find(v => v.name === VOZ_PREF.voz) : null;
+            iaraVoice = salva || vs[0] || null;
+            if (window.inst_pintarVozUI) window.inst_pintarVozUI();
         }
         function setupSpeechRecognition() {
             if (NEEDS_MIC_POPUP) {
@@ -651,10 +733,36 @@
                 .replace(/R\$\s*/g, '')
                 .replace(/(\d+(?:[.,]\d+)?)\s*%/g, '$1 por cento')
                 .replace(/º|ª/g, ' ')
+                // --- valores monetários: R$ 1.234,56 -> "1.234 reais e 56 centavos" ---
+                .replace(/R\$\s*([\d.]+)(?:,(\d{2}))?/g, (m, inteiro, cents) => {
+                    const i = inteiro.replace(/\./g, '');
+                    let out = i + ' reais';
+                    if (cents && cents !== '00') out += ' e ' + cents + ' centavos';
+                    return out;
+                })
+                // --- datas 12/05/2026 -> "12 de 05 de 2026" (antes da regra de frações) ---
+                .replace(/\b(\d{1,2})\/(\d{1,2})\/(\d{4})\b/g, '$1 de $2 de $3')
+                // --- mais siglas ---
+                .replace(/\bSTJ\b/g, 'S T J')
+                .replace(/\bTJE\b/g, 'T J E')
+                .replace(/\bPJe\b/g, 'P Je')
+                .replace(/\bCDA\b/g, 'C D A')
+                .replace(/\bCPF\b/g, 'C P F')
+                .replace(/\bCNPJ\b/g, 'C N P J')
+                .replace(/\bOSC\b/g, 'O S C')
+                .replace(/\bPIB\b/g, 'P I B')
+                .replace(/\bSEPLAN\b/g, 'Seplan')
+                // --- abreviações ---
+                .replace(/\bp\.?\s*ex\.?/gi, 'por exemplo')
+                .replace(/\bobs?\.\s*/gi, 'observação ')
+                .replace(/\bcf\.\s*/gi, 'conforme ')
+                // --- links e emojis (não devem ser lidos) ---
+                .replace(/https?:\/\/\S+/g, ' o link ')
+                .replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu, ' ')
                 .replace(/\s{2,}/g, ' ')
                 .trim();
         }
-        let falaFila = [], falaToken = 0, falaKeep = null;
+        let falaFila = [], falaToken = 0, falaKeep = null, falaBocaT = null;
         function pararFalaKeep() { if (falaKeep) { clearInterval(falaKeep); falaKeep = null; } }
         function stopSpeak() {
             falaToken++; falaFila = []; pararFalaKeep();
@@ -680,7 +788,7 @@
                 return;
             }
             const u = new SpeechSynthesisUtterance(falaFila.shift());
-            u.lang = 'pt-BR'; u.rate = 0.97; u.pitch = 1.0;
+            u.lang = 'pt-BR'; u.rate = VOZ_PREF.rate; u.pitch = VOZ_PREF.pitch; u.volume = 1;
             if (iaraVoice) u.voice = iaraVoice;
             if (primeira) u.onstart = () => {
                 isSpeaking = true;
@@ -691,7 +799,22 @@
                     if (synth.speaking) synth.resume(); else pararFalaKeep();
                 }, 10000);
             };
-            u.onend = () => falarProxima(tk, false);
+            // Sincronia labial: abre a boca a cada palavra (boundary) em vez de
+            // uma animação constante — o movimento acompanha a fala de verdade.
+            u.onboundary = (ev) => {
+                if (tk !== falaToken) return;
+                const boca = document.querySelector('.mouth-open');
+                if (!boca) return;
+                boca.style.animation = 'none';
+                boca.style.transform = 'scaleY(' + (0.75 + Math.random() * 1.05).toFixed(2) + ')';
+                clearTimeout(falaBocaT);
+                falaBocaT = setTimeout(() => { boca.style.transform = 'scaleY(0.45)'; }, 120);
+            };
+            u.onend = () => {
+                const boca = document.querySelector('.mouth-open');
+                if (boca) { boca.style.animation = ''; boca.style.transform = ''; }
+                falarProxima(tk, false);
+            };
             u.onerror = () => {
                 if (tk !== falaToken) return;
                 pararFalaKeep(); isSpeaking = false;
@@ -726,6 +849,56 @@
                 addMessage('iara', 'Conversa limpa! Como posso ajudar agora?');
             }
         }
+
+        /* ===================== UI DE VOZ ===================== */
+        function abrirConfigVoz() {
+            const p = document.getElementById('voz-painel');
+            p.hidden = !p.hidden;
+            if (!p.hidden) popularVozUI();
+        }
+        function fecharConfigVoz() { document.getElementById('voz-painel').hidden = true; }
+        window.inst_pintarVozUI = function () {
+            const p = document.getElementById('voz-painel');
+            if (p && !p.hidden) popularVozUI();
+        };
+        function popularVozUI() {
+            const sel = document.getElementById('voz-select');
+            const atual = iaraVoice ? iaraVoice.name : '';
+            sel.innerHTML = voices.length
+                ? voices.map(v => `<option value="${v.name}"${v.name === atual ? ' selected' : ''}>${v.name} (${v.lang})</option>`).join('')
+                : '<option value="">Nenhuma voz pt-BR encontrada</option>';
+            const r = document.getElementById('voz-rate');
+            r.value = VOZ_PREF.rate; document.getElementById('voz-rate-val').textContent = VOZ_PREF.rate.toFixed(2);
+            const t = document.getElementById('voz-pitch');
+            t.value = VOZ_PREF.pitch; document.getElementById('voz-pitch-val').textContent = VOZ_PREF.pitch.toFixed(2);
+        }
+        function testarVoz() {
+            speak('Olá! Sou a IARA, assistente do Conselho Gestor Centralizado. Esta é a minha voz.');
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const sel = document.getElementById('voz-select');
+            if (sel) sel.addEventListener('change', e => {
+                VOZ_PREF.voz = e.target.value;
+                iaraVoice = voices.find(v => v.name === e.target.value) || iaraVoice;
+                testarVoz();
+            });
+            const r = document.getElementById('voz-rate');
+            if (r) r.addEventListener('input', e => {
+                VOZ_PREF.rate = parseFloat(e.target.value);
+                document.getElementById('voz-rate-val').textContent = VOZ_PREF.rate.toFixed(2);
+            });
+            const t = document.getElementById('voz-pitch');
+            if (t) t.addEventListener('input', e => {
+                VOZ_PREF.pitch = parseFloat(e.target.value);
+                document.getElementById('voz-pitch-val').textContent = VOZ_PREF.pitch.toFixed(2);
+            });
+            // fecha o painel ao clicar fora
+            document.addEventListener('click', ev => {
+                const p = document.getElementById('voz-painel');
+                if (!p || p.hidden) return;
+                if (!ev.target.closest('.voz-wrap')) p.hidden = true;
+            });
+        });
     </script>
 </body>
 </html>
