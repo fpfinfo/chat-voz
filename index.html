@@ -120,12 +120,12 @@
         .avatar-box svg { width: 100%; height: 100%; display: block; }
         .avatar-box .iara-fig { transform-box: fill-box; transform-origin: bottom center; animation: iaraBreathe 5.5s ease-in-out infinite; }
         .avatar-box .eye { transform-box: fill-box; transform-origin: center; animation: iaraBlink 5.4s infinite; }
-        .avatar-box .mouth { opacity: 0; transform-box: fill-box; transform-origin: center; }
+        .avatar-box .vis { display: none; }
+        .avatar-box .vis.ativo { display: block; }
+        .avatar-box .v-X { display: block; }
         .avatar-box .arm-alto { display: none; transform-box: view-box; transform-origin: 198px 202px; }
         .avatar-container.is-greeting .avatar-box .arm-alto { display: block; animation: iaraWave .8s ease-in-out infinite; }
         .avatar-container.is-greeting .avatar-box .arm-baixo { display: none; }
-        .avatar-container.speaking .avatar-box .mouth { opacity: 1; animation: iaraTalk .3s infinite; }
-        .avatar-container.speaking .avatar-box .smile { opacity: 0; }
         
         .avatar-container.thinking .avatar-box .iara-fig { animation: iaraTilt 2.4s ease-in-out infinite; }
         @keyframes iaraBreathe { 0%,100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-2px) scale(1.008); } }
@@ -468,8 +468,23 @@
       <path d="M128 120 Q124 132 131 135" stroke="#d19a80" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7"/>
       <ellipse cx="102" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
       <ellipse cx="158" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
-      <ellipse class="mouth-open" cx="130" cy="146" rx="8" ry="6" fill="#7d3b3b"/>
-      <path class="smile" d="M116 144 Q130 156 144 144" stroke="#c26a6a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <g class="bocas">
+        <path class="vis v-X" d="M116 144 Q130 156 144 144" stroke="#c26a6a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+        <path class="vis v-A" d="M118 147 Q130 152 142 147" stroke="#b8564e" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+        <ellipse class="vis v-B" cx="130" cy="148" rx="8" ry="2.8" fill="#8b3f3c"/>
+        <ellipse class="vis v-C" cx="130" cy="148" rx="9" ry="5.4" fill="#8b3f3c"/>
+        <ellipse class="vis v-D" cx="130" cy="148" rx="11" ry="9" fill="#7d3634"/>
+        <ellipse class="vis v-E" cx="130" cy="148" rx="7" ry="6.6" fill="#8b3f3c"/>
+        <ellipse class="vis v-F" cx="130" cy="148" rx="5" ry="6.8" fill="#8b3f3c"/>
+        <g class="vis v-G">
+          <path d="M121 146 Q130 144 139 146 L139 151.5 Q130 154 121 151.5 Z" fill="#8b3f3c"/>
+          <rect x="122.5" y="144.6" width="15" height="3" rx="1" fill="#ffffff"/>
+        </g>
+        <g class="vis v-H">
+          <ellipse cx="130" cy="148" rx="9" ry="6" fill="#8b3f3c"/>
+          <ellipse cx="130" cy="150" rx="5.2" ry="3" fill="#c9645e"/>
+        </g>
+      </g>
       </g>
       <circle cx="130" cy="130" r="122" fill="none" stroke="url(#gRing)" stroke-width="5"/>
       <circle class="ring-pulse" cx="130" cy="130" r="122" fill="none" stroke="#ef4444" stroke-width="3"/>
@@ -854,6 +869,53 @@
             if (v) { try { v.pause(); v.currentTime = 0; } catch (e) {} }
         }
 
+        // ===== SINCRONIA LABIAL (amplitude do áudio em tempo real) =====
+        var acLabial = null, anLabial = null, bufLabial = null, rafLabial = null, visAtual = null;
+        function bocaInit(audioEl) {
+            try {
+                if (!acLabial) acLabial = new (window.AudioContext || window.webkitAudioContext)();
+                if (anLabial) return;
+                var src = acLabial.createMediaElementSource(audioEl);
+                anLabial = acLabial.createAnalyser();
+                anLabial.fftSize = 512;
+                src.connect(anLabial);
+                anLabial.connect(acLabial.destination);
+                bufLabial = new Uint8Array(anLabial.fftSize);
+            } catch (e) { anLabial = null; }
+        }
+        function bocaMostrar(v) {
+            if (v === visAtual) return;
+            visAtual = v;
+            var el = document.querySelector('.avatar-box .bocas');
+            if (!el) return;
+            var alvos = el.querySelectorAll('.vis');
+            for (var i = 0; i < alvos.length; i++) alvos[i].classList.remove('ativo');
+            var novo = el.querySelector('.v-' + v);
+            if (novo) novo.classList.add('ativo');
+        }
+        function bocaLoop() {
+            if (anLabial && bufLabial) {
+                anLabial.getByteTimeDomainData(bufLabial);
+                var soma = 0;
+                for (var i = 0; i < bufLabial.length; i++) { var d = (bufLabial[i] - 128) / 128; soma += d * d; }
+                var rms = Math.sqrt(soma / bufLabial.length);
+                var forma = 'X';
+                if (rms > 0.012) forma = 'B';
+                if (rms > 0.045) forma = 'C';
+                if (rms > 0.095) forma = 'D';
+                bocaMostrar(forma);
+            }
+            rafLabial = requestAnimationFrame(bocaLoop);
+        }
+        function bocaIniciar(audioEl) {
+            bocaInit(audioEl);
+            if (acLabial && acLabial.state === 'suspended') acLabial.resume().catch(function(){});
+            if (!rafLabial) bocaLoop();
+        }
+        function bocaParar() {
+            if (rafLabial) { cancelAnimationFrame(rafLabial); rafLabial = null; }
+            bocaMostrar('X');
+        }
         // ===== VOZ NEURAL (Gemini TTS) =====
         // Usa a chave de config.local.js (teste local). Sem chave, cai na voz do navegador.
         const GEMINI_KEY = (window.GEMINI_KEY || '').trim();
@@ -878,8 +940,10 @@
                 const url = URL.createObjectURL(pcmParaWavBlob(b64, rate || 24000));
                 const a = new Audio(url);
                 audioNeural = a;
+                bocaIniciar(a);
                 a.onended = a.onerror = () => {
                     URL.revokeObjectURL(url); audioNeural = null;
+                    bocaParar();
                     if (tk === undefined || tk === falaToken) {
                         isSpeaking = false; pararFalaKeep();
                         updateStatus('Pronta para ajudar', '#10b981');
