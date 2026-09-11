@@ -1,3 +1,8 @@
+> **ATUALIZAÇÃO (avatar SVG animado):** o avatar do arquivo `iara_PRODUCAO_ATUALIZADA.html`
+> agora é um **SVG animado** (leve, ~44 KB, sem vídeo). Ele pisca os olhos, respira,
+> move a boca quando fala e **levanta o braço só para acenar** (classe `is-greeting`),
+> ficando com os braços abaixados na postura normal. Não é necessário arquivo de vídeo.
+
 # IARA — Atualização da página de produção (avatar + voz neural)
 
 Esta pasta contém a versão atualizada da página do atendimento virtual **IARA**

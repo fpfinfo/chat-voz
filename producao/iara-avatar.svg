@@ -1,0 +1,83 @@
+<svg class="avatar-svg" viewBox="0 0 260 260" xmlns="http://www.w3.org/2000/svg"
+                     role="img" aria-label="Retrato ilustrado da IARA">
+                    <defs>
+                        <radialGradient id="gBg" cx="50%" cy="42%" r="65%">
+                            <stop offset="0%" stop-color="#eef7f2"/><stop offset="100%" stop-color="#d5e9e4"/>
+                        </radialGradient>
+                        <linearGradient id="gRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0b5c8f"/><stop offset="100%" stop-color="#17754a"/>
+                        </linearGradient>
+                        <linearGradient id="gHair" x1="20%" y1="0%" x2="80%" y2="100%">
+                            <stop offset="0%" stop-color="#7a4327"/><stop offset="55%" stop-color="#5a3018"/><stop offset="100%" stop-color="#43220f"/>
+                        </linearGradient>
+                        <linearGradient id="gSkin" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#f7d6c0"/><stop offset="100%" stop-color="#e7b593"/>
+                        </linearGradient>
+                        <linearGradient id="gBlazer" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#134e79"/><stop offset="100%" stop-color="#1c7a5a"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="130" cy="130" r="126" fill="url(#gBg)"/>
+                    <circle class="halo" cx="130" cy="120" r="86" fill="#0b5c8f"/>
+                    <g class="iara-fig">
+                        <path d="M60 96 Q78 34 130 30 Q182 34 200 96 Q214 150 198 210 Q165 190 130 190 Q95 190 62 210 Q46 150 60 96Z" fill="url(#gHair)"/>
+                        <path d="M112 150 h36 v34 q-18 12 -36 0 Z" fill="url(#gSkin)"/>
+                        <path d="M112 150 h36 v10 q-18 12 -36 0 Z" fill="#00000018"/>
+                        <!-- braço direito (ACENANDO) -->
+                        <g class="arm-alto" style="transform-origin:198px 202px">
+                            <path d="M187 212 Q203 176 213 144 L237 152 Q226 186 205 216 Z" fill="url(#gBlazer)"/>
+                            <path d="M187 212 Q203 176 213 144 L218 146 Q208 178 193 212 Z" fill="#ffffff" opacity=".10"/>
+                            
+                            <ellipse cx="227" cy="129" rx="13" ry="14" fill="url(#gSkin)"/>
+                            <ellipse cx="219.5" cy="115" rx="3.1" ry="7" fill="url(#gSkin)"/>
+                            <ellipse cx="226" cy="112" rx="3.1" ry="7.6" fill="url(#gSkin)"/>
+                            <ellipse cx="232.5" cy="113" rx="3.1" ry="7.6" fill="url(#gSkin)"/>
+                            <ellipse cx="238.5" cy="117" rx="3.1" ry="6.6" fill="url(#gSkin)"/>
+                            <ellipse cx="215.5" cy="127" rx="3" ry="6" fill="url(#gSkin)" transform="rotate(-30 217 126)"/>
+                        </g>
+                        <!-- braço direito ABAIXADO (postura normal) -->
+                        <g class="arm-baixo">
+                            <path d="M180 202 Q194 228 194 252 L218 252 Q214 226 198 198 Z" fill="url(#gBlazer)"/>
+                            <ellipse cx="206" cy="252" rx="9" ry="7" fill="url(#gSkin)"/>
+                        </g>
+                        <path d="M40 250 Q54 196 96 178 L130 200 L164 178 Q206 196 220 250 Z" fill="url(#gBlazer)"/>
+                        <path d="M112 180 L130 214 L148 180 Q130 190 112 180Z" fill="#fdfdfa"/>
+                        <path d="M96 178 L130 200 L118 214 L104 196 Z" fill="#0e4467"/>
+                        <path d="M164 178 L130 200 L142 214 L156 196 Z" fill="#155f45"/>
+                        <g stroke="#dcefe7" stroke-width="1.6" fill="#f0f8f4">
+                            <line x1="150" y1="196" x2="159" y2="190"/><line x1="150" y1="196" x2="160" y2="203"/><line x1="159" y1="190" x2="160" y2="203"/>
+                            <circle cx="150" cy="196" r="2.7"/><circle cx="159" cy="190" r="2.7"/><circle cx="160" cy="203" r="2.7"/>
+                        </g>
+                        <ellipse cx="82" cy="122" rx="8" ry="11" fill="url(#gSkin)"/>
+                        <ellipse cx="178" cy="122" rx="8" ry="11" fill="url(#gSkin)"/>
+                        <circle cx="82" cy="134" r="2.4" fill="#2fa88a"/>
+                        <circle cx="178" cy="134" r="2.4" fill="#2fa88a"/>
+                        <ellipse cx="130" cy="118" rx="46" ry="53" fill="url(#gSkin)"/>
+                        <path d="M84 74 Q92 40 130 38 Q168 40 176 74 Q180 58 168 50 Q150 60 130 58 Q110 60 92 50 Q80 58 84 74Z" fill="url(#gHair)"/>
+                        <path d="M84 74 Q70 116 78 168 Q66 150 64 118 Q64 90 84 74Z" fill="url(#gHair)"/>
+                        <path d="M176 74 Q190 116 182 168 Q194 150 196 118 Q196 90 176 74Z" fill="url(#gHair)"/>
+                        <path d="M130 40 Q108 46 96 66 Q118 56 130 58 Q142 56 164 66 Q152 46 130 40Z" fill="#8a5236" opacity=".55"/>
+                        <path d="M100 100 Q110 94 122 99" stroke="#5a3320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+                        <path d="M138 99 Q150 94 160 100" stroke="#5a3320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+                        <g>
+                            <ellipse class="eye" cx="111" cy="113" rx="9" ry="6.5" fill="#fff"/>
+                            <circle cx="111" cy="113" r="4.4" fill="#3f7d4f"/>
+                            <circle cx="111" cy="113" r="2" fill="#1c130c"/>
+                            <circle cx="112.6" cy="111.3" r="1.3" fill="#fff"/>
+                        </g>
+                        <g>
+                            <ellipse class="eye" cx="149" cy="113" rx="9" ry="6.5" fill="#fff"/>
+                            <circle cx="149" cy="113" r="4.4" fill="#3f7d4f"/>
+                            <circle cx="149" cy="113" r="2" fill="#1c130c"/>
+                            <circle cx="150.6" cy="111.3" r="1.3" fill="#fff"/>
+                        </g>
+                        <path d="M128 120 Q124 132 131 135" stroke="#d19a80" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".7"/>
+                        <ellipse cx="102" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
+                        <ellipse cx="158" cy="132" rx="9" ry="5" fill="#f2a79c" opacity=".38"/>
+                        <ellipse class="mouth-open" cx="130" cy="146" rx="8" ry="6" fill="#7d3b3b"/>
+                        <path class="smile" d="M116 144 Q130 156 144 144" stroke="#c26a6a" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+                    </g>
+                    <circle cx="130" cy="130" r="122" fill="none" stroke="url(#gRing)" stroke-width="5"/>
+                    <circle class="ring-pulse" cx="130" cy="130" r="122" fill="none" stroke="#ef4444" stroke-width="3"/>
+                    
+                </svg>
